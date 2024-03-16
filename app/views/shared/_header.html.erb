@@ -1,3 +1,8 @@
+<!-- reset.css modern-css-reset -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+/>
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
     <%= link_to image_tag("header-sunflower.png", class:"header-sunflower-img"), "/" %>
@@ -12,6 +17,7 @@
       <%= image_tag("search.png", class: "search-icon") %>
     <% end %>
   <% end %>
+  <div class="search-text">検索</div>
 
   </div>
   <div class="header-bar-right">

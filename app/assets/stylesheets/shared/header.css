@@ -5,21 +5,26 @@
 
 .header-wrapper {
   display: flex;
+  justify-content: center;
 }
 
 .header-bar-left {
   width: calc(100vw - 30%);
-  height: 70px;
-  background-color: blue;
+  height: 50px;
+  background-color:forestgreen;
   color: white;
+  display: flex;
+  align-items: center;
 }
 
 .header-bar-right {
   width: calc(100vw - 70%);
-  height: 70px;
-  background-color:darkgreen;
+  height: 50px;
+  background-color:forestgreen;
   font-size: 20px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 li {
@@ -28,10 +33,7 @@ li {
 
 .user-link {
  display: flex;
- justify-content: center;
  color: white;
- 
- 
 }
 
 .logout {
@@ -49,10 +51,10 @@ li {
 }
 
 .search-form {
-  width: 65vw;
+  width: 30vw;
   height: 5vh;
   display: flex;
-  margin-bottom: 5px;
+  margin-left: 70px;
 }
 
 .search-form>.input-box {
@@ -71,4 +73,10 @@ li {
 
 .search-icon {
   width: 100%;
+}
+
+.search-text {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
 }
