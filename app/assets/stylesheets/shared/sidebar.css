@@ -54,6 +54,6 @@
 }
 
 .menu-item {
-  width: 70%; /* 親要素いっぱいに拡大 */
-  margin-bottom: 15px; /* アイテム間の余白 */
+  width: 70%;
+  margin-bottom: 15px;
 }
