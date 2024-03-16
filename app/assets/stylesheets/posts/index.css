@@ -1,3 +1,7 @@
+.index-bg {
+  background-color:forestgreen
+}
+
 .wrapper {
   display: flex;
 }

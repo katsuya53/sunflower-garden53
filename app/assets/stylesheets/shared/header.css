@@ -1,5 +1,74 @@
 
-.header-sunflower {
+.header-sunflower-img {
   width : 100vw
 }
 
+.header-wrapper {
+  display: flex;
+}
+
+.header-bar-left {
+  width: calc(100vw - 30%);
+  height: 70px;
+  background-color: blue;
+  color: white;
+}
+
+.header-bar-right {
+  width: calc(100vw - 70%);
+  height: 70px;
+  background-color:darkgreen;
+  font-size: 20px;
+
+}
+
+li {
+  list-style: none;
+}
+
+.user-link {
+ display: flex;
+ justify-content: center;
+ color: white;
+ 
+ 
+}
+
+.logout {
+ color: white;
+
+}
+
+.login {
+  color: white;
+}
+
+.sign-up {
+  color: white;
+  margin-left: 70px;
+}
+
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #3ccace;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+}

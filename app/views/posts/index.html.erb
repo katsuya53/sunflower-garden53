@@ -1,14 +1,14 @@
 <%# CSS・・・assets/stylesheets/posts/index.css %>
-<h1>Sunflower Garden  TOPページ</h>
-<%= render "shared/header" %>
+<div class= "index-bg">
+   <%= render "shared/header" %>
+  <div class="wrapper">
+    <div class="main-index">
+      <%= render "main_index" %>
+    </div>
+    <div class="side-bar">
+      <%= render "side_bar" %>
+    </div>
+  </div>
 
-<div class="wrapper">
-  <div class="main-index">
-    <%= render "main_index" %>
-  </div>
-  <div class="side-bar">
-    <%= render "side_bar" %>
-  </div>
+  <%= render "shared/footer" %>
 </div>
-
-<%= render "shared/footer" %>
