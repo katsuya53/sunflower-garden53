@@ -21,7 +21,6 @@
 }
 
 .main-wrapper {
-
 }
 
 .main-title {
@@ -35,9 +34,86 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 .post-item {
   width: 80%;
   margin-top: 20px;
 }
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .main-index {
+    height: 800px;
+  }
+  
+  .side-bar {
+    height: 800px;
+  }
+
+  .main-title {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+}
+
+
+
+/* 幅狭小表示時 */
+@media (max-width: 770px) {
+  .main-index {
+    height: 800px;
+  }
+  
+  .side-bar {
+    height: 800px;
+  }
+
+  .main-title {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+  .main-index {
+    height: 520px;
+  }
+  
+  .side-bar {
+    height: 520px;
+  }
+
+  .main-title {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+}
+
+
+
+/* 最小スマホ表示時 */
+@media (max-width: 370px) {
+  .main-index {
+    height: 500px;
+  }
+  
+  .side-bar {
+    height: 500px;
+  }
+
+  .main-title {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+}
+
