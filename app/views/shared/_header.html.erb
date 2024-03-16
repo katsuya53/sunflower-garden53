@@ -1,8 +1,4 @@
-<!-- reset.css modern-css-reset -->
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
-/>
+
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
     <%= link_to image_tag("header-sunflower.png", class:"header-sunflower-img"), "/" %>
@@ -12,7 +8,7 @@
 
     <!-- 検索フォームのコード -->
   <%= form_with(url: search_posts_path, method: :get, class: "search-form") do |form| %>
-    <%= form.text_field :keyword, placeholder: "投稿からキーワード検索します", class: "input-box" %>
+    <%= form.text_field :keyword, placeholder: "投稿から検索", class: "input-box" %>
     <%= form.button class: "search-button" do %>
       <%= image_tag("search.png", class: "search-icon") %>
     <% end %>
@@ -32,9 +28,5 @@
     </ul>
   </div>
 </div>
-
-
-
-    
 
 </header>

@@ -1,0 +1,37 @@
+.user-area {
+  display: flex;
+  margin-top: 20px;
+}
+
+.user-icon-area {
+  width: 30%;
+  height: 100px;
+  background-color:white;
+  display: flex;
+  justify-content: center; /* 画像を水平中央に配置 */
+  align-items: center; /* 画像を垂直中央に配置 */
+}
+
+.user-icon-img {
+  font-size: 30px;
+}
+
+.user-wrapper {
+  width: 70%;
+  height: 100px;
+  background-color:azure;
+  display: flex;
+  flex-direction: column; /* テキストを縦に配置 */
+  justify-content: center; /* テキストを垂直中央に配置 */
+}
+
+.user-name {
+  margin-bottom: 10px; /* 下側の余白を追加 */
+  text-align: center; /* テキストを水平中央に配置 */
+  font-size: 20px; /* テキストのスタイル */
+}
+
+.user-mypage-link {
+  text-align: center; /* テキストを水平中央に配置 */
+  font-size: 20px; /* テキストのスタイル */
+}
