@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+}
+
+.main-index {
+  background-color:lightgreen;
+  width: calc(100vw - 30%);
+}
+
+.side-bar {
+  background-color:lemonchiffon;
+  width: calc(100vw - 70%);
+  height: 100vh;
+}
+
