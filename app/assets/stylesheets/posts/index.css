@@ -16,7 +16,6 @@
 .side-bar {
   background-color:lemonchiffon;
   width: calc(30%);
-  height: 100vh;
   height: 1000px;
 }
 
@@ -76,6 +75,11 @@
   }
 }
 
+.post-item {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
 
 
 /* スマホ表示時 */
@@ -92,6 +96,12 @@
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
+  }
+
+  .post-item {
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
 }

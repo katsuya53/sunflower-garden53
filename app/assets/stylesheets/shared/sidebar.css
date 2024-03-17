@@ -1,10 +1,10 @@
 .user-area {
   display: flex;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .user-icon-area {
-  width: 30%;
+  width: 50%;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
 .user-icon-img {
   width: 80%;
   height: 80%;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .user-wrapper {
@@ -27,7 +27,7 @@
 }
 
 .user-name {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -118,6 +118,10 @@
     font-family:Arial Black;
   }
   
+  .menu-item {
+    width: 85%;
+    margin-bottom: 12px;
+  }
 
 }
 
@@ -126,6 +130,11 @@
 @media (max-width: 490px) {
   .user-wrapper {
     font-size: 10px; 
+  }
+
+  .menu-item {
+    width: 90%;
+    margin-bottom: 10px;
   }
 
 }
