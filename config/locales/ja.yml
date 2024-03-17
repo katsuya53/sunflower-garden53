@@ -1,5 +1,20 @@
 ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "を入力してください"
+            password:
+              blank: "を入力してください"
+          messages:
+            blank: "を入力してください"
   devise:
-    registrations:
-      signed_up: '成功しました！ 会員登録が完了しました。'
-      # 他のメッセージ設定
+    sessions:
+      user:
+        signed_out: "ログアウトしました"
+      signed_out: "ログアウトしました"
+    failure:
+      user:
+        invalid: "メールアドレスまたはパスワードが無効です"
