@@ -1,11 +1,25 @@
 <div class="user-area">
   <div class="user-icon-area">
-    <%= link_to image_tag("user-icon.png", class: "user-icon-img"), "/" %>
+    <% if user_signed_in? %>
+      <% if current_user.image.attached? %>
+        <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' %>
+      <% else %>
+        <%= image_tag("user-icon.png", class: "user-icon-img") %>
+      <% end %>
+    <% else %>
+      <%= image_tag("user-icon.png", class: "user-icon-img") %>
+    <% end %>
   </div>
-  <div class="user-wrapper">
-    <div class="user-name">はなこ さん</div>
-    <%= link_to 'マイページ', "#", class: "user-mypage-link" %>
-  </div>
+
+    <div class="user-name">
+      <% if user_signed_in? %>
+        <%= link_to current_user.nickname, "#", class: "user-nickname" %>
+      <% else %>
+        ゲスト
+      <% end %>
+      <span class="user-san">さん</span>
+    </div>
+  
 </div>
 
 <div class="menu-title">menu</div>

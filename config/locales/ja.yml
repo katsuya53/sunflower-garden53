@@ -1,0 +1,5 @@
+ja:
+  devise:
+    registrations:
+      signed_up: '成功しました！ 会員登録が完了しました。'
+      # 他のメッセージ設定
