@@ -4,36 +4,35 @@
 }
 
 .user-icon-area {
-  width: 50%;
+  width: 40%;
   height: 100px;
   display: flex;
-  justify-content: center;
+  
   align-items: center;
 }
 
 .user-icon-img {
   width: 80%;
   height: 80%;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .user-wrapper {
-  width: 70%;
+  width: 60%;
   height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  font-size: 30px; 
 }
 
 .user-name {
   margin-bottom: 5px;
   text-align: center;
+  font-size: 30px;
 }
 
-.user-mypage-link {
-  text-align: center;
-  color: black;
+.user-san {
+  font-size: 20px;
 }
 
 .menu-title {
@@ -61,8 +60,14 @@
 
 /* タブレット表示時 */
 @media (max-width: 1024px) {
-  .user-wrapper {
-    font-size: 20px; 
+  .user-name {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .user-san {
+    font-size: 18px;
   }
 
 }
@@ -95,15 +100,20 @@
     height: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    font-size: 15px; 
+    justify-content: center;
   }
   
   .user-name {
     margin-bottom: 5px;
     text-align: center;
+    text-decoration: none;
+    font-size: 15px;
   }
-  
+
+  .user-san {
+    font-size: 12px;
+  }
+
   .user-mypage-link {
     text-align: center;
     color: black;
@@ -125,11 +135,14 @@
 
 }
 
-
 /* スマホ表示時 */
 @media (max-width: 490px) {
-  .user-wrapper {
+  .user-name {
     font-size: 10px; 
+  }
+
+  .user-san {
+    font-size: 8px;
   }
 
   .menu-item {
@@ -142,8 +155,12 @@
 
 /* 最小スマホ表示時 */
 @media (max-width: 370px) {
-  .user-wrapper {
+  .user-name {
     font-size: 8px; 
+  }
+
+  .user-san {
+    font-size: 6px;
   }
 
   .menu-title {
