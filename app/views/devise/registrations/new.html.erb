@@ -9,6 +9,16 @@
   
   <%= render 'shared/error_messages', model: f.object %>
 
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">アイコン画像</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.file_field :image, id:"item-image" %>
+  </div>
+
+
+
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>
