@@ -7,10 +7,9 @@
   justify-content: center;
 }
 
-/* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
-  width: 50%;
-  background-color: white;
+  width: 60%;
+  background-color:antiquewhite;
   padding-bottom: 70px;
 }
 
@@ -161,4 +160,8 @@
   color: #0099e8;
   text-align: right;
   cursor: pointer;
+}
+
+.indispensable {
+  color: red;
 }
