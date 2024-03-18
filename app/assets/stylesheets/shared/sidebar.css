@@ -30,6 +30,15 @@
   border: 1px solid black;
 }
 
+.preview-image {
+  width: 200px;
+  height: 200px;
+  margin:auto;
+  object-fit: cover; 
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
 .user-sample-image {
   width: 200px;
   height: 200px;

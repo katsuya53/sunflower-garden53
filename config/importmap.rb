@@ -2,3 +2,4 @@
 
 pin "application"
 pin "@hotwired/turbo-rails", to: "turbo.js"
+pin "preview", to: "preview.js"
