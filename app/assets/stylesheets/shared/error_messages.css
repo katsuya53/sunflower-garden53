@@ -5,7 +5,29 @@
 }
 
 .error-message {
-  font-size: 1.3vw;
+  font-size: 20px;
   list-style: circle;
   color: rgb(182, 48, 0);
+}
+
+
+/* 幅狭小表示時 */
+@media (max-width: 770px) {
+  .error-message {
+    font-size: 20px;
+  }
+}
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+  .error-message {
+    font-size: 15px;
+  }
+}
+
+/* 最小スマホ表示時 */
+@media (max-width: 370px) {
+  .error-message {
+    font-size: 15px;
+  }
 }

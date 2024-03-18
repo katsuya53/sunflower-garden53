@@ -224,4 +224,10 @@ justify-content:center;
   .form-group {
     width: 90%;
   }
+
+  .delete-registration-btn {
+    width: 50%;
+    height: 50px;
+  }
+
 }
