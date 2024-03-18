@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
   
   # ユーザーの詳細画面へのルートを追加
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update, :destroy]
 end
