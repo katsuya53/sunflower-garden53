@@ -213,6 +213,11 @@ justify-content:center;
   .form-group {
     width: 70%;
   }
+
+  .delete-registration-btn {
+    width: 50%;
+    height: 50px;
+  }
 }
 
 /* 最小スマホ表示時 */
@@ -224,10 +229,4 @@ justify-content:center;
   .form-group {
     width: 90%;
   }
-
-  .delete-registration-btn {
-    width: 50%;
-    height: 50px;
-  }
-
 }
