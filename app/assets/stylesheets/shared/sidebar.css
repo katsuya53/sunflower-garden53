@@ -15,6 +15,7 @@
   width: 100px;
   height: 100px;
   margin-left: 20px;
+  object-fit: cover; 
   border-radius: 50%;
   border: 1px solid black;
   margin-left: auto;
@@ -24,6 +25,7 @@
   width: 200px;
   height: 200px;
   margin:auto;
+  object-fit: cover; 
   border-radius: 50%;
   border: 1px solid black;
 }
