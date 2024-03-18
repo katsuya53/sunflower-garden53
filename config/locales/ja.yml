@@ -1,20 +1,5 @@
 ja:
   activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            email:
-              blank: "を入力してください"
-            password:
-              blank: "を入力してください"
-          messages:
-            blank: "を入力してください"
-  devise:
-    sessions:
+    attributes:
       user:
-        signed_out: "ログアウトしました"
-      signed_out: "ログアウトしました"
-    failure:
-      user:
-        invalid: "メールアドレスまたはパスワードが無効です"
+        nickname: ニックネーム
