@@ -6,7 +6,7 @@ class User < ApplicationRecord
   belongs_to :prefecture, class_name: 'Prefecture', foreign_key: 'prefecture_id'
   has_one_attached :image
 
-  validates :prefecture_id, presence: { message: "都道府県を選択してください" }, numericality: { other_than: 1, message: "都道府県を選択してください" }
+  validates :prefecture_id, presence: { message: "を選択してください" }, numericality: { other_than: 1, message: "を選択してください" }
   validates :nickname, presence: { message: "を入力してください" }
   validate :password_presence
 
