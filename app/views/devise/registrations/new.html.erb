@@ -1,5 +1,6 @@
-<%= render "shared/second-header"%>
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+<%= link_to image_tag("header-sunflower.png", class:"header-sunflower-img"), "/" %>
+<div class="total-wrapper">
+  <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
@@ -64,11 +65,12 @@
     登録した情報はマイページから編集できます
     </h2>
   </div>
+
   <div class='register-btn'>
     <%= f.submit "新規登録" ,class:"register-red-btn" %>
   </div>
   
 </div>
 <% end %>
-
+</div>
 <%= render "shared/second-footer"%>

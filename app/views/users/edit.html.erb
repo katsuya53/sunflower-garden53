@@ -1,4 +1,5 @@
 <%= render "shared/second-header"%>
+<div class="total-wrapper">
 <%= form_with(model: @user, url: user_path(@user), method: :patch, class: 'registration-main', local: true) do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
@@ -76,5 +77,5 @@
   
 </div>
 <% end %>
-
+</div>
 <%= render "shared/second-footer"%>
