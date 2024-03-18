@@ -1,81 +1,91 @@
-<%= render "shared/second-header"%>
+<%= render "shared/second-header" %>
 <div class="total-wrapper">
-<%= form_with(model: @user, url: user_path(@user), method: :patch, class: 'registration-main', local: true) do |f| %>
-<div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>
-      ユーザー編集画面
-    </h1>
-  </div>
-  
-<%= render 'shared/error_messages', model: @user %>
-
-<div class="form-group">
-    <div class='form-text-wrap'>
-      <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' %>
+  <%= form_with(model: @user, url: user_path(@user), method: :patch, class: 'registration-main', local: true) do |f| %>
+    <div class='form-wrap'>
+      <div class='form-header'>
+        <h1 class='form-header-text'>
+          ユーザー編集画面
+        </h1>
+      </div>
+      
+<%= render 'layouts/error_messages', model: @user %>
+  <%# ログイン時のエラーメッセージ  %>
+    <div class='login-flash-message'>
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
     </div>
-</div>
 
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">アイコン画像</label>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if current_user.image.attached? %>
+            <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-show-image' %>
+          <% else %>
+            <%= image_tag 'user-icon.png', class: 'user-sample-image', alt: 'サンプル画像' %>
+          <% end %>
+        </div>
+      </div>
 
-    </div>
-    <%= f.file_field :image, id:"item-image" %>
-  </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">アイコン画像</label>
 
+        </div>
+        <%= f.file_field :image, id: "item-image" %>
+      </div>
 
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">ニックネーム</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :nickname, class: "input-default", id: "nickname", placeholder: "例) はなこ", maxlength: "6" %>
+        <p class='info-text'>※6文字以内</p>
+      </div>
 
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">ニックネーム</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) はなこ", maxlength:"6" %>
-   <p class='info-text'>※6文字以内</p>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">メールアドレス</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
-    <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード(確認)</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
-  </div>
-  
-  
-  <div class="form-group">
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">メールアドレス</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.email_field :email, class: "input-default", id: "email", placeholder: "PC・携帯どちらでも可", autofocus: true %>
+      </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">パスワード</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.password_field :password, class: "input-default", id: "password", placeholder: "6文字以上の半角英数字" %>
+        <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+      </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">パスワード(確認)</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.password_field :password_confirmation, class: "input-default", id: "password-confirmation", placeholder: "同じパスワードを入力して下さい" %>
+      </div>
+
+      <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">都道府県</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
-  </div>
-  
-  <div class="form-group">
-    <h2 class='form-bottom-text'>
-    いつでもマイページから編集できます
-    </h2>
-  </div>
-  <div class='register-btn'>
-    <%= f.submit "変更する" ,class:"register-red-btn" %>
-  </div>
-  
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, { class: "select-box", id: "prefecture" }) %>
+      </div>
+
+      <div class="form-group">
+        <h2 class='form-bottom-text'>
+          いつでもマイページから編集できます
+        </h2>
+      </div>
+      <div class='register-btn'>
+        <%= f.submit "変更する", class: "register-red-btn" %>
+      </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
-</div>
-<%= render "shared/second-footer"%>
+<!-- 削除ボタンを total-wrapper の外側に配置 -->
+<%= button_to "登録を削除する", user_path(@user), method: :delete, class: "delete-registration-btn", onclick: "return confirm('本当に削除しますか？全ての投稿も削除されます');" %>
+<%= render "shared/second-footer" %>

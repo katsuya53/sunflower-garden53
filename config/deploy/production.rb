@@ -60,3 +60,4 @@
 #     # password: "please use keys"
 #   }
 server '54.65.201.13', user: 'ec2-user', roles: %w{app db web}
+append :linked_files, "config/locales/ja.yml"

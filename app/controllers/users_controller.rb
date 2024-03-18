@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       sign_in(@user, bypass: true) # ユーザーを再認証してセッションを維持
       redirect_to root_path
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 

@@ -15,14 +15,30 @@
   width: 100px;
   height: 100px;
   margin-left: 20px;
-  border-radius: 50%; /* 画像を丸くする */
-  border: 1px solid black;/* 白い丸い枠を追加 */
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-left: auto;
+}
+
+.user-show-image {
+  width: 200px;
+  height: 200px;
+  margin:auto;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.user-sample-image {
+  width: 200px;
+  height: 200px;
+  margin:auto;
+  border-radius: 50%;
 }
 
 .user-icon-img {
   width: 100px;
   height: 100px;
-  margin-left: 20px;
+  margin-left: auto;
 }
 
 .user-name {
@@ -64,7 +80,7 @@
   .user-image {
     width: 80px;
     height: 80px;
-    margin-left: 20px;
+    margin-left: auto;
   }
   
   .user-icon-img {
@@ -90,13 +106,13 @@
   }
   
   .user-icon-img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   
   .user-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .user-name {
