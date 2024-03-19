@@ -8,8 +8,8 @@ class Post < ApplicationRecord
   validates :image, presence: true
 
   def self.search(search)
-    if search != ""
-      Post.where('text LIKE(?)', "%#{search}%")
+    if search.present?
+      Post.where('post_title LIKE ? OR post_text LIKE ?', "%#{search}%", "%#{search}%")
     else
       Post.all
     end

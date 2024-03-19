@@ -106,3 +106,16 @@ margin-left: 20px;
   margin-left: 5px;
   font-size: 20px;
 }
+
+.search-result-area {
+background-color: antiquewhite;
+width: 70%;
+margin: auto;
+}
+
+.search-result-text {
+
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+}
