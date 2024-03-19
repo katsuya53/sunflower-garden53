@@ -2,11 +2,15 @@ ja:
   activerecord:
     attributes:
       user:
-        email: メールアドレス
-        password: パスワード
-        nickname: ニックネーム
-        prefecture_id: 都道府県
+        email: "メールアドレス"
+        password: "パスワード"
+        nickname: "ニックネーム"
+        prefecture_id: "都道府県"
+      post:
+        post_title: "タイトル"
+        post_text: "本文"
+        image: "画像"
   errors:
     messages:
-      confirmation: が一致しません
-      blank: を入力してください
+      confirmation: "が一致しません"
+      blank: "を入力してください"

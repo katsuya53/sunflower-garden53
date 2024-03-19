@@ -1,0 +1,60 @@
+<%= render "shared/second-header" %>
+
+<div class="total-wrapper">
+  <%= form_with model: @post, id: 'new_post', class: 'post-form', url: posts_path, local: true do |f|%>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>新規投稿画面</h1>
+    </div>
+
+    <%= render 'layouts/error_messages', model: @post %> <!-- エラーメッセージ  -->
+    
+    <%# 写真をアップロード %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <div id="post-previews"> <!--投稿画像のプレビューを表示--->
+        </div>
+        <label class="form-text">投稿画像</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.file_field :image, id: "post-image" %>
+    </div>
+
+    <%# タイトル入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">タイトル</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :post_title, class:"post_text", id:"post-title", placeholder:"タイトル（必須 20文字まで)", maxlength:"20" %>
+    </div>
+    
+    <%# 文章入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">文章</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :post_text, class:"post_text", id:"post-text", placeholder:"文章（必須 200文字まで)" ,rows:"4" ,maxlength:"200" %>
+    </div>
+    
+    <%# 注意書き %>
+    <div class="caution">
+        他人が不快と思われるような書き込みはご遠慮ください。
+    </div>
+
+    <%# 下部ボタン %>
+
+    <div class="post-form-group">
+        <h2 class='form-bottom-text'>投稿された内容は後で編集できます</h2>
+      <div class='register-btn'>
+        <%= f.submit "投稿する", class: "register-red-btn" %>
+      </div>
+    </div>
+
+  </div>
+  <% end %>
+
+</div>
+
+<%= render "shared/second-footer" %>
