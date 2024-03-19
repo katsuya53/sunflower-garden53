@@ -3,8 +3,8 @@
 }
 
 .total-wrapper {
-display: flex;
-justify-content:center;
+  display: flex;
+  justify-content:center;
 }
 
 .registration-main {
@@ -135,6 +135,7 @@ justify-content:center;
 .form-bottom-text {
   font-size: 15px;
   margin-top: 10px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -182,8 +183,10 @@ justify-content:center;
   text-align: center;
 }
 
+
 /* タブレット表示時 */
 @media (max-width: 1024px) {
+
   .registration-main {
     width: 70%;
   }
@@ -193,8 +196,10 @@ justify-content:center;
   }
 }
 
+
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
+
   .registration-main {
     width: 80%;
   }
@@ -204,8 +209,10 @@ justify-content:center;
   }
 }
 
+
 /* スマホ表示時 */
 @media (max-width: 490px) {
+
   .registration-main {
     width: 90%;
   }
@@ -220,8 +227,10 @@ justify-content:center;
   }
 }
 
+
 /* 最小スマホ表示時 */
 @media (max-width: 370px) {
+
   .registration-main {
     width: 100%;
   }

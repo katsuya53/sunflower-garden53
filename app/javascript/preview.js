@@ -37,4 +37,3 @@ document.addEventListener('turbo:load', function(){
     userShowImage.style.display = 'none';
   });
 });
-

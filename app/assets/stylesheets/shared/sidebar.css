@@ -104,6 +104,7 @@
   }
 }
 
+
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
 
@@ -143,6 +144,7 @@
   }
 }
 
+
 /* スマホ表示時 */
 @media (max-width: 490px) {
 
@@ -174,8 +176,10 @@
   }
 }
 
+
 /* 最小スマホ表示時 */
 @media (max-width: 370px) {
+
   .user-name {
     font-size: 8px; 
   }
