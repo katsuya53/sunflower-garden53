@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      sign_in(@user, bypass: true) # ユーザーを再認証してセッションを維持
+      sign_in(@user, bypass: true) ## 編集完了後にログアウトしないよう再認証してセッションを維持
       redirect_to root_path
     else
       render :edit, status: :unprocessable_entity
