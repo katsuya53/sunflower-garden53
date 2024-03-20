@@ -32,3 +32,6 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
+# デプロイ後に画像が消えないように設定
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/storage" # “public/storage"を加える
