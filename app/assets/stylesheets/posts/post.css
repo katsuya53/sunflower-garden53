@@ -48,7 +48,9 @@
 
 /* TOPページ */
 
-
+.post-area {
+  padding-bottom: 20px;
+}
 
 .post-contents {
   background-color: white;
@@ -56,7 +58,7 @@
   width: 90%;
   height: 90%;
   margin: auto;
-margin-top: 20px;
+  margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -84,22 +86,21 @@ margin-top: 20px;
   margin-bottom: 20px;
 }
 
+.post-info {
+  display: flex;
+  justify-content:flex-end;
+}
+
 .post-poster {
   font-size: 25px;
-  padding-left: 20px;
-  padding-top: 10px;
-  margin-bottom: 10px;
-  text-align: right;
+  margin-right: 20px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .post-date {
-font-size: 20px;
-margin-left: 20px;
-}
-
-.post-info {
-  text-align: right;
-  margin-right: 30px;
+  font-size: 20px;
+  margin-left: 20px;
 }
 
 .post-san {
@@ -107,15 +108,165 @@ margin-left: 20px;
   font-size: 20px;
 }
 
+.post-icon-image {
+  width: 50px;
+  margin: auto;
+  margin-right: 10px;
+  object-fit: cover; 
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.iine-area {
+  display: flex;
+  align-items: flex-end;
+}
+
+.iine-icon-image {
+  width: 50px;
+  margin: auto;
+  margin-left: 10px;
+  object-fit: cover; 
+}
+
+.iine-count {
+  font-size: 20px;
+}
+
 .search-result-area {
-background-color: antiquewhite;
-width: 70%;
-margin: auto;
+  background-color: antiquewhite;
+  width: 70%;
+  margin: auto;
 }
 
 .search-result-text {
-
   margin-top: 10px;
   font-size: 20px;
   text-align: center;
 }
+
+
+/* 幅狭小表示時 */
+@media (max-width: 770px) {
+
+  .search-result-area {
+    background-color: antiquewhite;
+    width: 70%;
+    margin: auto;
+  }
+
+  .search-result-text {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .post-area {
+    padding-bottom: 10px;
+  }
+
+  .post-contents {
+    width: 95%;
+    height: 95%;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .post-img {
+    width: 95%;
+    height: 95%;
+  }
+
+  .post-title {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  .post-text {
+    font-size: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .post-poster {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+
+  .post-date {
+    font-size: 12px;
+    margin-left: 15px;
+  }
+
+  .post-san {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+
+  .post-icon-image {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .iine-icon-image {
+    width: 30px;
+    margin-left: 8px;
+  }
+
+  .iine-count {
+    font-size: 12px;
+   }
+}
+
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+
+  .post-title {
+    padding-left: 15px;
+    padding-top: 8px;
+    font-size: 13px;
+  }
+
+  .post-text {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+  }
+
+  .post-poster {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .post-date {
+    font-size: 8px;
+    margin-left: 10px;
+  }
+
+  .post-san {
+    margin-left: 5px;
+    font-size: 8px;
+  }
+
+  .post-icon-image {
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  .iine-icon-image {
+    width: 20px;
+    margin-left: 5px;
+  }
+
+  .iine-count {
+    font-size: 8px;
+   }
+}
+
