@@ -2,9 +2,27 @@
   background-color: antiquewhite;
   width: 70%;
   margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.post-area {
+.show-form-header {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.show-form-header-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.show-content {
+  background-color: white;
+  border-radius: 2%;
+  width: 90%;
+  height: 90%;
+  margin: auto;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -21,3 +39,43 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+/* 幅狭小表示時 */
+@media (max-width: 770px) {
+ .show-form-header-text {
+   font-size: 25px;
+ }
+
+ .show-wrap {
+   width: 85%;
+   padding-top: 15px;
+   padding-bottom: 15px;
+  }
+ 
+ .show-content {
+   width: 95%;
+   height: 95%;
+   padding-top: 10px;
+   padding-bottom: 10px;
+  }
+}
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+  .show-form-header-text {
+    font-size: 20px;
+ }
+
+ .show-wrap {
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ }
+
+ .show-content {
+   width: 95%;
+   height: 95%;
+ }
+}
+
+

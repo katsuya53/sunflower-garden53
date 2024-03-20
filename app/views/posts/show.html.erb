@@ -1,14 +1,12 @@
-<%= render "shared/header" %>
+<%= render "shared/second-header" %>
 
 <div class="show-wrap">
-<div class="main-title">
-  詳細画面
-</div>
+  
+    <div class='show-form-header'>
+      <h1 class='show-form-header-text'>詳細画面</h1>
+    </div>
 
-
-<div class="whow-area">
-
-<div class='post-contents'>
+  <div class='show-content'>
     <%= image_tag @post.image, class: "post-img" %>
    
     <div class='post-title'>
@@ -19,34 +17,41 @@
       <%= @post.post_text %>
     </div>
 
-   <div class= "post-info">
-    <div class='post-poster'>
-       <%= image_tag @post.user.image, class: "post-icon-image" %>
-       <%= @post.user.nickname %>
-      <div class="post-san">
+    <div class= "post-info">
+      <div class='post-poster'>
+        <%= image_tag @post.user.image, class: "post-icon-image" %>
+        <%= @post.user.nickname %>
+        <div class="post-san">
          さん
-      </div>
+        </div>
  
-      <div class='post-date'>
-        <%= @post.created_at.strftime("%Y.%m.%d %H:%M") %>
-      </div>
-
-      <div class="iine-area">
-        <div class="iine-icon-image">
-          <img src="/assets/iine.png" alt="いいね">
+        <div class='post-date'>
+          <%= @post.created_at.strftime("%Y.%m.%d %H:%M") %>
         </div>
-        <div class="iine-count">5
+
+        <div class="iine-area">
+          <div class="iine-icon-image">
+            <img src="/assets/iine.png" alt="いいね">
+          </div>
+          <div class="iine-count">5
+          </div>
         </div>
       </div>
-
     </div>
 
   </div>
 
+  <%# ログインした投稿者のみ編集ボタンが表示 %>
+  <% if user_signed_in? && current_user.id == @post.user_id  %>
+  <div class="form-group">
+    <h2 class='form-bottom-text'>下のボタンから編集できます</h2>
+    <div class='edit-btn'>
+      <%= link_to "編集画面へ", edit_post_path, class: "edit-btn-text" %>
+    </div>
   </div>
-
-
+  <% else %>
+  <% end%>
 
 </div>
-</div>
+
 <%= render "shared/second-footer" %>

@@ -21,24 +21,29 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
-    post.destroy
+    @post = Post.find(params[:id])
+    puts "@post: #{@post.inspect}" # デバッグ情報を出力
+    @post.destroy
     redirect_to root_path
   end
 
+  
   def edit
   end
 
   def update
-    post = Post.find(params[:id])
-    post.update(post_params)
-    redirect_to root_path
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
-  #def show
+  def show
     #@comment = Comment.new
     #@comments = @post.comments.includes(:user)
-  #end
+  end
   
   def search
     @posts = Post.search(params[:keyword])
