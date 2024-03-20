@@ -14,7 +14,7 @@ document.addEventListener('turbo:load', function(){
   // input要素で値の変化が起きた際に呼び出される関数
   fileField.addEventListener('change', function(e){
     // 古いプレビューが存在する場合は削除
-    const alreadyPreview = document.querySelector('.post-previews');
+    const alreadyPreview = document.querySelector('.post-preview');
     if (alreadyPreview) {
       alreadyPreview.remove();
     };
