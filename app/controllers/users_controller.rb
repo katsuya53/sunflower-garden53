@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
     def destroy
       @user = User.find(params[:id])
+      @user.posts.destroy_all  # ユーザーに関連付けられている投稿を削除
       @user.destroy
       redirect_to root_path, notice: "ユーザーが削除されました。"
     end

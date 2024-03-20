@@ -80,6 +80,11 @@
   margin-left: 10px;
 }
 
+.top-flash-message {
+  text-align: center;
+  color:white;
+  margin-left: 50px;
+}
 
 /* タブレット表示時 */
 @media (max-width: 1024px) {
