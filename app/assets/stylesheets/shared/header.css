@@ -50,10 +50,10 @@
 }
 
 .search-form {
-  width: 300px;
+  width: 40%;
   height: 35px;
   display: flex;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 
 .search-form>.input-box {
@@ -96,12 +96,16 @@
    .sign-up {
     margin-left: 30px;
   }
+
+  .top-flash-message {
+    margin-left: 40px;
+    font-size: 15px;
+  }
 }
 
 
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
-
   .header-bar-left {
     height: 30px;
   }
@@ -111,10 +115,9 @@
   }
 
  .search-form {
-   width: 200px;
    height: 20px;
    display: flex;
-   margin-left: 30px;
+   margin-left: 20px;
   }
 
  .search-form>.input-box {
@@ -140,6 +143,11 @@
   .sign-up {
     margin-left: 20px;
   }
+
+  .top-flash-message {
+    font-size: 10px;
+    margin-left: 20px;
+  }
 }
 
 
@@ -155,7 +163,6 @@
   }
   
   .search-form {
-    width: 200px;
     height: 16px;
     display: flex;
     margin-left: 5px;
@@ -185,6 +192,11 @@
   .sign-up {
     margin-left: 10px;
   }
+
+  .top-flash-message {
+    font-size: 8px;
+    margin-left: 10px;
+  }
 }
 
 
@@ -200,7 +212,6 @@
   }
   
   .search-form {
-    width: 150px;
     height: 15px;
     display: flex;
     margin-left: 5px;
