@@ -5,12 +5,13 @@
 }
 
 .btn-area {
+  
   display: flex;
   justify-content: center;
 }
 
 .delete-post-btn {
-  width: 100%;
+  width: 200px;
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;

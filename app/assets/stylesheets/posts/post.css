@@ -30,19 +30,22 @@
 }
 
 .post-btn {
-  width: 50%;
   margin: 0 auto;
+  text-align:center;
 }
 
 .post-green-btn {
-  width: 100%;
-  background-color:green;
+  width: 200px;
+  background-color: green;
   border: 1px solid green;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
 

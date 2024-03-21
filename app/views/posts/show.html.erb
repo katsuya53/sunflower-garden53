@@ -45,9 +45,9 @@
   <% if user_signed_in? && current_user.id == @post.user_id  %>
   <div class="form-group">
     <h2 class='form-bottom-text'>下のボタンから編集できます</h2>
-    <div class='edit-btn'>
-      <%= link_to "編集画面へ", edit_post_path, class: "edit-btn-text" %>
-    </div>
+   
+      <%= link_to "編集画面へ", edit_post_path, class: "post-green-btn" %>
+    
   </div>
   <% else %>
   <% end%>

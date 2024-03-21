@@ -52,8 +52,6 @@
         <h2 class='form-bottom-text'>投稿された内容は後で編集できます</h2>
       <div class='post-btn'>
         <%= f.submit "修正して投稿する", class: "post-green-btn" %>
-
-      
     </div>
     </div>
 
@@ -65,5 +63,5 @@
 <%= button_to "投稿を削除する", post_path(@post), method: :delete, class: "delete-post-btn", onclick: "return confirm('本当に削除しますか？');"  %>
 </div>
 </div>
-
+とう
 <%= render "shared/second-footer" %>

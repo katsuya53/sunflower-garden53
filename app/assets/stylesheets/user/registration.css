@@ -112,10 +112,9 @@
   margin: 0 auto;
 }
 
-.register-red-btn {
+.register-edit-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: blue;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
@@ -135,17 +134,20 @@
 }
 
 .delete-registration-btn {
-  width: 30%;
+  width: 20%;
   height: 50px;
   display: block;
   margin: 50px auto;
   text-align: center;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: white;
+  border-radius: 10px;
 }
 
 .edit-btn {
-  width: 50%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  width: 200px;
+  background: blue;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
