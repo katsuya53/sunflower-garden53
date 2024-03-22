@@ -112,14 +112,15 @@
   margin: 0 auto;
 }
 
-.register-edit-btn {
-  width: 100%;
-  background: blue;
+.register-new-btn {
+  width: 200px;
+  background: red;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 10px;
+  border: none;
 }
 
 .register-info {
@@ -134,7 +135,7 @@
 }
 
 .delete-registration-btn {
-  width: 20%;
+  width: 200px;
   height: 50px;
   display: block;
   margin: 50px auto;
@@ -143,6 +144,7 @@
   border: 1px solid #ea352d;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .edit-btn {
@@ -199,11 +201,6 @@
   
   .form-group {
     width: 70%;
-  }
-
-  .delete-registration-btn {
-    width: 50%;
-    height: 50px;
   }
 }
 
