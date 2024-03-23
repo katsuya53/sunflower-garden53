@@ -1,7 +1,7 @@
 document.addEventListener('turbo:load', function(){
   // 新規投稿・編集ページのフォームを取得し、元のアイコン画像を取得
-  const postForm = document.getElementById('new_post');
-  const userShowImage = document.querySelector('.post-show-image');
+  const postForm = document.getElementById('post-new_post');
+  const userShowImage = document.querySelector('.post-image');
 
   // プレビューを表示するためのスペースを取得
   const previewList = document.getElementById('post-previews');

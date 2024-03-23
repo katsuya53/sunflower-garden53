@@ -1,7 +1,7 @@
 <%= render "shared/second-header" %>
 
 <div class="total-wrapper">
-  <%= form_with model: @user, id: 'new_post', url: user_registration_path, class: 'registration-main', local: true do |f| %>
+  <%= form_with model: @user, id: 'user-new_post', url: user_registration_path, class: 'registration-main', local: true do |f| %>
   <div class='form-wrap'>
     <div class='form-header'>
       <h1 class='form-header-text'>ユーザー新規登録</h1>

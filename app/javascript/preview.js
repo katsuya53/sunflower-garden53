@@ -1,13 +1,13 @@
 document.addEventListener('turbo:load', function(){
   // 新規投稿・編集ページのフォームを取得し、元のアイコン画像を取得
-  const postForm = document.getElementById('new_post');
+  const postForm = document.getElementById('user-new_post');
   const userShowImage = document.querySelector('.user-show-image');
 
   // プレビューを表示するためのスペースを取得
   const previewList = document.getElementById('previews');
 
   // 新規投稿・編集ページのフォームがないならここで終了。「!」は論理否定演算子。
-  if (!postForm) return null;
+  if (!postForm) return;
 
   // input要素を取得
   const fileField = document.querySelector('input[type="file"][name="user[image]"]');
