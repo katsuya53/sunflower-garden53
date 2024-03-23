@@ -52,68 +52,83 @@
 /* TOPページ */
 
 .post-area {
-  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  
 }
 
 .post-contents {
   background-color: white;
   border-radius: 2%;
-  width: 90%;
-  height: 90%;
-  margin: auto;
+  width: 47%;
+  height: 600px;
+  
   margin-top: 20px;
+  margin: 1%;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  align-items: flex-end;
+  
 }
 
 .post-img {
   width: 90%;
-  height: 90%;
+  height: 300px;
   border-radius: 5px 5px 0 0;
   object-fit: cover;
   margin: auto;
+  
 }
 
 .post-title {
   padding-left: 30px;
   padding-top: 20px;
   text-decoration: underline;
-  font-size: 30px;
+  font-size: 140%;
 }
 
 .post-text {
-  font-size: 20px;
+  font-size: 120%;
   padding-left: 20px;
   padding-top: 10px;
   padding-right: 20px;
   margin-bottom: 20px;
+  height: 150px;
+  flex-grow: 1; /* 余白を埋めるために成長 */
+  overflow: hidden; /* はみ出したコンテンツを隠す */
+  text-overflow: ellipsis; /* はみ出したコンテンツを省略記号で表示 */
 }
 
 .post-info {
   display: flex;
   justify-content:flex-end;
+  
 }
 
 .post-poster {
-  font-size: 25px;
+  font-size: 18px;
   margin-right: 20px;
   display: flex;
   align-items: flex-end;
+  text-align:end;
+  
+  align-self: flex-end; /* 自身を一番下に配置 */
 }
 
 .post-date {
-  font-size: 20px;
+  font-size: 12px;
   margin-left: 20px;
 }
 
 .post-san {
   margin-left: 5px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .post-icon-image {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   margin: auto;
   margin-right: 10px;
   object-fit: cover; 
@@ -127,14 +142,14 @@
 }
 
 .iine-icon-image {
-  width: 50px;
+  width: 30px;
   margin: auto;
   margin-left: 10px;
   object-fit: cover; 
 }
 
 .iine-count {
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .search-result-area {
@@ -167,6 +182,10 @@
 
   .post-area {
     padding-bottom: 10px;
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   }
 
   .post-contents {
