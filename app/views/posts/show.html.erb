@@ -6,34 +6,34 @@
       <h1 class='show-form-header-text'>詳細画面</h1>
     </div>
 
-  <div class='show-content'>
+  <div class='post-show-content'>
     <%= image_tag @post.image, class: "post-show-img" %>
    
-    <div class='post-title'>
+    <div class='post-show-title'>
       <%= @post.post_title %>
     </div>
 
-    <div class='post-text'>
+    <div class='post-show-text'>
       <%= @post.post_text %>
     </div>
 
-    <div class= "post-info">
-      <div class='post-poster'>
-        <%= image_tag @post.user.image, class: "post-icon-image" %>
+    <div class= "post-show-info">
+      <div class='post-show-poster'>
+        <%= image_tag @post.user.image, class: "post-show-icon-image" %>
         <%= @post.user.nickname %>
-        <div class="post-san">
+        <div class="post-show-san">
          さん
         </div>
  
-        <div class='post-date'>
+        <div class='post-show-date'>
           <%= @post.created_at.strftime("%Y.%m.%d %H:%M") %>
         </div>
 
-        <div class="iine-area">
-          <div class="iine-icon-image">
+        <div class="show-iine-area">
+          <div class="show-iine-icon-image">
             <%= link_to image_tag("iine.png", class:"iine-img"), "/" %>
           </div>
-          <div class="iine-count">5
+          <div class="show-iine-count">5
           </div>
         </div>
       </div>

@@ -48,6 +48,11 @@
   text-decoration: underline;
 }
 
+
+
+
+
+
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
  .show-form-header-text {
