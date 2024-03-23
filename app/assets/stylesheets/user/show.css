@@ -27,6 +27,14 @@
   padding-bottom: 20px;
 }
 
+.post-show-img {
+  width: 90%;
+  height: 90%;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  margin: auto;
+}
+
 .show-text {
   width: 100%;
   height: 20%;

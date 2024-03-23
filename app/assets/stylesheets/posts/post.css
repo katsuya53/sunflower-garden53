@@ -60,11 +60,11 @@
   background-color: white;
   border-radius: 2%;
   width: 47%;
-  height: 600px;
+  height: 590px;
   margin-top: 20px;
   margin: 1%;
   padding-top: 20px;
-  padding-bottom: 20px;
+  
   align-items: flex-end;
 }
 
@@ -254,6 +254,10 @@
 
 /* スマホ表示時 */
 @media (max-width: 490px) {
+
+  .post-img {
+    height:150px;
+  }
 
   .post-title {
     padding-left: 15px;
