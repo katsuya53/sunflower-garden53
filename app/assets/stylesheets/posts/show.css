@@ -6,10 +6,11 @@
   margin: 1%;
   padding-top: 20px;
   align-items: flex-end;
+  padding-bottom: 20px;
 }
 
 .post-show-img {
-  width: 95%;
+  width: 99%;
   border-radius: 5px 5px 0 0;
   object-fit: cover;
   margin: auto;
@@ -33,11 +34,11 @@
 .post-show-info {
   display: flex;
   justify-content:flex-end;
-  height: 5vh;
+  
 }
 
 .post-show-poster {
-  font-size: 3vw;
+  font-size: 2.5vw;
   margin-right: 20px;
   display: flex;
   align-items: flex-end;
@@ -57,7 +58,6 @@
 
 .post-show-icon-image {
   width: 5vw;
-  
   margin: auto;
   margin-right: 10px;
   object-fit: cover; 
@@ -73,7 +73,7 @@
 .show-iine-icon-image {
   width: 5vw;
   margin: auto;
-  margin-left: 10px;
+  margin-left: 3vw;
   object-fit: cover; 
 }
 
