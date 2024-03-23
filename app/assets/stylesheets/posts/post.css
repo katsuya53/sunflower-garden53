@@ -54,7 +54,6 @@
 .post-area {
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 .post-contents {
@@ -62,14 +61,11 @@
   border-radius: 2%;
   width: 47%;
   height: 600px;
-  
   margin-top: 20px;
   margin: 1%;
   padding-top: 20px;
   padding-bottom: 20px;
-
   align-items: flex-end;
-  
 }
 
 .post-img {
@@ -78,7 +74,6 @@
   border-radius: 5px 5px 0 0;
   object-fit: cover;
   margin: auto;
-  
 }
 
 .post-title {
@@ -103,7 +98,6 @@
 .post-info {
   display: flex;
   justify-content:flex-end;
-  
 }
 
 .post-poster {
@@ -112,7 +106,6 @@
   display: flex;
   align-items: flex-end;
   text-align:end;
-  
   align-self: flex-end; /* 自身を一番下に配置 */
 }
 
@@ -165,6 +158,23 @@
 }
 
 
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .post-poster {
+    font-size: 12px;
+}
+
+
+.post-date {
+  font-size: 6px;
+}
+
+.post-san {
+  font-size: 8px;
+}
+}
+
+
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
 
@@ -183,10 +193,10 @@
   .post-area {
     padding-bottom: 10px;
     display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  }
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    }
 
   .post-contents {
     width: 95%;
@@ -194,11 +204,6 @@
     margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-
-  .post-img {
-    width: 95%;
-    height: 95%;
   }
 
   .post-title {
