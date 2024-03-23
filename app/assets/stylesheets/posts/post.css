@@ -101,7 +101,7 @@
 }
 
 .post-poster {
-  font-size: 18px;
+  font-size: 1.5vw;
   margin-right: 20px;
   display: flex;
   align-items: flex-end;
@@ -110,18 +110,17 @@
 }
 
 .post-date {
-  font-size: 12px;
+  font-size: 1.2vw;
   margin-left: 20px;
 }
 
 .post-san {
   margin-left: 5px;
-  font-size: 15px;
+  font-size: 1vw;
 }
 
 .post-icon-image {
-  width: 30px;
-  height: 30px;
+  width: 3vw;
   margin: auto;
   margin-right: 10px;
   object-fit: cover; 
@@ -135,14 +134,14 @@
 }
 
 .iine-icon-image {
-  width: 30px;
+  width: 3vw;
   margin: auto;
   margin-left: 10px;
   object-fit: cover; 
 }
 
 .iine-count {
-  font-size: 10px;
+  font-size: 1.2vw;
 }
 
 .search-result-area {
