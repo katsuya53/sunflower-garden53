@@ -4,10 +4,10 @@
       <% if current_user.image.attached? %>  <!--アイコン画像の登録がなければサンプル画像を表示-->
         <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' %>
       <% else %>
-        <%= image_tag("user-icon.png", class: "user-icon-img") %>
+        <%= image_tag("user-icon.png", class: "user-noicon-img") %>
       <% end %>
     <% else %>
-      <%= image_tag("user-icon.png", class: "user-icon-img") %>
+      <%= image_tag("user-icon.png", class: "user-noicon-img") %>
     <% end %>
   </div>
 
