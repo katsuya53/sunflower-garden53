@@ -185,7 +185,8 @@
   .post-contents {
     width: 95%;
     height: 95%;
-    margin-top: 10px;
+    margin: auto;
+    margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -239,8 +240,14 @@
 /* スマホ表示時 */
 @media (max-width: 490px) {
 
+  .post-contents {
+    width: 95%;
+    padding-top: 8px;
+  }
+  
   .post-img {
-    height:150px;
+    width: 95%;
+    height: 150px;
   }
 
   .post-title {
