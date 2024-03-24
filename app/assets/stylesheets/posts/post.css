@@ -65,6 +65,7 @@
   margin-left: 15px;
   margin-bottom: 10px;
   padding-top: 15px;
+  padding-bottom: 10px;
   align-items: flex-end;
 }
 
@@ -89,7 +90,7 @@
   padding-top: 10px;
   padding-right: 20px;
   margin-bottom: 20px;
-  height: 170px;
+  height: 160px;
   flex-grow: 1; /* 余白を埋めるために成長 */
   overflow: hidden; /* はみ出したコンテンツを隠す */
   text-overflow: ellipsis; /* はみ出したコンテンツを省略記号で表示 */

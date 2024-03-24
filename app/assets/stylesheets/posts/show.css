@@ -2,8 +2,8 @@
   background-color: white;
   border-radius: 2%;
   width: 95%;
-  margin-top: 20px;
-  margin: 1%;
+  
+  margin: auto;
   padding-top: 20px;
   align-items: flex-end;
   padding-bottom: 20px;
@@ -37,7 +37,7 @@
 }
 
 .post-show-poster {
-  font-size: 22px;
+  font-size: 2vw;
   margin-right: 20px;
   display: flex;
   align-items: flex-end;
@@ -52,7 +52,7 @@
 
 .post-show-san {
   margin-left: 10px;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .post-show-icon-image {
@@ -78,4 +78,31 @@
 
 .show-iine-count {
   font-size: 2vw;
+}
+
+
+/* 幅狭小表示時 */
+@media (max-width: 770px) {
+
+  .post-show-title {
+    font-size: 20px;
+  }
+  
+  .post-show-text {
+    font-size: 18px;
+  }
+  
+}
+
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+
+  .post-show-title {
+    font-size: 16px;
+  }
+  
+  .post-show-text {
+    font-size: 14px;
+  }
 }
