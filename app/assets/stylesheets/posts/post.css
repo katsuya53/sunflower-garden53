@@ -77,18 +77,18 @@
 
 .post-title {
   padding-left: 30px;
-  padding-top: 20px;
+  padding-top: 10px;
   text-decoration: underline;
-  font-size: 140%;
+  font-size: 1.6vw;
 }
 
 .post-text {
-  font-size: 120%;
+  font-size: 1.5vw;
   padding-left: 20px;
   padding-top: 10px;
   padding-right: 20px;
   margin-bottom: 20px;
-  height: 150px;
+  height: 26%;
   flex-grow: 1; /* 余白を埋めるために成長 */
   overflow: hidden; /* はみ出したコンテンツを隠す */
   text-overflow: ellipsis; /* はみ出したコンテンツを省略記号で表示 */
@@ -192,11 +192,9 @@
   .post-title {
     padding-left: 20px;
     padding-top: 10px;
-   
   }
 
   .post-text {
-    
     padding-left: 15px;
     padding-top: 10px;
     padding-right: 15px;
@@ -204,18 +202,15 @@
   }
 
   .post-poster {
-    
     margin-right: 15px;
   }
 
   .post-date {
-    
     margin-left: 15px;
   }
 
   .post-san {
     margin-left: 5px;
-    
   }
 
   .post-icon-image {
@@ -245,11 +240,9 @@
   .post-title {
     padding-left: 15px;
     padding-top: 8px;
-    font-size: 13px;
   }
 
   .post-text {
-    font-size: 12px;
     padding-left: 10px;
     padding-top: 8px;
     padding-right: 10px;

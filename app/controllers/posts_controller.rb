@@ -34,6 +34,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
+      @post.touch # 更新日時を更新
       redirect_to post_path(@post)
     else
       render :edit, status: :unprocessable_entity
