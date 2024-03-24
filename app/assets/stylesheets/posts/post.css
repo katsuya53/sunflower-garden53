@@ -145,20 +145,6 @@
   font-size: 1.2vw;
 }
 
-.search-result-area {
-  background-color: antiquewhite;
-  width: 70%;
-  margin: auto;
-}
-
-.search-result-text {
-  margin-top: 10px;
-  font-size: 20px;
-  text-align: center;
-}
-
-
-
 
 /* 幅狭小表示時 */
 @media (max-width: 770px) {

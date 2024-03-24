@@ -1,36 +1,54 @@
 <%= render "shared/header" %>
 
-<div class="search-result-area">
-<div class="post-area">
+
+<div class="post-show-wrap">
 
   <div class="search-result-text">
-  検索結果です
+  検索結果一覧
   </div>
 
+
   <% @posts.each do |post| %>
-  <div class='post-contents'>
+  
+  <div class='post-search-content'>
     <%= link_to post_path(post) do %>
-      <%= image_tag post.image, class: "post-img" %>
+      <%= image_tag post.image, class: "post-show-img" %>
     <% end %>
-         
-    <div class='post-title'>
+  
+    <div class='post-show-title'>
       <%= post.post_title %>
     </div>
 
-    <div class='post-text'>
+    <div class='post-show-text'>
       <%= post.post_text %>
     </div>
 
-   <div class= "post-info">
-     <span class='post-poster'>
-       <%= post.user.nickname %><span class="post-san">  さん</span>
-     </span>
-     <span class='post-date'>
-       <%= post.created_at.strftime("%Y.%m.%d %H:%M") %>
-      </span>
+    <div class= "post-show-info">
+      <div class='post-show-poster'>
+        <%= image_tag post.user.image, class: "post-show-icon-image" %>
+        <%= post.user.nickname %>
+        <div class="post-show-san">
+         さん
+        </div>
+ 
+        <div class='post-show-date'>
+          <%= post.updated_at.strftime("%Y.%m.%d %H:%M") %>
+        </div>
+
+        <div class="show-iine-area">
+          <div class="show-iine-icon-image">
+            <%= link_to image_tag("iine.png", class:"iine-img"), "/" %>
+          </div>
+          <div class="show-iine-count">5
+          </div>
+        </div>
+      </div>
     </div>
+
+
   </div>
   <% end %>
-</div>
+  
+
 </div>
 <%= render "shared/second-footer" %>
