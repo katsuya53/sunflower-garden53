@@ -1,6 +1,7 @@
 <%= render "shared/second-header" %>
 
 <div class="total-wrapper">
+
   <%= form_with model: @post, id: 'post-new_post', class: 'post-form', url: posts_path, local: true do |f|%>
   <div class='form-wrap'>
     <div class='form-header'>
@@ -47,9 +48,9 @@
 
     <div class="post-form-group">
         <h2 class='form-bottom-text'>投稿された内容は後で編集できます</h2>
-      <div class='post-btn'>
+   
         <%= f.submit "投稿する", class: "post-green-btn" %>
-      </div>
+     
     </div>
 
   </div>

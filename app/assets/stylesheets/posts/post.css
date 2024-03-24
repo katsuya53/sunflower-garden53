@@ -35,17 +35,18 @@
 }
 
 .post-green-btn {
-  width: 200px;
+  width: 160px;
   background-color: green;
   border: 1px solid green;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 10px;
   text-align: center;
   margin: 0 auto;
   text-decoration: none;
+  display: block;
 }
 
 

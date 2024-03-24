@@ -135,7 +135,7 @@
 }
 
 .delete-registration-btn {
-  width: 200px;
+  width: 160px;
   height: 50px;
   display: block;
   margin: 50px auto;
@@ -145,10 +145,11 @@
   color: white;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .edit-btn {
-  width: 200px;
+  width: 160px;
   background: blue;
   color: #fff;
   line-height: 48px;
@@ -156,6 +157,7 @@
   cursor: pointer;
   border-radius: 10px;
   margin: auto;
+  font-size: 16px;
   text-align: center; /* 水平方向の中央揃え */
 }
 

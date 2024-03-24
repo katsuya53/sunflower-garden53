@@ -21,11 +21,11 @@
 }
 
 .delete-post-btn {
-  width: 200px;
+  width: 160px;
   background: #ea352d;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   border-radius: 10px;
   border: none;
