@@ -1,6 +1,6 @@
 .post-show-wrap {
   background-color: antiquewhite;
-  width: 70%;
+  width: 80%;
   margin: auto;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -91,6 +91,10 @@
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
 
+  .post-show-wrap {
+    width: 90%;
+  }
+
   .post-show-title {
     font-size: 20px;
   }
@@ -98,7 +102,6 @@
   .post-show-text {
     font-size: 18px;
   }
-  
 }
 
 
@@ -106,10 +109,34 @@
 @media (max-width: 490px) {
 
   .post-show-title {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .post-show-text {
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .post-show-poster {
+    font-size: 3vw;
+    margin-right: 20px;
+  }
+
+  .post-show-date {
+    font-size: 3vw;
+    margin-left: 20px;
+  }
+
+  .post-show-san {
+    margin-left: 10px;
+    font-size: 2vw;
+  }
+
+  .show-iine-icon-image {
+    width: 6vw;
+    margin-left: 3vw;
+  }
+
+  .show-iine-count {
+    font-size: 3vw;
   }
 }
