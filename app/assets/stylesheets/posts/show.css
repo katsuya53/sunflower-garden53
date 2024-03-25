@@ -108,14 +108,6 @@
 /* スマホ表示時 */
 @media (max-width: 490px) {
 
-  .post-show-title {
-    font-size: 18px;
-  }
-  
-  .post-show-text {
-    font-size: 16px;
-  }
-
   .post-show-poster {
     font-size: 3vw;
     margin-right: 20px;
