@@ -70,15 +70,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-
 }
 
 .menu-item {
   width: 70%;
   margin-bottom: 15px;
 }
-
-
 
 .show-lists {
   width: 50%;
@@ -129,8 +126,8 @@
   cursor:pointer;
   margin: auto;
   border: 1px solid white; /* ボーダーの色と太さ */
- padding: 5px; /* テキストとボーダーの間隔 */
- cursor: pointer;
+  padding: 5px; /* テキストとボーダーの間隔 */
+  cursor: pointer;
 }
 
 /* タブレット表示時 */
@@ -145,7 +142,19 @@
   }
   
   .user-name {
-    margin-left: 10px;
+    font-size: 3vw;
+    margin-left: 3vw;
+  }
+
+  .user-image {
+    width: 10vw;
+    height: 10vw;
+    
+  }
+  
+  .user-noicon-img {
+    width: 100vw;
+    
   }
 
   .menu-title {
@@ -171,7 +180,6 @@
   
   .user-name {
     height: 40px;
-    margin-left: 5px;
   }
 
   .menu-item {

@@ -22,6 +22,7 @@ function pullDown() {
       pullDownParents.classList.add("hide-lists"); // アニメーションクラスを追加
       pullDownParents.addEventListener('animationend', function onAnimationEnd() {
         pullDownParents.classList.add("hidden"); // アニメーションが終了したら非表示にする
+        pullDownParents.classList.remove("hide-lists"); // アニメーションクラスを削除
         pullDownParents.removeEventListener('animationend', onAnimationEnd); // ハンドラを削除
       });
     }
@@ -38,5 +39,7 @@ function pullDown() {
   });
 }
 
+// ページが完全に読み込まれた後にpullDown関数を呼び出す
 
-window.addEventListener('load', pullDown);
+window.addEventListener('turbo:load', pullDown);
+window.addEventListener("render", pullDown);
