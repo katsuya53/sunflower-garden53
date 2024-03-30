@@ -3,10 +3,12 @@
 }
 
 .menu-btn {
-position: absolute;
-width: 15vw;
-top: 20px; /* 上側の余白を追加 */
+  display: none;
+  position: absolute;
+  width: 15vw;
+  top: 20px; /* 上側の余白を追加 */
   right: 20px; /* 右側の余白を追加 */
+  border-radius: 10%;
 }
 
 .header-wrapper {
@@ -113,6 +115,12 @@ top: 20px; /* 上側の余白を追加 */
 
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
+  
+  .menu-btn {
+    display:block;
+  }
+
+  
   .header-bar-left {
     height: 30px;
   }
@@ -170,7 +178,6 @@ top: 20px; /* 上側の余白を追加 */
     padding: 2px; /* テキストとボーダーの間隔 */
     cursor: pointer;
    }
-
 }
 
 
@@ -211,7 +218,7 @@ top: 20px; /* 上側の余白を追加 */
   }
   
   .user-link {
-    font-size: 10px;
+    font-size: 3vw;
   }
   
   .sign-up {
@@ -251,7 +258,6 @@ top: 20px; /* 上側の余白を追加 */
     width: 28px;
   }
   
-
   .search-icon {
     height: 12px;
     width: 12px;
@@ -261,10 +267,6 @@ top: 20px; /* 上側の余白を追加 */
   .search-text {
     font-size: 10px;
     margin-left: 8px;
-  }
-  
-  .user-link {
-    font-size: 8px;
   }
   
   .sign-up {
