@@ -32,16 +32,16 @@
  align-items: center;
 }
 
+.menu-text {
+ display: none;
+}
+
 .logout {
  color: white;
 }
 
 .login {
   color: white;
-}
-
-.log-in-box {
-  justify-content: left;
 }
 
 .sign-up {
@@ -154,6 +154,16 @@
     font-size: 10px;
     margin-left: 20px;
   }
+
+  .menu-text {
+    display: block;
+    color: white;
+    margin-right: 2vw;
+    border: 1px solid white; /* ボーダーの色と太さ */
+    padding: 2px; /* テキストとボーダーの間隔 */
+    cursor: pointer;
+   }
+
 }
 
 

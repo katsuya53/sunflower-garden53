@@ -70,6 +70,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+
 }
 
 .menu-item {
@@ -77,6 +78,60 @@
   margin-bottom: 15px;
 }
 
+
+
+.show-lists {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 22vh; /* 画面上部に配置 */
+  right: 0; /* 画面右端に配置 */
+  background-color: antiquewhite;
+  animation: slideInRight 0.5s ease-in-out; /* slideInRightアニメーションを適用 */
+}
+
+.hide-lists {
+  animation: slideOutRight 0.5s ease-in-out; /* slideOutRightアニメーションを適用 */
+  animation-fill-mode: forwards; /* アニメーションが終了した後も最終スタイルを維持 */
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0; /* 開始時は完全に透明 */
+    transform: translateX(100%); /* 右端からスタート */
+  }
+  100% {
+    opacity: 1; /* 終了時は完全に不透明 */
+    transform: translateX(0); /* 左端まで移動 */
+  }
+}
+
+.hide-lists {
+  animation: slideOutRight 0.5s ease-in-out; /* slideOutRightアニメーションを適用 */
+}
+
+@keyframes slideOutRight {
+  0% {
+    opacity: 1; /* 開始時は完全に不透明 */
+    transform: translateX(0); /* 左端にある状態から開始 */
+  }
+  100% {
+    opacity: 0; /* 終了時は完全に透明 */
+    transform: translateX(100%); /* 右端に移動して非表示に */
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.close-menu {
+  cursor:pointer;
+  margin: auto;
+  border: 1px solid white; /* ボーダーの色と太さ */
+ padding: 5px; /* テキストとボーダーの間隔 */
+ cursor: pointer;
+}
 
 /* タブレット表示時 */
 @media (max-width: 1024px) {
