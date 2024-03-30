@@ -2,6 +2,13 @@
   width : 100vw;
 }
 
+.menu-btn {
+position: absolute;
+width: 15vw;
+top: 20px; /* 上側の余白を追加 */
+  right: 20px; /* 右側の余白を追加 */
+}
+
 .header-wrapper {
   display: flex;
   align-items: center;

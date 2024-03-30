@@ -27,9 +27,7 @@
         
         <% if user_signed_in? %>
 
-        <div class="menu-text" id="menu">
-          メニュー
-        </div>
+       
 
         <%= link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete } ,class: "logout" %>
         <% else %>
