@@ -1,18 +1,18 @@
 
 <div class="show-lists hidden" id="pull-down">
   
-<div class="user-area">
-  <div class="user-icon-area">
-    <% if user_signed_in? %>  <!--ログインしていなければサンプル画像を表示-->
-      <% if current_user.image.attached? %>  <!--アイコン画像の登録がなければサンプル画像を表示-->
-        <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' %>
+  <div class="user-area">
+    <div class="user-icon-area">
+      <% if user_signed_in? %>  <!--ログインしていなければサンプル画像を表示-->
+        <% if current_user.image.attached? %>  <!--アイコン画像の登録がなければサンプル画像を表示-->
+          <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' %>
+        <% else %>
+          <%= image_tag("user-icon.png", class: "user-noicon-img") %>
+        <% end %>
       <% else %>
         <%= image_tag("user-icon.png", class: "user-noicon-img") %>
       <% end %>
-    <% else %>
-      <%= image_tag("user-icon.png", class: "user-noicon-img") %>
-    <% end %>
-  </div>
+    </div>
 
     <div class="user-name">
       <% if user_signed_in? %>  <!--ログインしていなければ ゲストさん と表示-->
@@ -21,31 +21,31 @@
         ゲストさん
       <% end %>
     </div>
-</div>
+  </div>
 
-<div class="menu-title">
-  menu
-</div>
+  <div class="menu-title">
+    menu
+  </div>
 
-<div class="menu-list">
-  <div class="menu-item">
-    <%= link_to image_tag("icon-post.png", class: "icon-post-img"), new_post_path %>
+  <div class="menu-list">
+    <div class="menu-item">
+      <%= link_to image_tag("icon-post.png", class: "icon-post-img"), new_post_path %>
+    </div>
+    <div class="menu-item">
+      <%= link_to image_tag("icon-calendar.png", class: "icon-calendar-img"), "/" %>
+    </div>
+    <div class="menu-item">
+      <%= link_to image_tag("icon-diary.png", class: "icon-diary-img"), "/" %>
+    </div>
+    <div class="menu-item">
+      <%= link_to image_tag("icon-today.png", class: "icon-today-img"), "/" %>
+    </div>
+    <div class="menu-item">
+      <%= link_to image_tag("icon-weather.png", class: "icon-weather-img"), "/" %>
+    </div>
+    <div class="menu-item">
+      <%= link_to image_tag("icon-camera.png", class: "icon-camera-img"), "/" %>
+    </div>
   </div>
-  <div class="menu-item">
-    <%= link_to image_tag("icon-calendar.png", class: "icon-calendar-img"), "/" %>
-  </div>
-  <div class="menu-item">
-    <%= link_to image_tag("icon-diary.png", class: "icon-diary-img"), "/" %>
-  </div>
-  <div class="menu-item">
-    <%= link_to image_tag("icon-today.png", class: "icon-today-img"), "/" %>
-  </div>
-  <div class="menu-item">
-    <%= link_to image_tag("icon-weather.png", class: "icon-weather-img"), "/" %>
-  </div>
-  <div class="menu-item">
-    <%= link_to image_tag("icon-camera.png", class: "icon-camera-img"), "/" %>
-  </div>
-</div>
 
 </div>
