@@ -66,17 +66,20 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  config.action_mailer.raise_delivery_errors = true
+  
 
+  
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.mail.yahoo.co.jp',
-    port:                 465, # YahooメールのSMTPポート番号は465です
-    domain:               'yahoo.co.jp',
-    user_name:            'redstar53h@yahoo.co.jp', # あなたのYahooメールのアドレス
-    password:             'yahoo-0844', # あなたのYahooメールのパスワード
-    authentication:       :login, # YahooメールのSMTP認証方式は:loginです
-    ssl:                  true # SSL通信を使用するためにtrueを指定します
+    port:                 587,
+    address:              'smtp.gmail.com',
+    domain:               'gmail.com',
+    user_name:            'redstar53hk@gmail.com',
+    password:             'eyhu chni sgwr ehow',
+    authentication:       'login',
+    enable_starttls_auto: true
+  
   }
 
   config.action_mailer.default_url_options = { host: '54.65.201.13' }
