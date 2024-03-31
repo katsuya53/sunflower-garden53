@@ -81,8 +81,7 @@ Rails.application.configure do
     enable_starttls_auto: true
   
   }
-
-  config.action_mailer.default_url_options = { host: '54.65.201.13' }
+  config.action_mailer.default_url_options = { protocol: 'https', host:'54.65.201.13'}
 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
