@@ -75,13 +75,14 @@ Rails.application.configure do
     port:                 587,
     address:              'smtp.gmail.com',
     domain:               'gmail.com',
-    user_name:            ENV["GMAIL_USERNAME"],
-    password:             ENV["GMAIL_PASSWORD"],
+    user_name:            'redstar53hk@gmail.com',
+    password:             'eyhu chni sgwr ehow',
     authentication:       'login',
     enable_starttls_auto: true
   
   }
-  config.action_mailer.default_url_options = { protocol: 'http', host:'54.65.201.13'}
+
+  config.action_mailer.default_url_options = { host: '54.65.201.13' }
 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
