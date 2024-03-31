@@ -144,6 +144,7 @@
 
 .iine-count {
   font-size: 1.2vw;
+  margin-left: 1vw;
 }
 
 
@@ -177,6 +178,11 @@
     margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  .post-img {
+    width: 90%;
+    height: 500px;
   }
 
   .post-title {
