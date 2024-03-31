@@ -105,31 +105,38 @@
   }
 }
 
+.post-show-poster {
+  font-size: 3vw;
+  margin-right: 20px;
+}
+
+.post-show-date {
+  font-size: 3vw;
+  margin-left: 20px;
+}
+
+.post-show-san {
+  margin-left: 10px;
+  font-size: 2vw;
+}
+
+.post-show-icon-image {
+  width: 8vw;
+  margin-right: 10px;
+}
+
+.show-iine-icon-image {
+  width: 8vw;
+  margin-left: 3vw;
+}
+
+.show-iine-count {
+  font-size: 4vw;
+  margin-left: 1vw;
+}
 
 /* スマホ表示時 */
 @media (max-width: 490px) {
 
-  .post-show-poster {
-    font-size: 3vw;
-    margin-right: 20px;
-  }
-
-  .post-show-date {
-    font-size: 3vw;
-    margin-left: 20px;
-  }
-
-  .post-show-san {
-    margin-left: 10px;
-    font-size: 2vw;
-  }
-
-  .show-iine-icon-image {
-    width: 6vw;
-    margin-left: 3vw;
-  }
-
-  .show-iine-count {
-    font-size: 3vw;
-  }
+  
 }
