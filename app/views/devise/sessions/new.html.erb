@@ -33,8 +33,15 @@
     <div class='login-btn'>
       <%= f.submit "ログイン" ,class:"login-red-btn" %>
     </div>
+    <%= link_to "パスワードを忘れた?", password_reset_path, class: 'link-secondary d-inline-block ms-3' %>
+  
+  
   </div>
+  
   <% end %>
+
+  
+
 </div>
 
 <%= render "shared/second-footer"%>

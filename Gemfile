@@ -56,6 +56,8 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'letter_opener_web'
 end
 
 group :development do
@@ -80,7 +82,6 @@ group :production do
 end
 gem 'devise'
 gem 'active_hash'
-gem 'importmap-rails'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'rails-i18n'

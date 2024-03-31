@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><%= @user.nickname %>様</p>
+    <p>
+      パスワードリセットのご申請ありがとございます。
+      下のリンクをクリックし、パスワードをリセットする画面が表示されますので、新しいパスワードを設定してください。
+      ※パスワードリセットはメール受信後から「15分以内」に行ってください。
+    </p>
+    <p><%= link_to "パスワードをリセットする", password_reset_edit_url(token: @token) %></p>
+  </body>
+</html>
