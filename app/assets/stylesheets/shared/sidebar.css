@@ -81,7 +81,7 @@
   width: 50%;
   height: auto;
   position: absolute;
-  top: 40vh; /* 画面上部に配置 */
+  top: 0; /* 画面上部に配置 */
   right: 0; /* 画面右端に配置 */
   background-color:lemonchiffon;
   animation: slideInRight 0.5s ease-in-out; /* slideInRightアニメーションを適用 */
@@ -164,10 +164,6 @@
 
 /* スマホ表示時 */
 @media (max-width: 490px) {
-
-  .show-lists {
-    top: 22vh; /* 画面上部に配置 */
-  }
 
   .user-area {
     height: 40px;
