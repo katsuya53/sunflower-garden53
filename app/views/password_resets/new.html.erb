@@ -1,7 +1,25 @@
-<%= form_with url: password_reset_path do |form| %>
-  <div class="form-group">
+<%= render "shared/third-header" %>
+ 
+<div class="user-reset-wrap">
+
+    <div class='show-form-header'>
+      <h1 class='show-form-header-text'>パスワード再設定</h1>
+    </div>
+   
+    <%= form_with url: password_reset_path do |form| %>
+   
+
+  <div class="user-reset-group">
     <%= form.label :email %>
-    <%= form.text_field :email, placeholder: "user@example.com", class: "form-control mb-3"  %>
+    <%= form.text_field :email, placeholder: "user@example.com" , class:"reset-email-form" %>
   </div>
-  <%= form.submit 'パスワードリセットを申請する', class:'btn btn-primary' %>
-<% end %>
+
+  <div class="reset-text">
+    新規登録時のメールアドレスを入力して下さい
+    </div>
+
+  <%= form.submit 'パスワードリセットを申請', class:'pass-reset-btn' %>
+  <% end %>
+</div>
+
+<%= render "shared/second-footer" %>

@@ -1,3 +1,9 @@
+<div class="search-text">検索
+        <span class='top-flash-message'>  <!-- エラーや通知を白字で表示 -->
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+        </span>
+      </div>
 <%= form_with model: @user, url: password_reset_edit_path(token: params[:token]) do |form| %>
   <% if form.object.errors.any? %>
     <div class="alert alert-danger">
