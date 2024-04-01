@@ -1,10 +1,17 @@
-<div class="search-text">検索
+<%= render "shared/third-header" %>
+ 
+<div class="user-reset-wrap">
+
+    <div class='show-form-header'>
+      <h1 class='show-form-header-text'>パスワード再設定</h1>
+    </div>
+   
         <span class='top-flash-message'>  <!-- エラーや通知を白字で表示 -->
           <%= flash[:notice] %>
           <%= flash[:alert] %>
         </span>
-      </div>
-<%= form_with model: @user, url: password_reset_edit_path(token: params[:token]) do |form| %>
+      
+  <%= form_with model: @user, url: password_reset_edit_path(token: params[:token]) do |form| %>
   <% if form.object.errors.any? %>
     <div class="alert alert-danger">
       <% form.object.errors.full_messages.each do |message|  %>
@@ -24,3 +31,7 @@
   </div>
   <%= form.submit "パスワードをリセットする", class:'btn btn-primary' %>
 <% end %>
+
+</div>
+
+<%= render "shared/second-footer" %>
