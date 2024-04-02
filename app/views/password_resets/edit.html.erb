@@ -6,28 +6,24 @@
       <h1 class='show-form-header-text'>パスワード再設定</h1>
     </div>
    
-        <span class='top-flash-message'>  <!-- エラーや通知を白字で表示 -->
-          <%= flash[:notice] %>
-          <%= flash[:alert] %>
-        </span>
+       
       
   <%= form_with model: @user, url: password_reset_edit_path(token: params[:token]) do |form| %>
-  <% if form.object.errors.any? %>
-    <div class="alert alert-danger">
-      <% form.object.errors.full_messages.each do |message|  %>
-        <div>
-          <%= message %>
-        </div>
-      <% end  %>
-    </div>
-  <% end %>
-  <div class="form-group">
+  
+   <span class='error-message'>  <!-- エラーや通知を白字で表示 -->
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+          <%= flash[:success] %>
+          <%= flash[:danger] %>
+        </span>
+        
+    <div class="user-reset-group">
     <%= form.label :password %>
-    <%= form.password_field :password, placeholder: "Enter your new password", class: "reset-email-form"  %>
+    <%= form.password_field :password, placeholder: "パスワードを入力", class: "reset-email-form"  %>
   </div>
-  <div class="form-group">
+    <div class="user-reset-group">
     <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation, placeholder: "パスワードをもう一度入力してください", class: "reset-email-form"  %>
+    <%= form.password_field :password_confirmation, placeholder: "パスワードをもう一度入力", class: "reset-email-form"  %>
   </div>
   <%= form.submit "パスワードをリセットする", class:'pass-reset-btn' %>
 <% end %>

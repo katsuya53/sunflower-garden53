@@ -86,5 +86,5 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
-  config.action_mailer.default_url_options = { host: '54.65.201.13' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 end
