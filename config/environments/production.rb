@@ -78,7 +78,7 @@ Rails.application.configure do
     user_name:            Rails.application.credentials.gmail[:user_name],
     password:             Rails.application.credentials.gmail[:password],
     authentication:       'login',
-    enable_starttls_auto: true
+    enable_starttls_auto: true 
   }
 
   config.action_mailer.default_url_options = { host: 'http://54.65.201.13' }
