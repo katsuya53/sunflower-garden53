@@ -2,6 +2,11 @@ function pullDown() {
   const pullDownButton = document.getElementById("menu");
   const pullDownParents = document.getElementById("pull-down");
 
+  if (!pullDownButton || !pullDownParents) {
+    // メニューボタンやプルダウンメニューが存在しない場合は処理を中断
+    return;
+  }
+  
   pullDownButton.addEventListener('click', function() {
     // プルダウンメニューの表示と非表示の設定
     if (pullDownParents.classList.contains("hidden")) {

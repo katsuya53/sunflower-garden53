@@ -13,8 +13,9 @@ class PasswordResetsController < ApplicationController
           redirect_to root_path
           flash[:success] = "パスワードリセットメールを送りました。"
       else
+          flash[:danger] = "メールアドレスが見つかりませんでした。"
           render :new
-          flash[:danger] = "メールアドレスを見つかりませんでした。"
+          flash.now[:reload_page] = true  # ページのリロードをトリガーするためのフラグを設定
       end
   end
 
@@ -28,13 +29,13 @@ end
 def update
     @user = User.find_signed!(params[:token], purpose: "password_reset")
     if @user.update(password_params)
-       redirect_to root_path
-       flash[:success] = "パスワードをリセットしました。"
+      redirect_to root_path
+      flash[:success] = "パスワードをリセットしました。"
     else
-        render :edit
-        flash[:danger] = "メールアドレスが見つかりませんでした。"
+      flash[:danger] = "パスワードのリセットに失敗しました。"
+      render :edit
     end
-end
+  end
 
 private
 
