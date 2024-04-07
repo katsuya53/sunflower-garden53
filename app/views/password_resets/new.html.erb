@@ -6,15 +6,14 @@
       <h1 class='show-form-header-text'>パスワード再設定</h1>
     </div>
 
-<span class='error-message'>  <!-- エラーや通知を表示 -->
-          <%= flash[:notice] %>
-          <%= flash[:alert] %>
-          <%= flash[:success] %>
-          <%= flash[:danger] %>
-        </span>
+  <span class='error-message'>  <!-- エラーや通知を表示 -->
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+    <%= flash[:success] %>
+    <%= flash[:danger] %>
+  </span>
 
-    <%= form_with url: password_reset_path do |form| %>
-   
+  <%= form_with url: password_reset_path do |form| %>
 
   <div class="user-reset-group">
     <%= form.label :email %>

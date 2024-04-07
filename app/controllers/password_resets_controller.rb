@@ -13,9 +13,8 @@ class PasswordResetsController < ApplicationController
           redirect_to root_path
           flash[:success] = "パスワードリセットメールを送りました。"
       else
+          redirect_to password_reset_path
           flash[:danger] = "メールアドレスが見つかりませんでした。"
-          render :new
-          flash.now[:reload_page] = true  # ページのリロードをトリガーするためのフラグを設定
       end
   end
 
@@ -32,8 +31,9 @@ def update
       redirect_to root_path
       flash[:success] = "パスワードをリセットしました。"
     else
-      flash[:danger] = "パスワードのリセットに失敗しました。"
-      render :edit
+        
+        flash[:danger] = "パスワードのリセットに失敗しました。"
+        render :edit
     end
   end
 
