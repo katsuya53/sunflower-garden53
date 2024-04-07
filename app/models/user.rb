@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_one_attached :image
 
   validates :prefecture_id, presence: { message: "を選択してください" }, numericality: { other_than: 1, message: "を選択してください" }
-  validates :nickname, presence: { message: "を入力してください" }
+  validates :nickname, presence: { message: "を入力してください" }, uniqueness: { message: "はすでに使用されています" }
   validate :password_presence
 
   private
