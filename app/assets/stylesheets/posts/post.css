@@ -181,7 +181,7 @@
 
   .post-img {
     width: 90%;
-    height: 500px;
+    height: 50%;
   }
 
   .post-title {
@@ -199,13 +199,13 @@
   }
 
   .post-poster {
-    font-size: 3vw;
+    font-size: 4vw;
     margin-right: 15px;
   }
 
   .post-date {
     margin-left: 15px;
-    font-size: 2.4vw;
+    font-size: 2.8vw;
   }
 
   .post-san {
@@ -253,6 +253,7 @@
   }
 
   .post-poster {
+    font-size: 4vw;
     margin-right: 10px;
   }
 
@@ -265,13 +266,13 @@
   }
 
   .post-icon-image {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
   }
 
   .iine-icon-image {
-    width: 20px;
+    width: 30px;
     margin-left: 5px;
   }
 }

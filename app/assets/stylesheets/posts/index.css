@@ -1,5 +1,5 @@
 .index-bg {
-  background-color:seagreen;
+  background-color: #98fb98;
 }
 
 .wrapper {
@@ -7,7 +7,7 @@
 }
 
 .main-index {
-  background-color:lightgreen;
+  background-color: #98fb98;
   width: calc(70%);
   height: 1200px;
   overflow: scroll;
