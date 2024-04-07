@@ -12,10 +12,12 @@
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+ 
 }
 
 .footer-link {
   color: #FFF;
+  font-size: 22px;
 }
 
 /* スマホ表示時 */
