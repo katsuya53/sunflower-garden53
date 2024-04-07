@@ -113,14 +113,17 @@
 }
 
 .register-new-btn {
-  width: 200px;
-  background: red;
-  color: #fff;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
+  width: 170px;
+  height: 50px;
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+  background: #ea352d;
+  border:none;
+  color: white;
   border-radius: 10px;
-  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .register-info {
