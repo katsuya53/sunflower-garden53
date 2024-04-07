@@ -184,36 +184,40 @@
 /* スマホ表示時 */
 @media (max-width: 490px) {
 
+  .header-wrapper {
+    height: 35px;
+  }
+
   .header-bar-left {
-    height: 20px;
+    height: 30px;
   }
 
   .header-bar-right {
-    height: 20px;
+    height: 30px;
   }
   
   .search-form {
-    height: 16px;
+    height: 26px;
     display: flex;
     margin-left: 5px;
   }
   
   .search-form>.input-box {
     width: 100%;
-    height: 16px;
-    font-size: 12px;
+    height: 26px;
+    font-size: 14px;
     padding-left: 10px;
   }
  
   .search-icon {
     height: 15px;
     width: 15px;
-    transform: translate(0%, -40%);
+    transform: translate(0%, -20%);
   }
   
   .search-text {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     margin-left: 10px;
   }
   
@@ -235,23 +239,12 @@
 /* 最小スマホ表示時 */
 @media (max-width: 370px) {
 
-  .header-bar-left {
-    height: 20px;
-  }
-  
-  .header-bar-right {
-    height: 20px;
-  }
-  
   .search-form {
-    height: 15px;
-    display: flex;
     margin-left: 5px;
   }
   
   .search-form>.input-box {
     width: 100%;
-    height: 15px;
   }
   
   .search-button {
@@ -261,11 +254,11 @@
   .search-icon {
     height: 12px;
     width: 12px;
-    transform: translate(0%, -50%);
+    transform: translate(0%, -10%);
   }
 
   .search-text {
-    font-size: 10px;
+    font-size: 14px;
     margin-left: 8px;
   }
   
