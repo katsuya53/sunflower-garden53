@@ -10,14 +10,17 @@
 }
 
 .register-edit-btn {
-  width: 200px;
   background: blue;
-  color: #fff;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
+  width: 170px;
+  height: 50px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  border:none;
+  color: white;
   border-radius: 10px;
-  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .delete-post-btn {
