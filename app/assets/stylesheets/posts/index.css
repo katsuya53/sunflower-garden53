@@ -9,7 +9,7 @@
 .main-index {
   background-color:lightgreen;
   width: calc(70%);
-  height: 1000px;
+  height: 1200px;
   overflow: scroll;
   position: relative;
 }
@@ -17,7 +17,7 @@
 .side-bar {
   background-color:lemonchiffon;
   width: calc(30%);
-  height: 1000px;
+  height: 1200px;
 }
 
 .side-bar-hidden {
@@ -55,6 +55,7 @@
   .main-index {
     height: 800px;
     width: 100vw;
+    margin-left: 0; /* サイドバーの幅分のマージンを除去 */
   }
   
   .side-bar {
@@ -62,7 +63,7 @@
   }
 
   .side-bar-hidden {
-    height: 800px;
+    height: 1000px;
     width: calc(30%);
   }
 
