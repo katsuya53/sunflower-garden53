@@ -1,0 +1,71 @@
+.comment-wrap {
+  width: 90%;
+  border-radius: 3%;
+  margin: auto;
+}
+
+
+.comment-header {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 50px;
+}
+
+.comment-header-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.comment-box {
+  width: 80%;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.comment-text {
+  font-size: 20px;
+}
+
+.comment-info {
+  font-size: 15px;
+  color: darkgrey;
+}
+
+.comment-warn {
+  padding: 10px;
+  
+  margin: 10px 0px;
+  text-align: left;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+}
+
+.comment-btn {
+  background-color:darkorange;
+  width: 220px;
+  height: 60px;
+  display: flex; /* 追加 */
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  border:none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.comment-flag {
+  display: flex;
+  justify-content: center;
+}
+
+.comment-flag-icon {
+  width: 30px;
+  height: 35px;
+  margin-right: 10px;
+}

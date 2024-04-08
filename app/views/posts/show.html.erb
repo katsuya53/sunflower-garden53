@@ -42,19 +42,56 @@
       </div>
     </div>
 
+    <ul class="comments_lists">
+      <% @comments.each do |comment| %>
+        <li class="comments_list">
+          <%= comment.comment_text %><br>
+          (by <%= comment.user.nickname %>さん - <%= comment.created_at.strftime("%Y.%m.%d %H:%M") %>)<br>
+          <br>
+        </li>
+      <% end %>
+    </ul>
+
   </div>
 
   <%# ログインした投稿者のみ編集ボタンが表示 %>
-  <% if user_signed_in? && current_user.id == @post.user_id  %>
-  <div class="form-group">
-    <h2 class='form-bottom-text'>下のボタンから編集できます</h2>
+    <% if user_signed_in? && current_user.id == @post.user_id  %>
+    <div class="form-group">
+      <h2 class='form-bottom-text'>下のボタンから投稿を編集できます</h2>
    
-      <%= link_to "編集画面へ", edit_post_path, class: "post-green-btn" %>
+        <%= link_to "編集画面へ", edit_post_path, class: "post-green-btn" %>
+    
+    </div>
+    <% else %>
+    <% end%>
+
+  <div class="comment-wrap">
+    <div class="comment-box">
+      <% if user_signed_in? %>
+        <%= form_with(model: [@post, @comment], local: true, class: "comment-form") do |f| %>
+          <div class="comment-field">
+            <%= f.label :comment_text, "感想や質問などコメントできます" %>
+            <%= f.text_area :comment_text, id: "comment-form", rows: 1, style: "width: 100%;" %>
+          </div>
+          <p class="comment-warn">
+            相手のことを考え丁寧なコメントを心がけましょう。
+          </p>
+
+          <div class="comment-actions">
+            <%= f.button class: 'comment-btn' do %>
+            <div class="comment-flag-icon">
+              <%= image_tag("comment.png") %>
+            </div>
+            <div class="comment-text">コメントする</div>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
     
   </div>
-  <% else %>
-  <% end%>
-
 </div>
+
+
 
 <%= render "shared/second-footer" %>
