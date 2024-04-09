@@ -95,7 +95,7 @@
 }
 
 .comment-btn {
-  background-color:darkorange;
+  background-color:#e0ffff;
   width: 200px;
   height: 60px;
   display: flex;
@@ -103,8 +103,8 @@
   align-items: center;
   margin: auto;
   text-align: center;
-  border:none;
-  color: white;
+  border-radius: 0.5px;
+  
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
