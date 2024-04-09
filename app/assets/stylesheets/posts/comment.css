@@ -1,14 +1,17 @@
 .comment-wrap {
   width: 90%;
   border-radius: 3%;
+  justify-content: center;
+  align-items: center;
   margin: auto;
+  text-align: center;
+  background-color:antiquewhite;
 }
-
 
 .comment-header {
   text-align: center;
   font-size: 22px;
-  margin-top: 50px;
+  
 }
 
 .comment-header-text {
@@ -23,40 +26,40 @@
 }
 
 .comment-content {
-background-color:antiquewhite;
-border-radius: 10px;
-margin: 1vw;
-padding: 2vw;
-width: 80%;
+  background-color:antiquewhite;
+  border-radius: 10px;
+  margin: 1vw;
+  padding-left: 20px;
+  padding-right: 20pxs;
+  padding-bottom: 10px;
+  width: 95%;
 }
-
 
 .comment-info {
   display: flex;
-
 }
 
 .comment-poster {
-  font-size: 2vw;
+  font-size: 1.7vw;
   margin-right: 10px;
   display: flex;
   align-items: flex-end;
   text-align: end;
-  align-self: flex-end; /* 自身を一番下に配置 */
+  align-self: flex-end;
 }
 
 .comment-date {
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-left: 10px;
 }
 
 .comment-san {
   margin-left: 5px;
-  font-size: 1.7vw;
+  font-size: 1vw;
 }
 
 .comment-icon-image {
-  width: 2vw;
+  width: 2.5vw;
   margin: auto;
   margin-right: 10px;
   object-fit: cover; 
@@ -65,7 +68,8 @@ width: 80%;
 }
 
 .comment-text {
-  font-size: 2vw;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .comment-info {
@@ -82,13 +86,15 @@ width: 80%;
 .comment-actions {
   display: flex;
   align-items: center;
+  justify-content: center;
+  
 }
 
 .comment-btn {
   background-color:darkorange;
-  width: 220px;
+  width: 200px;
   height: 60px;
-  display: flex; /* 追加 */
+  display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -107,6 +113,7 @@ width: 80%;
 
 .comment-flag-icon {
   width: 30px;
-  height: 35px;
+  height: 30px;
+  margin-left: 10px;
   margin-right: 10px;
 }

@@ -41,46 +41,44 @@
         </div>
       </div>
     </div>
-
+  <div>
     
-      <% @comments.each do |comment| %>
-  <div class="comment-content">
-     <div class="comment-text">
-      <%= comment.comment_text %>
-          </div>
-    <div class= "comment-info">
-      <div class='comment-poster'>
-       <%= image_tag comment.user.image, class: "comment-icon-image" %>
-       <%= comment.user.nickname %>
-      <div class="comment-san">
-         さん
-      </div>
-      <div class='comment-date'>
-          <%= @post.updated_at.strftime("%Y/%m/%d %H:%M") %>
-      </div>
-    </div>
-  </div>
-        
-          
-        
-       
-        </div>
-      <% end %>
-    
-
-  </div>
 
   <%# ログインした投稿者のみ編集ボタンが表示 %>
     <% if user_signed_in? && current_user.id == @post.user_id  %>
     <div class="form-group">
       <h2 class='form-bottom-text'>下のボタンから投稿を編集できます</h2>
-   
         <%= link_to "編集画面へ", edit_post_path, class: "post-green-btn" %>
-    
     </div>
     <% else %>
     <% end%>
 
+
+
+      <% @comments.each do |comment| %>
+  <div class="comment-content">
+    <div class="comment-header">
+      コメント一覧
+    </div>
+      <div class="comment-text">
+        <%= comment.comment_text %>
+      </div>
+    <div class= "comment-info">
+      <div class='comment-poster'>
+         <%= image_tag comment.user.image, class: "comment-icon-image" %>
+         <%= comment.user.nickname %>
+        <div class="comment-san">
+         さん
+        </div>
+        <div class='comment-date'>
+          <%= @post.updated_at.strftime("%Y/%m/%d %H:%M") %>
+        </div>
+      </div>
+    </div>
+  </div>
+      <% end %>
+
+    
   <div class="comment-wrap">
     <div class="comment-box">
       <% if user_signed_in? %>
@@ -98,7 +96,9 @@
             <div class="comment-flag-icon">
               <%= image_tag("comment.png") %>
             </div>
-            <div class="comment-text">コメントする</div>
+            <div class="comment-btn-text">
+              コメントする
+            </div>
             <% end %>
           </div>
         <% end %>
