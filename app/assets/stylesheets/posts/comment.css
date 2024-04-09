@@ -26,11 +26,13 @@
 }
 
 .comment-content {
-  background-color:antiquewhite;
+  background-color:white;
   border-radius: 10px;
-  margin: 1vw;
+  margin: 20px 20px 20px 20px;
+
+  
   padding-left: 20px;
-  padding-right: 20pxs;
+  padding-right: 20px;
   padding-bottom: 10px;
   width: 95%;
 }

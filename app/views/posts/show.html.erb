@@ -41,10 +41,10 @@
         </div>
       </div>
     </div>
-  <div>
-    
+   
+  </div>
 
-  <%# ログインした投稿者のみ編集ボタンが表示 %>
+   <%# ログインした投稿者のみ編集ボタンが表示 %>
     <% if user_signed_in? && current_user.id == @post.user_id  %>
     <div class="form-group">
       <h2 class='form-bottom-text'>下のボタンから投稿を編集できます</h2>
@@ -54,9 +54,9 @@
     <% end%>
 
 
-
-      <% @comments.each do |comment| %>
   <div class="comment-content">
+      <% @comments.each do |comment| %>
+  
     <div class="comment-header">
       コメント一覧
     </div>
@@ -75,10 +75,10 @@
         </div>
       </div>
     </div>
-  </div>
+  
       <% end %>
-
-    
+  
+    </div>
   <div class="comment-wrap">
     <div class="comment-box">
       <% if user_signed_in? %>
