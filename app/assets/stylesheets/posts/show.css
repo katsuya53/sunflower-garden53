@@ -86,6 +86,7 @@
 
 .show-iine-count {
   font-size: 2vw;
+  margin-left: 1vw;
 }
 
 
@@ -103,7 +104,7 @@
   .post-show-text {
     font-size: 18px;
   }
-}
+
 
 .post-show-poster {
   font-size: 3vw;
@@ -132,11 +133,6 @@
 
 .show-iine-count {
   font-size: 4vw;
-  margin-left: 1vw;
 }
 
-/* スマホ表示時 */
-@media (max-width: 490px) {
-
-  
 }
