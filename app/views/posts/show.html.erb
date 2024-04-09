@@ -42,15 +42,31 @@
       </div>
     </div>
 
-    <ul class="comments_lists">
+    
       <% @comments.each do |comment| %>
-        <li class="comments_list">
-          <%= comment.comment_text %><br>
-          (by <%= comment.user.nickname %>さん - <%= comment.created_at.strftime("%Y.%m.%d %H:%M") %>)<br>
-          <br>
-        </li>
+  <div class="comment-content">
+     <div class="comment-text">
+      <%= comment.comment_text %>
+          </div>
+    <div class= "comment-info">
+      <div class='comment-poster'>
+       <%= image_tag comment.user.image, class: "comment-icon-image" %>
+       <%= comment.user.nickname %>
+      <div class="comment-san">
+         さん
+      </div>
+      <div class='comment-date'>
+          <%= @post.updated_at.strftime("%Y/%m/%d %H:%M") %>
+      </div>
+    </div>
+  </div>
+        
+          
+        
+       
+        </div>
       <% end %>
-    </ul>
+    
 
   </div>
 
