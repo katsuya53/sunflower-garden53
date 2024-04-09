@@ -1,6 +1,5 @@
 .comment-wrap {
   width: 80%;
-  border-radius: 10px;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -13,6 +12,9 @@
 .comment-header {
   text-align: center;
   font-size: 22px;
+  font-weight: bold;
+  color: blue;
+  margin-bottom: 10px;
   
 }
 
@@ -28,13 +30,13 @@
 }
 
 .comment-content {
-  background-color:white;
+  background-color:#e0ffff;
   border-radius: 10px;
   margin: 20px 20px 20px 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
-  width: 90%;
+  
 }
 
 .comment-info {
@@ -127,4 +129,14 @@
 .comment-wrap {
   width: 90%;
 }
+}
+
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+
+  .comment-header {
+    font-size: 16px;
+    
+  }
 }
