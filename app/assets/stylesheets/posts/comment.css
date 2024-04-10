@@ -52,7 +52,7 @@
 }
 
 .comment-poster {
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 10px;
   display: flex;
   align-items: flex-end;
@@ -61,8 +61,8 @@
 }
 
 .comment-date {
-  font-size: 15px;
-  margin-left: 10px;
+  font-size: 10px;
+  margin-left: 0.8vw;
 }
 
 .comment-san {
@@ -77,7 +77,7 @@
   object-fit: cover; 
   border-radius: 50%;
   border: 1px solid black;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 .comment-text {
@@ -92,7 +92,6 @@
 
 .comment-warn {
   padding: 10px;
-  
   margin: 10px 0px;
   text-align: left;
 }
