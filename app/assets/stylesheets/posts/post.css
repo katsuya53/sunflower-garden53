@@ -150,6 +150,10 @@
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
 
+  .post-form-group {
+    width: 80%;
+  }
+
   .search-result-area {
     background-color: antiquewhite;
     width: 70%;
