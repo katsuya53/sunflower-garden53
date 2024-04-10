@@ -53,23 +53,25 @@
     <% else %>
     <% end%>
 
-  <div class="comment-content">
+  <div class="comment-contents">
     <div class="comment-header">
       コメント一覧
     </div>
-      <% @comments.each do |comment| %>
+    <% @comments.each do |comment| %>
+    <div class="comment-content">
       <div class="comment-text">
         <%= comment.comment_text %>
       </div>
-    <div class= "comment-info">
-      <div class='comment-poster'>
-         <%= image_tag comment.user.image, class: "comment-icon-image" %>
-         <%= comment.user.nickname %>
-        <div class="comment-san">
-         さん
-        </div>
-        <div class='comment-date'>
-          <%= comment.updated_at.strftime("%Y/%m/%d %H:%M") %>
+      <div class= "comment-info">
+        <div class='comment-poster'>
+           <%= image_tag comment.user.image, class: "comment-icon-image" %>
+           <%= comment.user.nickname %>
+          <div class="comment-san">
+           さん
+          </div>
+          <div class='comment-date'>
+            <%= comment.updated_at.strftime("%Y/%m/%d %H:%M") %>
+          </div>
         </div>
       </div>
     </div>
