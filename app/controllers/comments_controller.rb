@@ -20,6 +20,15 @@ class CommentsController < ApplicationController
     end
   end
 
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    puts "@comment: #{@comment.inspect}" # デバッグ情報を出力
+    @comment.destroy
+    redirect_to post_path(@comment.post)
+  end
+
+
   private
 
   def set_post

@@ -1,13 +1,12 @@
+<% editable_comments = @comments.select { |comment| user_signed_in? && current_user.id == comment.user_id } %>
 
-  <%= render "shared/second-header" %>
- 
+<%= render "shared/second-header" %>
+
 <div class="post-show-wrap">
-
   <%= render "side_bar_hidden" %>
-
-    <div class='show-form-header'>
-      <h1 class='show-form-header-text'>詳細画面</h1>
-    </div>
+  <div class='show-form-header'>
+    <h1 class='show-form-header-text'>詳細画面</h1>
+  </div>
 
   <div class='post-show-content'>
     <%= image_tag @post.image, class: "post-show-img" %>
@@ -59,36 +58,41 @@
       コメント一覧
     </div>
     <% @comments.each do |comment| %>
-    <div class="comment-content">
-      <div class="comment-text">
-        <%= comment.comment_text %>
-      </div>
-      <div class= "comment-info">
-        <div class='comment-poster'>
-           <%= image_tag comment.user.image, class: "comment-icon-image" %>
-           <%= comment.user.nickname %>
-          <div class="comment-san">
-           さん
-          </div>
-          <div class='comment-date'>
-            <%= comment.updated_at.strftime("%Y/%m/%d") %>
+      <div class="comment-content">
+        <% if editable_comments.include?(comment) %>
+          
+            
+          
+        
+        <div class="comment-text">
+          <%= comment.comment_text %>
+        </div>
+        <div class= "comment-info">
+          <div class='comment-poster'>
+            <%= image_tag comment.user.image, class: "comment-icon-image" %>
+            <%= comment.user.nickname %>
+            <div class="comment-san">
+             さん
+            </div>
+            <div class='comment-date'>
+              <%= comment.updated_at.strftime("%Y/%m/%d") %>
+            </div>
+            <%= link_to "編集", edit_comment_path(comment), class: "" %>
           </div>
         </div>
+        <% end %>
       </div>
-      </div>
-      <% end %>
+    <% end %>
   </div>
 
-    <%# ログインしたコメント投稿者のみ編集ボタンが表示 %>
-    <% editable_comments = @comments.select { |comment| user_signed_in? && current_user.id == comment.user_id } %>
-<% if editable_comments.any? %>
-  <div class="form-group">
-    <h2 class='form-bottom-text'>下のボタンからコメントを編集できます</h2>
-    <%= link_to "コメント編集", edit_comment_path(editable_comments.first), class: "post-green-btn" %>
-  </div>
-<% end %>
+  <%# ログインしたコメント投稿者のみ編集ボタンが表示 %>
+  <% if editable_comments.any? %>
+    <div class="form-group">
+      <h2 class='form-bottom-text'>下のボタンからコメントを編集できます</h2>
+      <%= link_to "コメント編集", edit_comment_path(editable_comments.first), class: "post-green-btn" %>
+    </div>
+  <% end %>
   
-    
   <div class="comment-wrap">
     <div class="comment-box">
       <% if user_signed_in? %>
