@@ -6,7 +6,7 @@
       <h1 class='show-form-header-text'>コメント編集画面</h1>
     </div>
 
-  <%= form_with model: @comment, id: 'post-new_post', class: 'post-edit-form', url: comment_path(@comment), local: true, method: :patch do |f|%>
+  <%= form_with model: @comment, id: 'comment-new_post', class: 'post-edit-form', url: comment_path(@comment), local: true, method: :patch do |f|%>
   <div class='form-wrap'>
     
     <%= render 'layouts/error_messages', model: @comment %> <!-- エラーメッセージ  -->

@@ -1,43 +1,49 @@
 class CommentsController < ApplicationController
-  before_action :set_post, only: [:edit]
+  before_action :set_comment, only: [:edit, :update, :destroy]
+  before_action :set_post, only: [:create, :update, :destroy]  # set_post を destroy アクションでも使用する
   
   def create
-    comment = Comment.create(comment_params)
-    redirect_to "/posts/#{comment.post.id}"
+    @comment = Comment.new(comment_params)
+    if @comment.save
+      redirect_to post_path(@post)
+    else
+      redirect_to root_path, alert: "Failed to create comment."
+    end
   end
-
 
   def edit
   end
 
   def update
-    @comment = Comment.find(params[:id])
     if @comment.update(comment_params)
       @comment.touch # 更新日時を更新
-      redirect_to post_path(@comment.post)
+      redirect_to post_path(@post)
     else
       render :edit, status: :unprocessable_entity
     end
   end
 
-
   def destroy
-    @comment = Comment.find(params[:id])
-    puts "@comment: #{@comment.inspect}" # デバッグ情報を出力
     @comment.destroy
-    redirect_to post_path(@comment.post)
+    redirect_to post_path(@post)
   end
-
 
   private
 
-  def set_post
+  # コメントの情報を取得するメソッドを追加
+  def set_comment
     @comment = Comment.find(params[:id])
   end
 
-
+  def set_post
+    if params[:post_id].present?
+      @post = Post.find(params[:post_id])  # コメントが関連付けられるpostを取得
+    else
+      @post = @comment.post
+    end
+  end
+  
   def comment_params
-    comment = Comment.find(params[:id])  # 更新しようとしているコメントを取得
-    params.require(:comment).permit(:comment_text).merge(user_id: current_user.id, post_id: comment.post_id)
+    params.require(:comment).permit(:comment_text).merge(user_id: current_user.id, post_id: @post.id)
   end
 end

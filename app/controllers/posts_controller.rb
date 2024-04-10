@@ -47,12 +47,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    @comment = Comment.new
-    @comments = @post.comments.includes(:user)
-    @comment_count = @comments.count
+    @post = Post.find(params[:id])
+  @comment = Comment.new
+  @comments = @post.comments.includes(:user)
+  @comment_count = @comments.count
   
-    # コメントの編集ボタンを表示するための情報を取得
-  @editable_comments = @comments.select { |comment| comment.user_id == current_user.id }
+  # コメントの編集ボタンを表示するための情報を取得
+  if user_signed_in?
+    @editable_comments = @comments.select { |comment| comment.user_id == current_user.id }
+  else
+    @editable_comments = []
+  end
 end
   
   def search
