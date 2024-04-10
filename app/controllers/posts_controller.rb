@@ -5,6 +5,11 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @posts = Post.includes(:user).order("created_at DESC")
+    @comment_count = {} # コメント数を格納するハッシュを初期化
+    @posts.each do |post|
+      @comment_count[post.id] = post.comments.count # 各投稿のコメント数を取得しハッシュに格納
+    end
+  
   end
 
   def new
@@ -44,6 +49,7 @@ class PostsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
+    @comment_count = @comments.count
   end
   
   def search

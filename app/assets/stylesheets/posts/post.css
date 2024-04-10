@@ -111,7 +111,7 @@
 }
 
 .post-date {
-  font-size: 1.2vw;
+  font-size: 1vw;
   margin-left: 10px;
 }
 
@@ -135,15 +135,15 @@
 }
 
 .iine-icon-image {
-  width: 3vw;
+  width: 2.5vw;
   margin: auto;
-  margin-left: 10px;
+  margin-left: 0.5vw;
   object-fit: cover; 
 }
 
 .iine-count {
   font-size: 1.2vw;
-  margin-left: 1vw;
+  margin-left: 0.5vw;
 }
 
 
