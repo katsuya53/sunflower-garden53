@@ -53,13 +53,11 @@
     <% else %>
     <% end%>
 
-
-  
-      <% @comments.each do |comment| %>
   <div class="comment-content">
     <div class="comment-header">
       コメント一覧
     </div>
+      <% @comments.each do |comment| %>
       <div class="comment-text">
         <%= comment.comment_text %>
       </div>
