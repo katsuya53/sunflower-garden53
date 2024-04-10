@@ -49,7 +49,7 @@
     <% if user_signed_in? && current_user.id == @post.user_id  %>
     <div class="form-group">
       <h2 class='form-bottom-text'>下のボタンから投稿を編集できます</h2>
-        <%= link_to "編集画面へ", edit_post_path, class: "post-green-btn" %>
+        <%= link_to "投稿編集", edit_post_path, class: "post-green-btn" %>
     </div>
     <% else %>
     <% end%>
@@ -75,11 +75,20 @@
           </div>
         </div>
       </div>
-    </div>
-  
+      </div>
       <% end %>
+  </div>
+
+    <%# ログインしたコメント投稿者のみ編集ボタンが表示 %>
+    <% editable_comments = @comments.select { |comment| user_signed_in? && current_user.id == comment.user_id } %>
+<% if editable_comments.any? %>
+  <div class="form-group">
+    <h2 class='form-bottom-text'>下のボタンからコメントを編集できます</h2>
+    <%= link_to "コメント編集", edit_comment_path(editable_comments.first), class: "post-green-btn" %>
+  </div>
+<% end %>
   
-    </div>
+    
   <div class="comment-wrap">
     <div class="comment-box">
       <% if user_signed_in? %>

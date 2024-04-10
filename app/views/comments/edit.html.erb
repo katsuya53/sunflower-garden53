@@ -1,0 +1,48 @@
+<%= render "shared/third-header" %>
+
+<div class="show-wrap">
+  
+    <div class='show-form-header'>
+      <h1 class='show-form-header-text'>コメント編集画面</h1>
+    </div>
+
+  <%= form_with model: @comment, id: 'post-new_post', class: 'post-edit-form', url: comment_path(@comment), local: true, method: :patch do |f|%>
+  <div class='form-wrap'>
+    
+    <%= render 'layouts/error_messages', model: @comment %> <!-- エラーメッセージ  -->
+    
+    
+    
+    <%# 文章入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">コメント</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :comment_text, class:"comment_text", id:"comment-text", placeholder:"文章（必須 200文字まで)" ,rows:"4" ,maxlength:"200" %>
+    </div>
+    
+    <%# 注意書き %>
+    <div class="caution">
+        他人が不快と思われるような投稿はやめましょう。
+    </div>
+
+    <%# 下部ボタン %>
+
+    <div class="post-form-group">
+        <h2 class='form-bottom-text'>投稿された内容は後で編集できます</h2>
+      <div class='post-btn'>
+        <%= f.submit "修正して投稿する", class: "post-green-btn" %>
+    </div>
+    </div>
+
+    
+
+  </div>
+  <% end %>
+<div class= "btn-area">
+<%= button_to "投稿を削除する", comment_path(@comment), method: :delete, class: "delete-post-btn", onclick: "return confirm('本当に削除しますか？');"  %>
+</div>
+</div>
+
+<%= render "shared/second-footer" %>

@@ -50,7 +50,10 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
     @comment_count = @comments.count
-  end
+  
+    # コメントの編集ボタンを表示するための情報を取得
+  @editable_comments = @comments.select { |comment| comment.user_id == current_user.id }
+end
   
   def search
     @posts = Post.search(params[:keyword])
