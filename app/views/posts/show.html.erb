@@ -51,11 +51,14 @@
     <% else %>
     <% end%>
 
-  <div class="comment-contents">
+    <% if @comments.blank? %>
+    <% else %>
+    <div class="comment-contents">
     <div class="comment-header">
       コメント一覧
     </div>
-    
+    <% end %>
+
     <% editable_comments = @comments.select { |comment| user_signed_in? && current_user.id == comment.user_id } %>
 
     <% @comments.each do |comment| %>

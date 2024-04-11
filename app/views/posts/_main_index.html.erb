@@ -23,13 +23,17 @@
    
     <div class='post-poster'>
        <%= image_tag post.user.image, class: "post-icon-image" %>
-       <%= post.user.nickname %>
-      <div class="post-san">
-         さん
-      </div>
- 
-      <div class='post-date'>
-        <%= post.updated_at.strftime("%Y/%m/%d") %>
+
+      <div class="post-poster-info">
+         <%= post.user.nickname %>
+        <span class="post-san">
+           さん
+        </span>
+
+       <div class='post-date'>
+          <%= post.updated_at.strftime("%Y/%m/%d") %>
+        </div>
+
       </div>
 
         <div class="comment-count-icon">

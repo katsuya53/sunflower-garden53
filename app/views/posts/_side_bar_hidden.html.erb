@@ -5,18 +5,18 @@
     <div class="user-icon-area">
       <% if user_signed_in? %>  <!--ログインしていなければサンプル画像を表示-->
         <% if current_user.image.attached? %>  <!--アイコン画像の登録がなければサンプル画像を表示-->
-          <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' %>
+          <%= image_tag current_user.image.variant(resize: '100x100'), class: 'hidden-user-image' %>
         <% else %>
-          <%= image_tag("user-icon.png", class: "user-noicon-img") %>
+          <%= image_tag("user-icon.png", class: "hidden-user-noicon-img") %>
         <% end %>
       <% else %>
-        <%= image_tag("user-icon.png", class: "user-noicon-img") %>
+        <%= image_tag("user-icon.png", class: "hidden-user-noicon-img") %>
       <% end %>
     </div>
 
     <div class="user-name">
       <% if user_signed_in? %>  <!--ログインしていなければ ゲストさん と表示-->
-        <%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %>
+        <%= link_to current_user.nickname, user_path(current_user), class: "hidden-user-name" %>
       <% else %>
         ゲストさん
       <% end %>

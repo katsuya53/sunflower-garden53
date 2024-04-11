@@ -110,9 +110,16 @@
   align-self: flex-end; /* 自身を一番下に配置 */
 }
 
+.post-poster-info {
+display: block;
+justify-self: left;
+  text-align: left;
+  margin-right: 1vw;
+}
+
 .post-date {
   font-size: 1vw;
-  margin-left: 10px;
+  justify-items: left;
 }
 
 .post-san {
@@ -121,7 +128,7 @@
 }
 
 .post-icon-image {
-  width: 3vw;
+  width: 4vw;
   margin: auto;
   margin-right: 10px;
   object-fit: cover; 
