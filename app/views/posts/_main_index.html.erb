@@ -1,62 +1,62 @@
 <div class="main-index-wrap">
   <div class="main-title">
-  みんなの投稿
-</div>
+    みんなの投稿
+  </div>
 
-<%= render "side_bar_hidden" %>
+  <%= render "side_bar_hidden" %>
 
-<div class="post-area">
-  <% @posts.each do |post| %>
-  <div class='post-contents'>
-    <%= link_to post_path(post) do %>
-      <%= image_tag post.image, class: "post-img" %>
-    <% end %>
+  <div class="post-area">
+    <% @posts.each do |post| %>
+    <div class='post-contents'>
+      <%= link_to post_path(post) do %>
+        <%= image_tag post.image, class: "post-img" %>
+      <% end %>
          
-    <div class='post-title'>
-      <%= post.post_title %>
-    </div>
+      <div class='post-title'>
+        <%= post.post_title %>
+      </div>
 
-    <div class='post-text'>
-      <%= post.post_text %>
-    </div>
+      <div class='post-text'>
+       <%= post.post_text %>
+      </div>
 
    
-    <div class='post-poster'>
-       <%= image_tag post.user.image, class: "post-icon-image" %>
+      <div class="post-poster-wrap">
 
-      <div class="post-poster-info">
-         <%= post.user.nickname %>
-        <span class="post-san">
-           さん
-        </span>
+        <div class='post-poster-image'>
+         <%= image_tag post.user.image, class: "post-icon-image" %>
+        </div>
 
-       <div class='post-date'>
-          <%= post.updated_at.strftime("%Y/%m/%d") %>
+        <div cklass="post-poster-user">
+          <%= post.user.nickname %>
+          <span class="post-san">さん</span>
+
+          <div class='post-date'>
+            <%= post.updated_at.strftime("%Y/%m/%d") %>
+          </div>
+
+        </div>
+
+          <div class="comment-count-icon">
+             <div class="comment-count-sum">
+               <%= @comment_count[post.id] %>
+             </div>
+             <%= image_tag("comment.png") %>
+          </div>
+
+        <div class="iine-area">
+          <div class="iine-icon-image">
+            <%= link_to image_tag("iine.png", class:"iine-img"), "/" %>
+          </div>
+          <div class="iine-count">5
+          </div>
         </div>
 
       </div>
-
-        <div class="comment-count-icon">
-           <div class="comment-count-sum">
-         <%= @comment_count[post.id] %>
-           </div>
-           <%= image_tag("comment.png") %>
-        </div>
-
-      <div class="iine-area">
-        <div class="iine-icon-image">
-          <%= link_to image_tag("iine.png", class:"iine-img"), "/" %>
-        </div>
-        <div class="iine-count">5
-        </div>
-      </div>
-
     
-
     </div>
-  </div>
-  <% end %>
+    <% end %>
 
-</div>
+  </div>
 
 </div>

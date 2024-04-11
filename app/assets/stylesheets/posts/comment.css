@@ -131,16 +131,16 @@
 }
 
 .comment-count-icon {
-  width: 3vw;
+  width: 4vw;
   margin-left: 10px;
   margin-right: 10px;
   position: relative;
 }
 
 .comment-count-sum {
-  font-size: 1vw;
+  font-size: 1.5vw;
   position: absolute; /* 追加 */
-  transform: translate(170%, 60%);
+  transform: translate(150%, 50%);
   z-index: 1; /* 任意の値。他の要素よりも大きな値に設定すると、要素が前面に表示されます。 */
 }
 
@@ -151,18 +151,17 @@
   width: 90%;
 }
 
-
 .comment-count-icon {
-  width: 8vw;
-  margin-left: 10px;
+  width: 12vw;
+  margin-left: 30px;
   margin-right: 10px;
   position: relative;
 }
 
 .comment-count-sum {
-  font-size: 3vw;
+  font-size: 4vw;
   position: absolute; /* 追加 */
-  transform: translate(150%, 50%);
+  transform: translate(160%, 60%);
 }
 }
 

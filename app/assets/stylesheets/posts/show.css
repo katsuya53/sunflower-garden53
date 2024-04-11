@@ -39,28 +39,28 @@
   margin-bottom: 20px;
 }
 
-.post-show-info {
-  display: flex;
-  justify-content:flex-end;
+.post-show-poster-user {
+  font-size: 2vw;
+  margin-right: 20px;
+  display: block;
 }
 
-.post-show-poster {
-  font-size: 2.5vw;
+.post-show-poster-wrap {
+  font-size: 1.5vw;
   margin-right: 20px;
   display: flex;
   align-items: flex-end;
-  text-align: end;
-  align-self: flex-end; /* 自身を一番下に配置 */
+  align-self: flex-end;
+  justify-content: flex-end; 
 }
 
 .post-show-date {
-  font-size: 2vw;
-  margin-left: 20px;
-  margin-right: 10px;
+  font-size: 1.5vw;
+  justify-items: left;
 }
 
 .post-show-san {
-  margin-left: 10px;
+  margin-left: 5px;
   font-size: 1.5vw;
 }
 
@@ -105,34 +105,33 @@
     font-size: 18px;
   }
 
+  .post-show-poster-user {
+    font-size: 3vw;
+  }
 
-.post-show-poster {
-  font-size: 3vw;
-  margin-right: 20px;
-}
+  .post-show-poster-wrap {
+    font-size: 3vw;
+  }
 
-.post-show-date {
-  font-size: 3vw;
-  margin-left: 20px;
-}
+  .post-show-date {
+    font-size: 2vw;
+  }
 
-.post-show-san {
-  margin-left: 10px;
-  font-size: 2vw;
-}
+  .post-show-san {
+    font-size: 2vw;
+  }
 
-.post-show-icon-image {
-  width: 8vw;
-  margin-right: 10px;
-}
+  .post-show-icon-image {
+    width: 8vw;
+  }
 
-.show-iine-icon-image {
-  width: 8vw;
-  margin-left: 3vw;
-}
 
-.show-iine-count {
-  font-size: 4vw;
-}
+  .show-iine-icon-image {
+    width: 8vw;
+    }
+
+  .show-iine-count {
+    font-size: 3vw;
+  }
 
 }
