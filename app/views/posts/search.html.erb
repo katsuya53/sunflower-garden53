@@ -25,26 +25,34 @@
       <%= post.post_text %>
     </div>
 
-    <div class= "post-show-info">
-      <div class='post-show-poster'>
+
+    <div class="post-show-poster-wrap">
+
+        <div class='post-show-poster-image'>
         <%= image_tag post.user.image, class: "post-show-icon-image" %>
-        <%= post.user.nickname %>
-        <div class="post-show-san">
-         さん
-        </div>
- 
-        <div class='post-show-date'>
-          <%= post.updated_at.strftime("%Y/%m/%d %H:%M") %>
         </div>
 
-        <div class="show-iine-area">
+        <div class="post-show-poster-user">
+
+            <%= post.user.nickname %>
+            <span class="post-show-san">さん</span>
+
+            <div class='post-show-date'>
+              <%= post.updated_at.strftime("%Y/%m/%d") %>
+            </div>
+
+        </div>
+ 
+      
+
+      <div class="show-iine-area">
           <div class="show-iine-icon-image">
             <%= link_to image_tag("iine.png", class:"iine-img"), "/" %>
           </div>
           <div class="show-iine-count">5
           </div>
-        </div>
       </div>
+      
     </div>
 
 
