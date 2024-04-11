@@ -111,8 +111,8 @@
 }
 
 .post-poster-info {
-display: block;
-justify-self: left;
+  display: block;
+  justify-self: left;
   text-align: left;
   margin-right: 1vw;
 }
@@ -277,13 +277,10 @@ justify-self: left;
   }
 
   .post-icon-image {
-    width: 30px;
-    height: 30px;
     margin-right: 10px;
   }
 
   .iine-icon-image {
-    width: 30px;
     margin-left: 5px;
   }
 }
