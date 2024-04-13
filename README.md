@@ -140,3 +140,13 @@
 ### Association
 
 - has_many :records, through: :users
+
+
+## contacts テーブル
+
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| name      | string     | null: false                    |
+| email     | string     | null: false                    |
+| subject   | string     | null: false                    |
+| message   | text       | null: false                    |
