@@ -113,7 +113,7 @@
   align-items: center;
   margin: auto;
   text-align: center;
-  border-radius: 0.5px;
+  border-width: 1px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
