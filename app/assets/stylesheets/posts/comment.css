@@ -139,7 +139,6 @@
 
 .comment-count-sum {
   font-size: 1.5vw;
-  position: absolute; /* 追加 */
   transform: translate(160%, 50%);
   z-index: 1; /* 任意の値。他の要素よりも大きな値に設定すると、要素が前面に表示されます。 */
 }
@@ -160,8 +159,7 @@
 
 .comment-count-sum {
   font-size: 4vw;
-  position: absolute; /* 追加 */
-  transform: translate(160%, 60%);
+  transform: translate(180%, 60%);
 }
 }
 
