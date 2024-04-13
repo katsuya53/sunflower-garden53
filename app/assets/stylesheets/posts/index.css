@@ -53,7 +53,7 @@
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
   .main-index {
-    height: 800px;
+    height: 1000px;
     width: 100vw;
     margin-left: 0; /* サイドバーの幅分のマージンを除去 */
   }
@@ -78,7 +78,7 @@
 /* スマホ表示時 */
 @media (max-width: 490px) {
   .main-index {
-    height: 520px;
+    height: 750px;
   }
   
   .side-bar-hidden {
@@ -98,7 +98,7 @@
 /* 最小スマホ表示時 */
 @media (max-width: 370px) {
   .main-index {
-    height: 500px;
+    height: 600px;
   }
   
   .side-bar-hidden {
