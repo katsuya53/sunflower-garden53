@@ -100,7 +100,7 @@
   padding-bottom: 100px;
   position: absolute;
   z-index: 9999;
-  top: 0; /* 画面上部に配置 */
+  top:  38vW; /* 画面上部に配置 */
   right: 0; /* 画面右端に配置 */
   background-color:lemonchiffon;
   animation: slideInRight 0.5s ease-in-out; /* slideInRightアニメーションを適用 */
