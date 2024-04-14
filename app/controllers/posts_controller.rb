@@ -76,10 +76,6 @@ end
 
   private
 
-#  def post_params
-#    params.require(:post).permit(:image, :post_title, :post_text).merge(user_id: current_user.id)
-#  end
-
   def post_form_params
     params.require(:post_form).permit(:image, :post_title, :post_text, :tag_name).merge(user_id: current_user.id)
   end
