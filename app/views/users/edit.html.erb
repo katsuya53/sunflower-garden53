@@ -14,7 +14,7 @@
         <% if current_user.image.attached? %> <!-- アイコン画像の添付がなければサンプル画像を表示  -->
             <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-show-image' %>
         <% else %>
-            <%= image_tag 'user-icon.png', class: 'user-sample-image', alt: 'サンプル画像' %>
+            <%= image_tag 'user-icon.png', class: 'user-show-image', alt: 'サンプル画像' %>
         <% end %>
       </div>
     </div>

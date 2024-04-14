@@ -7,10 +7,11 @@ document.addEventListener('turbo:load', function(){
   const previewList = document.getElementById('post-previews');
 
   // 新規投稿・編集ページのフォームがないならここで終了。「!」は論理否定演算子。
-  if (!postForm) return null;
+  if (!postForm) return;
 
   // input要素を取得
-  const fileField = document.querySelector('input[type="file"][name="post[image]"]');
+  const fileField = document.querySelector('input[type="file"][id="post-image"]');
+
   // input要素で値の変化が起きた際に呼び出される関数
   fileField.addEventListener('change', function(e){
     // 古いプレビューが存在する場合は削除

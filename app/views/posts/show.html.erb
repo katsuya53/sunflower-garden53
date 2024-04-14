@@ -108,7 +108,7 @@
         <%= form_with(model: Comment.new, url: post_comments_path(@post), local: true, class: "comment-form") do |f| %>
           <div class="comment-field">
             <%= f.label :comment_text, "感想や質問などコメントできます" %>
-            <%= f.text_area :comment_text, id: "comment-form", rows: 1, style: "width: 100%;" %>
+            <%= f.text_area :comment_text, rows: 1, style: "width: 100%;" %>
           </div>
           <p class="comment-warn">
             相手のことを考え丁寧なコメントを心がけましょう。
