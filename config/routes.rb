@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :comments
     collection do
       get 'search'
+      get 'search_tag'
     end
   end
 

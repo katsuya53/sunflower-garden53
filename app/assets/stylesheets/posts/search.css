@@ -17,6 +17,18 @@
   padding-bottom: 20px;
 }
 
+#search-result{
+  width: 30%;
+}
+
+.child{
+  margin: 5px;
+  border: 1px solid #dedede;
+  background-color: #F4F4F4;
+  padding: 5px;
+  font-size: 12px;
+}
+
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
 

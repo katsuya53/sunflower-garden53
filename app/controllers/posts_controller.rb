@@ -73,6 +73,12 @@ end
     @posts = Post.search(params[:keyword])
   end
 
+  def search_tag
+    return nil if params[:keyword] == ""
+    tag = Tag.where(['tag_name LIKE ?', "%#{params[:keyword]}%"] )
+    render json:{ keyword: tag }
+  end
+
 
   private
 
