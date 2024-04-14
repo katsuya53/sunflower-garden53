@@ -6,7 +6,7 @@
       <h1 class='show-form-header-text'>投稿編集画面</h1>
     </div>
 
-  <%= form_with model: @post, id: 'post-new_post', class: 'post-edit-form', url: post_path(@post), local: true, method: :patch do |f|%>
+  <%= form_with model: @post_form, id: 'post-new_post', class: 'post-edit-form', url: post_path(@post), local: true, method: :patch do |f|%>
   <div class='form-wrap'>
     
     <%= render 'layouts/error_messages', model: @post %> <!-- エラーメッセージ  -->
@@ -39,6 +39,15 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :post_text, class:"post_text", id:"post-text", placeholder:"文章（必須 200文字まで)" ,rows:"4" ,maxlength:"200" %>
+    </div>
+    
+    <%# タグ入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">タグ（キーワード）</label>
+        <span class="indispensable">必須(10字以内)</span>
+      </div>
+      <%= f.text_area :tag_name, class:"post_tag", id:"post-tag", placeholder:"例：鉢植え、赤、家庭菜園など" ,rows:"1" ,maxlength:"10" %>
     </div>
     
     <%# 注意書き %>

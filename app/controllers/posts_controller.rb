@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:edit, :show]
+  before_action :set_post, only: [:edit, :show, :update]
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
@@ -13,12 +13,13 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post_form = PostForm.new
   end
 
   def create
-    @post = Post.new(post_params)
-    if @post.save
+     @post_form = PostForm.new(post_form_params)
+    if @post_form.valid?
+      @post_form.save
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
@@ -32,14 +33,22 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
-  
   def edit
+    # @postから情報をハッシュとして取り出し、@post_formとしてインスタンス生成する
+    post_attributes = @post.attributes
+    @post_form = PostForm.new(post_attributes)
+    @post_form.tag_name = @post.tags.first&.tag_name
   end
 
   def update
-    @post = Post.find(params[:id])
-    if @post.update(post_params)
-      @post.touch # 更新日時を更新
+    # paramsの内容を反映したインスタンスを生成する
+    @post_form = PostForm.new(post_form_params)
+
+    # 画像を選択し直していない場合は、既存の画像をセットする
+    @post_form.image ||= @post.image.blob
+
+    if @post_form.valid?
+      @post_form.update(post_form_params, @post)
       redirect_to post_path(@post)
     else
       render :edit, status: :unprocessable_entity
@@ -67,8 +76,12 @@ end
 
   private
 
-  def post_params
-    params.require(:post).permit(:image, :post_title, :post_text).merge(user_id: current_user.id)
+#  def post_params
+#    params.require(:post).permit(:image, :post_title, :post_text).merge(user_id: current_user.id)
+#  end
+
+  def post_form_params
+    params.require(:post_form).permit(:image, :post_title, :post_text, :tag_name).merge(user_id: current_user.id)
   end
 
   def set_post

@@ -19,6 +19,11 @@
       <%= @post.post_text %>
     </div>
 
+    <div class='post-show-text'>
+      キーワード：<BR>
+      <%= @post.tags.first&.tag_name %>
+    </div>
+
     <div class="post-show-poster-wrap">
 
         <div class='post-show-poster-image'>
