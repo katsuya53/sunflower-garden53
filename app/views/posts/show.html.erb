@@ -20,8 +20,9 @@
     </div>
 
     <div class='post-show-text'>
-      キーワード：<BR>
-      <%= @post.tags.first&.tag_name %>
+      キーワード：<br>
+       <% tags = [@post_form.tag_name, @post_form.tag_name2, @post_form.tag_name3].reject(&:blank?) %>
+       <%= tags.join(', ') if tags.any? %>
     </div>
 
     <div class="post-show-poster-wrap">

@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     @posts = Post.includes(:user).order("created_at DESC")
     @comment_count = {} # コメント数を格納するハッシュを初期化
     @posts.each do |post|
-      @comment_count[post.id] = post.comments.count # 各投稿のコメント数を取得しハッシュに格納
+    @comment_count[post.id] = post.comments.count # 各投稿のコメント数を取得しハッシュに格納
     end
   
   end
@@ -17,7 +17,9 @@ class PostsController < ApplicationController
   end
 
   def create
-     @post_form = PostForm.new(post_form_params)
+    # フォームからのパラメーターに含まれるtag_name, tag_name2, tag_name3を抽出して渡す
+    @post_form = PostForm.new(post_form_params)
+  
     if @post_form.valid?
       @post_form.save
       redirect_to root_path
@@ -38,6 +40,8 @@ class PostsController < ApplicationController
     post_attributes = @post.attributes
     @post_form = PostForm.new(post_attributes)
     @post_form.tag_name = @post.tags.first&.tag_name
+    @post_form.tag_name2 = @post.tags.second&.tag_name
+    @post_form.tag_name3 = @post.tags.third&.tag_name
   end
 
   def update
@@ -56,17 +60,24 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+  @post = Post.find(params[:id])
   @comment = Comment.new
   @comments = @post.comments.includes(:user)
   @comment_count = @comments.count
-  
+
   # コメントの編集ボタンを表示するための情報を取得
   if user_signed_in?
     @editable_comments = @comments.select { |comment| comment.user_id == current_user.id }
   else
     @editable_comments = []
   end
+
+  # PostForm を新しく生成してタグ情報を取得
+  @post_form = PostForm.new(
+    tag_name: @post.tags.first&.tag_name,
+    tag_name2: @post.tags.second&.tag_name,
+    tag_name3: @post.tags.third&.tag_name
+  )
 end
   
   def search
@@ -83,7 +94,7 @@ end
   private
 
   def post_form_params
-    params.require(:post_form).permit(:image, :post_title, :post_text, :tag_name).merge(user_id: current_user.id)
+    params.require(:post_form).permit(:image, :post_title, :post_text, :tag_name, :tag_name2, :tag_name3).merge(user_id: current_user.id)
   end
 
   def set_post

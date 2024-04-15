@@ -44,12 +44,16 @@
     <div class="post-form-group">
       <div class='post-form-text-wrap'>
         <label class="form-text">タグ（キーワード）</label>
-        <span class="indispensable">必須(10字以内)</span>
+        <span class="indispensable">(10文字以内)</span>
       </div>
       <%= f.text_area :tag_name, class:"post_tag", id:"post-tag", placeholder:"例：鉢植え、赤、家庭菜園など" ,rows:"1" ,maxlength:"10" %>
       <div id="search-result"></div>
+      <%= f.text_area :tag_name2, class:"post_tag2", id:"post-tag2", placeholder:"例：鉢植え、赤、家庭菜園など" ,rows:"1" ,maxlength:"10" %>
+      <div id="search-result2"></div>
+      <%= f.text_area :tag_name3, class:"post_tag3", id:"post-tag3", placeholder:"例：鉢植え、赤、家庭菜園など" ,rows:"1" ,maxlength:"10" %>
+    <div id="search-result3"></div>
     </div>
-    
+
     <%# 注意書き %>
     <div class="caution">
         他人が不快と思われるような投稿はやめましょう。
