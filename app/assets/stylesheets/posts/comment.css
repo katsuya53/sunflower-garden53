@@ -50,7 +50,7 @@
 }
 
 .comment-poster {
-  font-size: 14px;
+  font-size: 20px;
   margin-right: 10px;
   display: flex;
   align-items: flex-end;
@@ -59,18 +59,18 @@
 }
 
 .comment-date {
-  font-size: 10px;
+  font-size: 15px;
   margin-left: 0.8vw;
   margin-right: 0.8vw;
 }
 
 .comment-san {
-  margin-left: 5px;
+  margin-left: 8px;
   font-size: 10px;
 }
 
 .comment-icon-image {
-  width: 20px;
+  width: 40px;
   margin: auto;
   margin-right: 10px;
   object-fit: cover; 
@@ -167,6 +167,25 @@
 
   .comment-header {
     font-size: 16px;
-    
+  }
+
+  .comment-poster {
+    font-size: 15px;
+    margin-right: 1px;
+  }
+
+  .comment-date {
+    font-size: 10px;
+  }
+
+  .comment-san {
+    margin-left: 1px;
+    font-size: 8px;
+  }
+
+  .comment-icon-image {
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 1px;
   }
 }

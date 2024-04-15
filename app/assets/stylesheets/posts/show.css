@@ -40,9 +40,9 @@
 }
 
 .post-show-poster-user {
-  font-size: 2vw;
+  font-size: 2.5vw;
   margin-right: 20px;
-  display: block;
+  display:flex;
 }
 
 .post-show-poster-wrap {
@@ -55,13 +55,18 @@
 }
 
 .post-show-date {
-  font-size: 1.5vw;
+  font-size: 2vw;
+  margin-left: 1vw;
   justify-items: left;
+  align-items: flex-end;
+  align-self: flex-end;
 }
 
 .post-show-san {
   margin-left: 5px;
   font-size: 1.5vw;
+  align-items: flex-end;
+  align-self: flex-end;
 }
 
 .post-show-icon-image {
@@ -125,7 +130,6 @@
     width: 8vw;
   }
 
-
   .show-iine-icon-image {
     width: 8vw;
     }
@@ -133,5 +137,39 @@
   .show-iine-count {
     font-size: 3vw;
   }
+}
 
+
+/* 幅狭小表示時 */
+@media (max-width: 490px) {
+
+  .post-show-wrap {
+    width: 100%;
+  }
+
+  .post-show-poster-user {
+    font-size: 4vw;
+  }
+
+  .post-show-date {
+    font-size: 3vw;
+    margin-left: 2vw;
+  }
+
+  .post-show-san {
+    font-size: 2vw;
+    margin-left: 1vw;
+  }
+
+  .post-show-icon-image {
+    width: 9vw;
+  }
+
+  .show-iine-icon-image {
+    width: 9vw;
+  }
+
+  .show-iine-count {
+    font-size: 3vw;
+  }
 }
