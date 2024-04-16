@@ -20,28 +20,27 @@
     </div>
 
     <div class='post-show-text'>
-  キーワード：<br>
-  <% @post.tags.each do |tag| %>
-    <%= tag.tag_name %>
-    <% unless tag == @post.tags.last %>, <% end %>
-  <% end %>
-</div>
-
-<div class="related-posts">
-  <h3>関連する投稿</h3>
-  <% @post.tags.each_with_index do |tag, index| %>
-    <h3>「<%= tag.tag_name %>」</h3>
-    <% tag.posts.each do |related_post| %>
-      <% unless related_post == @post %>
-        <div class="related-post">
-          <%= link_to related_post.post_title, post_path(related_post) %>
-        </div>
+      キーワード：<br>
+      <% @post.tags.each do |tag| %>
+      <%= tag.tag_name %>
+      <% unless tag == @post.tags.last %>, <% end %>
       <% end %>
-    <% end %>
-    <% unless index == @post.tags.size - 1 %><br style="line-height: 0.5;"> <% end %>
-  <% end %>
-</div>
+    </div>
 
+    <div class="related-posts">
+      <h3>関連する投稿</h3>
+      <% @post.tags.each_with_index do |tag, index| %>
+      <h3>「<%= tag.tag_name %>」</h3>
+      <% tag.posts.each do |related_post| %>
+        <% unless related_post == @post %>
+          <div class="related-post">
+            <%= link_to related_post.post_title, post_path(related_post) %>
+          </div>
+        <% end %>
+      <% end %>
+      <% unless index == @post.tags.size - 1 %><br style="line-height: 0.5;"> <% end %>
+      <% end %>
+    </div>
 
     <div class="post-show-poster-wrap">
 
