@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :comments
+  has_many :likes
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture, class_name: 'Prefecture', foreign_key: 'prefecture_id'

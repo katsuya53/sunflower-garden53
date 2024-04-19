@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get 'search'
       get 'search_tag'
     end
+    resource :likes, only: [:create, :destroy]
   end
 
   resources :users, only: [:show, :edit, :update, :destroy]

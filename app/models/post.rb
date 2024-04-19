@@ -4,13 +4,27 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :post_tag_relations, dependent: :destroy
   has_many :tags, through: :post_tag_relations
+  has_many :likes
   
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
 
+  def increment_likes_count
+    self.likes_count += 1
+    save
+  end
+
+  def decrement_likes_count
+    self.likes_count -= 1
+    save
+  end
+  
   def self.search(search)
     if search.present?
-      Post.where('post_title LIKE ? OR post_text LIKE ?', "%#{search}%", "%#{search}%")
+      where('post_title LIKE ? OR post_text LIKE ?', "%#{search}%", "%#{search}%")
     else
-      Post.all
+      all
     end
   end
 end
