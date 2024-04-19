@@ -22,11 +22,12 @@
 
 ## posts テーブル
 
-| Column     | Type       | Options                        |
-| -----------| ---------- | ------------------------------ |
-| post_title | string     | null: false                    |
-| post_text  | text       | null: false                    |
-| user       | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ------------| ---------- | ------------------------------ |
+| post_title  | string     | null: false                    |
+| post_text   | text       | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| likes_count | string     | null: false                    |
 
 ### Association
 
