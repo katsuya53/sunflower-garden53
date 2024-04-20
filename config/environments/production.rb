@@ -68,7 +68,7 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   
-
+  config.secret_key_base = ENV['SECRET_KEY_BASE']
   
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
