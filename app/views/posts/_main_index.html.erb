@@ -1,4 +1,10 @@
 <div class="main-index-wrap">
+  <span class='top-flash-message'>  <!-- エラーや通知を白字で表示 -->
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+          <%= flash[:success] %>
+          <%= flash[:danger] %>
+        </span>
   <div class="main-title">
     みんなの投稿
   </div>
