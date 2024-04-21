@@ -53,8 +53,12 @@
         </div>
 
         <div class="post-show-poster-user">
-
+          <% if user_signed_in? %>  <%# ログインしていればユーザー詳細ページのリンクあり%>
             <%= link_to @post.user.nickname, user_path(@post.user.id) %>
+          <% else %>
+            <%= @post.user.nickname %>
+          <% end %>
+
             <span class="post-show-san">さん</span>
 
             <div class='post-show-date'>
@@ -64,7 +68,7 @@
         </div>
 
       <div class="show-iine-area">
-          <% if user_signed_in? %>
+          <% if user_signed_in? %> <%# ログインしていればいいねのボタン使用可能%>
           <div id="like-btn<%= @post.id %>">
             <div class="show-iine-icon-image">
               <% if user_signed_in? && @post.liked_by?(current_user) %>
