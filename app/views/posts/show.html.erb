@@ -16,7 +16,7 @@
     </div>
 
     <div class='post-show-text'>
-      <%= @post.post_text %>
+      <%= simple_format(@post.post_text) %>
     </div>
 
     <div class='post-show-text'>
@@ -96,7 +96,7 @@
       <div class="comment-content">
         
         <div class="comment-text">
-          <%= comment.comment_text %>
+          <%= simple_format(comment.comment_text) %>
         </div>
         <div class= "comment-info">
           <div class='comment-poster'>
