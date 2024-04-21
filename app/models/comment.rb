@@ -4,4 +4,3 @@ class Comment < ApplicationRecord
 
   validates :comment_text, presence: true
 end
-

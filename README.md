@@ -1,23 +1,30 @@
 ## users テーブル
 
-| Column             | Type    | Options                    |
-| ------------------ | ------- | -------------------------- |
-| nickname           | string  | null: false                |
-| email              | string  | null: false, unique: true  |
-| encrypted_password | string  | null: false                |
-| prefecture_id      | integer | null: false                | 
+| Column               | Type     | Options                    |
+| -------------------- | -------- | -------------------------- |
+| nickname             | string   | null: false                |
+| email                | string   | null: false, unique: true  |
+| encrypted_password   | string   | null: false                |
+| prefecture_id        | integer  | null: false                | 
+| confirmation_token   | string   | null: false                |
+| confirmed_at         | datetime | null: false                |
+| confirmation_sent_at | datetime | null: false                |
+| unconfirmed_email    | string   | null: false                |
+
+
 
 ### Association
-- has_many :posts
-- has_many :likes
+- has_many :post_tag_relations, dependent: :destroy
+- has_many :likes, dependent: :destroy
 - has_many :follows, foreign_key: "follower_id", dependent: :destroy
 - has_many :following_users, through: :follows, source: :followee
 - has_many :reverse_follows, foreign_key: "followee_id", class_name: "Follow", dependent: :destroy
 - has_many :followers, through: :reverse_follows, source: :follower
-- has_many :comments
+- has_many :comments, dependent: :destroy
 - has_many :blogs, dependent: :destroy
 - has_many :records, dependent: :destroy
 - has_many :categories, through: :records
+- has_many :tags, through: :post_tag_relations
 
 
 ## posts テーブル
@@ -27,13 +34,13 @@
 | post_title  | string     | null: false                    |
 | post_text   | text       | null: false                    |
 | user        | references | null: false, foreign_key: true |
-| likes_count | string     | null: false                    |
+| likes_count | integer    | default: 0                     |
 
 ### Association
 
-- has_many :likes
-- has_many :comments
-- has_many :post_tags
+- has_many :likes, dependent: :destroy
+- has_many :comments, dependent: :destroy
+- has_many :post_tags, dependent: :destroy
 - has_many :tags, through: :post_tags
 
 

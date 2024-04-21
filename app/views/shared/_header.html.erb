@@ -6,7 +6,7 @@
   <div class="header-wrapper">
     <div class="header-bar-left">
 
-      <!-- 検索フォーム -->
+     <!-- 検索フォーム -->
       <%= form_with(url: search_posts_path, method: :get, class: "search-form") do |form| %>
         <%= form.text_field :keyword, placeholder: "投稿から検索", class: "input-box" %>
         <%= form.button class: "search-button" do %>
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-      <!-- ログイン管理 -->
+    <!-- ログイン管理 -->
     <div class="header-bar-right">
       <div class="user-link">
         <% if user_signed_in? %>
@@ -31,7 +31,6 @@
     </div>
 
   </div>
-  
 
   <%= render "side_bar_hidden" %>
   
