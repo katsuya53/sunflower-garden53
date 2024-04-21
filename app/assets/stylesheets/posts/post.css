@@ -135,6 +135,14 @@
   border: 1px solid black;
 }
 
+.post-noicon-image {
+  width: 5vw;
+  margin: auto;
+  margin-right: 5spx;
+  object-fit: cover; 
+  border-radius: 50%;
+}
+
 .iine-area {
   display: flex;
   align-items: flex-end;
@@ -227,6 +235,11 @@
   }
   
   .post-icon-image {
+    width: 14vw;
+    margin-right: 10px;
+  }
+
+  .post-noicon-image {
     width: 10vw;
     margin-right: 10px;
   }
@@ -279,6 +292,10 @@
   }
 
   .post-icon-image {
+    margin-right: 10px;
+  }
+
+  .post-noicon-image {
     margin-right: 10px;
   }
 

@@ -78,6 +78,14 @@
   border: 1px solid black;
 }
 
+.post-show-noicon-image {
+  width: 6vw;
+  margin: auto;
+  margin-right: 10px;
+  object-fit: cover; 
+  border-radius: 50%;
+}
+
 .show-iine-area {
   display: flex;
   align-items: flex-end;
@@ -135,6 +143,10 @@
     width: 8vw;
   }
 
+  .post-show-noicon-image {
+    width: 10vw;
+  }
+
   .show-iine-icon-image {
     width: 8vw;
   }
@@ -168,6 +180,10 @@
 
   .post-show-icon-image {
     width: 9vw;
+  }
+
+  .post-show-noicon-image {
+    width: 10vw;
   }
 
   .show-iine-icon-image {

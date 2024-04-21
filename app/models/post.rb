@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  before_destroy :delete_image
+
   belongs_to :user
   has_one_attached :image
   has_many :comments, dependent: :destroy
@@ -26,5 +28,11 @@ class Post < ApplicationRecord
     else
       all
     end
+  end
+
+  private
+
+  def delete_image
+    image.purge if image.attached?
   end
 end

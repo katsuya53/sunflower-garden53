@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_destroy :delete_image
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
@@ -21,4 +23,9 @@ class User < ApplicationRecord
       errors.add(:password, "を入力してください")
     end
   end
+
+  def delete_image
+    image.purge if image.attached?
+  end
+
 end

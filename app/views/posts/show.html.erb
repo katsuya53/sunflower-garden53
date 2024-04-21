@@ -45,7 +45,11 @@
     <div class="post-show-poster-wrap">
 
         <div class='post-show-poster-image'>
-        <%= image_tag @post.user.image, class: "post-show-icon-image" %>
+          <% if @post.user && @post.user.image.attached? %>
+            <%= image_tag @post.user.image, class: "post-show-icon-image" %>
+          <% else %>
+            <%= image_tag("user-icon.png", class: "post-show-noicon-image") %>
+          <% end %>
         </div>
 
         <div class="post-show-poster-user">

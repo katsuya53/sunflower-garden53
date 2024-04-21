@@ -29,7 +29,11 @@
       <div class="post-poster-wrap">
 
         <div class='post-poster-image'>
-         <%= image_tag post.user.image, class: "post-icon-image" %>
+          <% if post.user && post.user.image.attached? %>
+            <%= image_tag post.user.image, class: "post-icon-image" %>
+          <% else %>
+            <%= image_tag("user-icon.png", class: "post-noicon-image") %>
+          <% end %>
         </div>
 
         <div cklass="post-poster-user">
