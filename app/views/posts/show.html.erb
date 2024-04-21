@@ -139,7 +139,7 @@
       <% if user_signed_in? %>
         <%= form_with(model: Comment.new, url: post_comments_path(@post), local: true, class: "comment-form") do |f| %>
           <div class="comment-field">
-            <%= f.label :comment_text, "感想や質問などコメントできます" %>
+            <%= f.label :comment_text, "感想や質問などコメントできます (改行不可)" %>
             <%= f.text_area :comment_text, rows: 1, style: "width: 100%;" %>
           </div>
           <p class="comment-warn">
