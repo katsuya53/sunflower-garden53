@@ -62,12 +62,30 @@
       
 
       <div class="show-iine-area">
+          <% if user_signed_in? %>
+          <div id="like-btn<%= @post.id %>">
+            <div class="show-iine-icon-image">
+              <% if user_signed_in? && @post.liked_by?(current_user) %>
+              <%= link_to image_tag("iine.png", class:"iine-img"), post_likes_path(@post.id), data: { turbo_method: :delete }, class: "post_likes", remote: true %>
+              <% else %>
+              <%= link_to image_tag("iine.png", class:"iine-img"), post_likes_path(@post.id), data: { turbo_method: :post }, class: "post_likes", remote: true %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="like-count">
+            <%= @post.likes_count.positive? ? @post.likes_count : 0 %>
+          </div>
+          <% else %>
           <div class="show-iine-icon-image">
-            <%= link_to image_tag("iine.png", class:"iine-img"), "/" %>
+            <%= image_tag("iine.png", class:"show-iine-img")%>
           </div>
-          <div class="show-iine-count">5
+          <div class="like-count">
+            <%= @post.likes_count.positive? ? @post.likes_count : 0 %>
           </div>
-      </div>
+          <% end %>
+        </div>
+
       
     </div>
    
