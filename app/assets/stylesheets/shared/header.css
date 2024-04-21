@@ -18,7 +18,7 @@
 }
 
 .header-bar-left {
-  width: calc(70%);
+  width: calc(60%);
   height: 50px;
   background-color:seagreen;
   color: white;
@@ -27,7 +27,7 @@
 }
 
 .header-bar-right {
-  width: calc(30%);
+  width: calc(40%);
   height: 50px;
   background-color:seagreen;
   font-size: 20px;
@@ -37,7 +37,7 @@
 
 .user-link {
  color: white;
- font-size: 20px;
+ font-size: 25px;
  display: flex;
  align-items: center;
 }
@@ -61,7 +61,7 @@
 }
 
 .search-form {
-  width: 40%;
+  width: 70%;
   height: 35px;
   display: flex;
   margin-left: 50px;
@@ -92,25 +92,23 @@
 }
 
 .top-flash-message {
-  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align:center;
   color:darkgreen;
-  margin-left: 50px;
+  
 }
 
 /* タブレット表示時 */
 @media (max-width: 1024px) {
 
   .user-link {
-    font-size: 19px;
+    font-size: 22px;
    }
 
    .sign-up {
     margin-left: 30px;
-  }
-
-  .top-flash-message {
-    margin-left: 40px;
-    font-size: 15px;
   }
 }
 
@@ -164,15 +162,10 @@
   }
 
   .user-link {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .sign-up {
-    margin-left: 20px;
-  }
-
-  .top-flash-message {
-    font-size: 10px;
     margin-left: 20px;
   }
 
@@ -228,7 +221,7 @@
   }
   
   .user-link {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   
   .sign-up {
@@ -241,7 +234,7 @@
    }
 
   .top-flash-message {
-    font-size: 8px;
+    font-size: 15px;
     margin-left: 10px;
   }
 }
