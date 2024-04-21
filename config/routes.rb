@@ -12,7 +12,10 @@ Rails.application.routes.draw do
     resource :likes, only: [:create, :destroy]
   end
 
-  resources :users, only: [:show, :edit, :update, :destroy]
+  resources :users do
+    resource :follows, only: [:create, :destroy]
+  end
+
   resources :comments
 
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?

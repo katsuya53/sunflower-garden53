@@ -8,6 +8,16 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
+  has_many :active_follows, class_name: "Follow", foreign_key: :followee_id
+  has_many :followees, through: :active_follows, source: :follower
+  has_many :passive_follows, class_name: "Follow", foreign_key: :follower_id
+  has_many :followers, through: :passive_follows, source: :followee
+
+  def followed_by?(user)
+    follower =  passive_follows.find_by(followee_id: user.id)
+    return follower.present?
+  end
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture, class_name: 'Prefecture', foreign_key: 'prefecture_id'
   has_one_attached :image

@@ -5,13 +5,13 @@
     <div class='form-wrap'>
 
       <div class='form-header'>
-        <h1 class='form-header-text'> <%= current_user.nickname %>さんマイページ</h1>
+        <h1 class='form-header-text'> <%= @user.nickname %> さん のページ</h1>
       </div>
 
       <div class="form-group">
         <div class='form-text-wrap'>
-          <% if current_user.image.attached? %>
-            <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-show-image' %>
+          <% if @user.image.attached? %>
+            <%= image_tag @user.image.variant(resize: '100x100'), class: 'user-show-image' %>
           <% else %>
             <%= image_tag 'user-icon.png', class: 'user-sample-image', alt: 'サンプル画像' %>
           <% end %>
@@ -22,34 +22,67 @@
         <div class='form-text-wrap'>
           <label class="show-form-title">ニックネーム</label>
         </div>
-        <span class="show-text"><%= current_user.nickname %></span>
+        <span class="show-text"><%= @user.nickname %></span>
       </div>
 
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="show-form-title">メールアドレス</label>
         </div>
-        <span class="show-text"><%= current_user.email %></span>
+        <span class="show-text"><%= @user.email %></span>
       </div>
 
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="show-form-title">都道府県</label>
         </div>
-        <span class="show-text"><%= Prefecture.find(current_user.prefecture_id).name %></span>
+        <span class="show-text"><%= Prefecture.find(@user.prefecture_id).name %></span>
       </div>
 
       <div class="form-group">
-        <h2 class='form-bottom-text'>下のボタンから編集できます</h2>
-        <div class='edit-btn'>
-          <%= link_to "編集画面へ", edit_user_path, class: "edit-btn-text" %>
+        <div class='form-text-wrap'>
+          <label class="show-form-title">フォロー中</label>
+          <% @user.followees.each do |user| %>
+            <p class=“f-user”><%= link_to user.nickname, user_path(user.id) %></p>
+          <% end %>
         </div>
       </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="show-form-title">フォロワー</label>
+          <% @user.followers.each do |user| %>
+            <p class=“f-user”><%= link_to user.nickname, user_path(user.id) %></p>
+          <% end %>
+        </div>
+      </div>
+
+      <% if current_user != @user %>  <%# 自分のマイページでなければフォローや解除が可能 %>
+        <% if @user.followed_by?(current_user) %>
+        <h2 class='form-bottom-text'><BR>下のボタンからフォロー解除ができます</h2>
+          <div class='follow-btn'>
+            <%=link_to "フォロー解除", user_follows_path(@user.id),class: "follow-btn-text", data: { turbo_method: :delete } %>
+          </div>
+        <% else %>
+        <h2 class='form-bottom-text'><BR>下のボタンからフォローができます</h2>
+          <div class='follow-btn'>
+            <%=link_to "フォローする", user_follows_path(@user.id),class: "follow-btn-text", data: { turbo_method: :post } %>
+          </div>
+        <% end %>
+
+      <% else %> <%# 自分のマイページであれば編集が可能 %>
+        <div class="form-group">
+          <h2 class='form-bottom-text'>下のボタンから編集できます</h2>
+          <div class='edit-btn'>
+            <%= link_to "編集画面へ", edit_user_path, class: "edit-btn-text" %>
+          </div>
+        </div>
+      <% end %>
 
     </div>
   </div>
 </div>
 
-<%= button_to "登録を削除する", user_path(@user), method: :delete, class: "delete-registration-btn", onclick: "return confirm('本当に削除しますか？全ての投稿も削除されます');" %>
+<%= button_to "会員登録を削除", user_path(@user), method: :delete, class: "delete-registration-btn", onclick: "return confirm('本当に削除しますか？全ての投稿も削除されます');" %>
 
 <%= render "shared/second-footer" %>
