@@ -36,7 +36,7 @@
         <div class="post-show-poster-user">
 
             <% if user_signed_in? %>  <%# ログインしていればユーザー詳細ページのリンクあり%>
-              <%= link_to post.user.nickname, user_path(@post.user.id) %>
+              <%= link_to post.user.nickname, user_path(post.user.id) %>
             <% else %>
               <%= post.user.nickname %>
             <% end %>
