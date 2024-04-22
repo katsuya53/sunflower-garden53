@@ -1,5 +1,5 @@
 <style>
-  .blog-show {
+  .show {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
@@ -10,15 +10,15 @@
     text-align: center;
   }
 
-  .blog-show p {
+  .show p {
     margin-bottom: 15px;
   }
 
-  .blog-show strong {
+  .show strong {
     color: #007bff;
   }
 
-  .blog-show a {
+  .show a {
     color: #28a745;
     text-decoration: none;
     margin-right: 15px;
@@ -26,7 +26,7 @@
     align-items: center;
   }
 
-  .blog-show a:hover {
+  .show a:hover {
     text-decoration: underline;
   }
 
@@ -39,7 +39,7 @@
     margin: 0 auto;
   }
 
-  .blog-title, .blog-text, .blog-time {
+  .title, .content, .time {
     margin-bottom: 20px;
   }
 
@@ -78,27 +78,34 @@
   }
 </style>
 
+<%= render "shared/second-header" %>
+
+
+   <%= render "shared/side_bar_hidden" %>
+
 <%= form_with(model: @blog, local: true) do |form| %>
 
   <div class="blog-title">
-    <div class="form-tag">タイトル</div>
-    <%= form.text_field :blog_title %>
+    <div class="blog-form-tag">タイトル(5文字以内)</div>
+    <%= form.text_field :blog_title, class: "blog-edit-text", maxlength:"5" %>
   </div>
 
 
   <div class="blog-text">
-    <div class="form-tag">内容</div>
-    <%= form.text_field :blog_text %>
+    <div class="blog-form-tag">内容(20文字以内)</div>
+    <%= form.text_field :blog_text, class: "blog-edit-text", maxlength:"20" %>
   </div>
 
     <div class="blog-time">
-    <div class="form-tag">時間</div>
-    <%= form.date_select :start_time %>
+    <div class="blog-form-tag">時間</div>
+    <%= form.date_select :start_time, class: "blog-edit-text" %>
   </div>
 
 
-  <div class="submit">
-    <%= form.submit "修正する" %>
+  <div class="blog-submit">
+    <%= form.submit "修正する", class: "blog-edit-submit" %>
   </div>
 
 <% end %>
+
+<%= render "shared/second-footer" %>

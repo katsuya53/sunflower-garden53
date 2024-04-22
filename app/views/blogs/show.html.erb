@@ -1,51 +1,27 @@
-<style>
-  .blog-show {
-    background-color: #f8f9fa; /* 背景色を指定 */
-    padding: 20px; /* 余白を指定 */
-    border-radius: 10px; /* 角丸を指定 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ボックスシャドウを指定 */
-    color: #333; /* フォントカラーを指定 */
-    max-width: 600px; /* 最大幅を指定 */
-    margin: 0 auto; /* 中央揃えにするために左右の自動マージンを指定 */
-  }
+<%= render "shared/second-header" %>
 
-  .blog-show p {
-    margin-bottom: 15px; /* 各パラグラフの余白を指定 */
-  }
-
-  .blog-show strong {
-    color: #007bff; /* 強調テキストのフォントカラーを指定 */
-  }
-
-  .blog-show a {
-    color: #28a745; /* リンクのフォントカラーを指定 */
-    text-decoration: none; /* リンクの下線をなくす */
-    margin-right: 15px; /* リンクの右マージンを指定 */
-  }
-
-  .blog-show a:hover {
-    text-decoration: underline; /* マウスオーバー時の下線を指定 */
-  }
-</style>
-
-<p id="notice"><%= notice %></p>
+   <%= render "shared/side_bar_hidden" %>
+   
+   <p id="notice"><%= notice %></p>
 <div class="blog-show">
 <p>
-  <strong>タイトル</strong>
+  <strong>タイトル</strong><BR>
   <%= @blog.blog_title %>
 </p>
 
 <p>
-  <strong>内容</strong>
+  <strong>内容</strong><BR>
   <%= @blog.blog_text %>
 </p>
 
 <p>
-  <strong>日時</strong>
+  <strong>日時</strong><BR>
   <%= @blog.start_time.strftime("%-m/%-d") %>
 </p>
 
 <%= link_to '編集', edit_blog_path(@blog) %>
-<%= link_to '消去', blog_path(@blog), method: :delete, data: { turbo_method: :delete, confirm: '本当に?' } %>
+<%= link_to '消去', blog_path(@blog), method: :delete, data: { turbo_method: :delete, confirm: '本当に削除してもよろしいですか？' } %>
 <%= link_to '戻る', blogs_path %>
 </div>
+
+<%= render "shared/second-footer" %>

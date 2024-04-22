@@ -1,4 +1,4 @@
-.toppage {
+.blog-toppage {
   text-align: center;
   margin: 20px;
 }
@@ -14,14 +14,17 @@ h1 {
 }
 
 .col-md-4 {
-  flex-basis: 20%; /* カレンダーの横幅を30%にする */
+  flex-basis: 20%; /* カレンダーの横幅を  %にする */
 }
 
 .col-md-8 {
-  flex-basis: 80%; /* 予定一覧の横幅を70%にする */
+  flex-basis: 80%; /* 予定一覧の横幅を  %にする */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.schedule {
+.blog-schedule {
   background-color: #007bff;
   color: #fff;
   padding: 10px;
@@ -29,7 +32,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-table {
+.blog-table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20px;
@@ -41,28 +44,18 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
-form {
+.blog-form {
   background-color: #f8f9fa;
   padding: 20px;
   border-radius: 5px;
 }
 
-.blog-title, .content, .time, .submit {
+.blog-title, .blog-content, .blog-time, .blog-submit {
   margin-bottom: 15px;
 }
 
-.form-tag {
+.blog-form-tag {
   font-weight: bold;
-}
-
-.your-css-class {
-  /* ここに必要なスタイルを追加 */
-}
-
-.col-md-8 {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 5px;
 }
 
 .calendar-day {
@@ -77,12 +70,19 @@ a {
   color: #007bff;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 770px) {
   .row {
-    flex-direction: column; /* スマホの場合、縦に並べる */
+    display:block; /* スマホの場合、縦に並べる */
   }
 
-  .col-md-4, .col-md-8 {
-    flex-basis: 100%; /* スマホの場合、横幅を100%にする */
+  
+  .col-md-4 {
+    flex-basis: 20%; /* カレンダーの横幅を  %にする */
   }
+  
+  .col-md-8 {
+    flex-basis: 80%; /* 予定一覧の横幅を  %にする */
+    font-size: 2.5vw;
+  }
+
 }
