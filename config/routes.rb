@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'blogs/index'
 
   devise_for :users # ユーザーモデル名に基づいて修正
 
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
   end
 
   resources :comments
+
+  resources :blogs
 
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   get "password/reset", to: "password_resets#new"
