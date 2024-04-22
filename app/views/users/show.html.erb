@@ -83,6 +83,8 @@
   </div>
 </div>
 
-<%= button_to "会員登録を削除", user_path(@user), method: :delete, class: "delete-registration-btn", onclick: "return confirm('本当に削除しますか？全ての投稿も削除されます');" %>
+<% if current_user == @user %>  <%# 自分のマイページでなければフォローや解除が可能 %>
+  <%= button_to "会員登録を削除", user_path(@user), method: :delete, class: "delete-registration-btn", onclick: "return confirm('本当に削除しますか？全ての投稿も削除されます');" %>
+<% end %>
 
 <%= render "shared/second-footer" %>
