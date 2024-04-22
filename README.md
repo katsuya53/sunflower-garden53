@@ -116,7 +116,7 @@
 | ---------- | ---------- | ------------------------------ |
 | blog_title | string     | null: false                    |
 | blog_text  | text       | null: false                    |
-| datetime   | date       | null: false                    |
+| start_time | date       | null: false                    |
 | user       | references | null: false, foreign_key: true |
 
 ### Association
