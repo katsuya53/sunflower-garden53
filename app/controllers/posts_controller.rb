@@ -9,7 +9,6 @@ class PostsController < ApplicationController
     @posts.each do |post|
     @comment_count[post.id] = post.comments.count # 各投稿のコメント数を取得しハッシュに格納
     end
-  
   end
 
   def new
