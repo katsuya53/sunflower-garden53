@@ -24,9 +24,9 @@ class Post < ApplicationRecord
   
   def self.search(search)
     if search.present?
-      joins(:user, :tags)
-        .where('post_title LIKE ? OR post_text LIKE ? OR users.nickname LIKE ? OR tags.tag_name LIKE ?',
-               "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+      joins(:user, :tags, :comments)
+        .where('post_title LIKE ? OR post_text LIKE ? OR users.nickname LIKE ? OR tags.tag_name LIKE ? OR comments.comment_text LIKE ?',
+               "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
         .distinct
     else
       all

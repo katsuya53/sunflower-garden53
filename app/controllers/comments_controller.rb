@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:edit, :update, :destroy]
   before_action :set_post, only: [:create, :update, :destroy]  # set_post を destroy アクションでも使用する
+  before_action :move_to_index
   
   def create
     @comment = Comment.new(comment_params)
@@ -46,4 +47,11 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:comment_text).merge(user_id: current_user.id, post_id: @post.id)
   end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path,notice: "アクセスできません。"
+    end
+  end
+
 end

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :move_to_index
+
   def show
     @user = User.find(params[:id])
   end
@@ -36,6 +38,12 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :prefecture_id, :image)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path,notice: "アクセスできません。"
+    end
   end
 
 end
