@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show, :update]
   before_action :move_to_index, except: [:index, :show, :search]
+  before_action :correct_post,only: [:edit]
 
   def index
     @posts = Post.all
@@ -104,6 +105,13 @@ end
     unless user_signed_in?
       redirect_to root_path,notice: "ログインなしではアクセスできません。"
     end
+  end
+  
+  def correct_post
+        @post = Post.find(params[:id])
+      unless @post.user.id == current_user.id
+        redirect_to posts_path,notice: "アクセスできません。"
+      end
   end
 
 end

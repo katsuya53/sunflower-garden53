@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :move_to_index
+  before_action :correct_post,only: [:edit]
 
   def show
     @user = User.find(params[:id])
@@ -46,4 +47,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def correct_post
+    @post = Post.find(params[:id])
+  unless @post.user.id == current_user.id
+    redirect_to posts_path,notice: "アクセスできません。"
+  end
+  end
+  
 end
