@@ -7,6 +7,13 @@ h1 {
   color: #333;
 }
 
+.blog-notice {
+  text-align: center;
+  font-size: 20px;
+  color:darkgreen;
+  margin-bottom: 10px;
+}
+
 .blog-wrap {
   display: flex;
   justify-content: space-between;
@@ -30,8 +37,8 @@ h1 {
 }
 
 .blog-schedule {
-  background-color: #007bff;
-  color: #fff;
+  border: 1px solid black;
+  background-color: #f8f9fa; 
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -55,8 +62,8 @@ th, td {
   border-radius: 5px;
 }
 
-.blog-title, .blog-content, .blog-time, .blog-submit {
-  margin-bottom: 15px;
+.blog-form-title, .blog-form-text, .blog-form-time {
+  margin-bottom: 20px;
 }
 
 .blog-form-tag {
@@ -77,9 +84,10 @@ th, td {
   height: 40px;
   display: block;
   margin: auto;
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
-  border-width: 1px;
+  border: 1px solid black;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -96,6 +104,11 @@ a {
     flex-direction: column; /* 画面が狭い場合、上下に要素を配置 */
   }
   
+  .blog-title {
+    font-size: 4vw;
+    margin-bottom: 10px;
+  }
+
   .blog-view-title {
     font-size: 3vw;
   }
@@ -115,6 +128,17 @@ a {
     order: 2;
     width: 100%; /* 幅を100%に設定 */
     margin-top: 30px;
+  }
+
+  .blog-schedule {
+    margin-top: 20px;
+  }
+  
+  .blog-notice {
+    text-align: center;
+    font-size: 15px;
+    color:darkgreen;
+    margin-bottom: 10px;
   }
 
 }

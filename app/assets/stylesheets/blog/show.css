@@ -1,4 +1,4 @@
-.blog-show {
+.blog-show-wrap {
   background-color: #f8f9fa; /* 背景色を指定 */
   padding: 20px; /* 余白を指定 */
   border-radius: 10px; /* 角丸を指定 */
@@ -6,22 +6,34 @@
   color: #333; /* フォントカラーを指定 */
   max-width: 600px; /* 最大幅を指定 */
   margin: 0 auto; /* 中央揃えにするために左右の自動マージンを指定 */
+  font-size: 20px;
 }
 
-.blog-show p {
+.blog-show-wrap p {
   margin-bottom: 15px; /* 各パラグラフの余白を指定 */
 }
 
-.blog-show strong {
+.blog-show-wrap strong {
   color: #007bff; /* 強調テキストのフォントカラーを指定 */
+  font-size: 20px;
 }
 
-.blog-show a {
-  color: #28a745; /* リンクのフォントカラーを指定 */
-  text-decoration: none; /* リンクの下線をなくす */
-  margin-right: 15px; /* リンクの右マージンを指定 */
+.blog-show-wrap a {
+  background: #007bff;
+  flex-grow: 1; /* 利用可能なスペースを均等に取る */
+  margin-right: 10px; /* ボタン間の間隔を設定 */
+  padding: 10px 30px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-decoration: none;
+  text-align: center;
+  border-width: 1px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.blog-show a:hover {
+.blog-show-wrap a:hover {
   text-decoration: underline; /* マウスオーバー時の下線を指定 */
 }

@@ -2,26 +2,28 @@
 
    <%= render "shared/side_bar_hidden" %>
    
-   <p id="notice"><%= notice %></p>
-<div class="blog-show">
-<p>
-  <strong>タイトル</strong><BR>
-  <%= @blog.blog_title %>
-</p>
+   <p class="blog-notice"><%= notice %></p>
 
-<p>
-  <strong>内容</strong><BR>
-  <%= @blog.blog_text %>
-</p>
+<div class="blog-show-wrap">
 
-<p>
+  <p>
   <strong>日時</strong><BR>
   <%= @blog.start_time.strftime("%-m/%-d") %>
-</p>
+  </p>
 
-<%= link_to '編集', edit_blog_path(@blog) %>
-<%= link_to '消去', blog_path(@blog), method: :delete, data: { turbo_method: :delete, confirm: '本当に削除してもよろしいですか？' } %>
-<%= link_to '戻る', blogs_path %>
+  <p>
+  <strong>タイトル</strong><BR>
+  <%= @blog.blog_title %>
+    </p>
+
+  <p>
+  <strong>内容</strong><BR>
+  <%= @blog.blog_text %>
+  </p>
+
+  <%= link_to '編集', edit_blog_path(@blog) %>
+  <%= link_to '消去', blog_path(@blog), method: :delete, data: { turbo_method: :delete, confirm: '本当に削除してもよろしいですか？' } %>
+  <%= link_to '戻る', blogs_path %>
 </div>
 
 <%= render "shared/second-footer" %>

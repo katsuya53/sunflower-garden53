@@ -1,0 +1,48 @@
+.blog-edit {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blog-edit p {
+  margin-bottom: 15px;
+}
+
+.blog-edit strong {
+  color: #007bff;
+}
+
+.blog-edit a {
+  color: #28a745;
+  text-decoration: none;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.blog-edit a:hover {
+  text-decoration: underline;
+}
+
+.blog-edit-form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.blog-edit-text {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+

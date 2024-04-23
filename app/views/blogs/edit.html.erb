@@ -1,109 +1,26 @@
-<style>
-  .show {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #333;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .show p {
-    margin-bottom: 15px;
-  }
-
-  .show strong {
-    color: #007bff;
-  }
-
-  .show a {
-    color: #28a745;
-    text-decoration: none;
-    margin-right: 15px;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .show a:hover {
-    text-decoration: underline;
-  }
-
-  form {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .title, .content, .time {
-    margin-bottom: 20px;
-  }
-
-  .form-tag {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    color: #007bff;
-  }
-
-  input[type="text"], select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-
-  .submit {
-    text-align: center;
-    margin-top: 20px; /* ボタンとフォームの間に余白を追加 */
-  }
-
-  input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-</style>
-
 <%= render "shared/second-header" %>
 
+<%= render "shared/side_bar_hidden" %>
 
-   <%= render "shared/side_bar_hidden" %>
+<%= form_with(model: @blog, class:"blog-edit-form",local: true) do |form| %>
 
-<%= form_with(model: @blog, local: true) do |form| %>
-
-  <div class="blog-title">
+  <div class="blog-form-title">
     <div class="blog-form-tag">タイトル(5文字以内)</div>
     <%= form.text_field :blog_title, class: "blog-edit-text", maxlength:"5" %>
   </div>
 
-
-  <div class="blog-text">
+  <div class="blog-form-text">
     <div class="blog-form-tag">内容(20文字以内)</div>
     <%= form.text_field :blog_text, class: "blog-edit-text", maxlength:"20" %>
   </div>
 
-    <div class="blog-time">
+    <div class="blog-form-time">
     <div class="blog-form-tag">時間</div>
     <%= form.date_select :start_time, class: "blog-edit-text" %>
   </div>
 
-
   <div class="blog-submit">
-    <%= form.submit "修正する", class: "blog-edit-submit" %>
+    <%= form.submit "修正する",class: "blog-submit-btn" %>
   </div>
 
 <% end %>
