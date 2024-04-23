@@ -14,8 +14,13 @@ class BlogsController < ApplicationController
   end
 
   def create
-    Blog.create(blog_parameter)
-    redirect_to blogs_path, notice:"予定を作成しました"
+    @blog = current_user.blogs.build(blog_parameter)
+    if @blog.save
+      redirect_to blogs_path, notice:"予定を作成しました"
+    else
+      @blogs = Blog.all
+      render :index
+    end
   end
 
   def destroy
