@@ -48,10 +48,10 @@ class UsersController < ApplicationController
   end
 
   def correct_post
-    @post = Post.find(params[:id])
-  unless @post.user.id == current_user.id
-    redirect_to posts_path,notice: "アクセスできません。"
+    @user = User.find(params[:id])
+  unless @user.user.id == current_user.id
+    redirect_to users_path,notice: "アクセスできません。"
   end
   end
-  
+
 end

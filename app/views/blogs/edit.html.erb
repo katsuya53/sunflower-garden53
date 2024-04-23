@@ -3,7 +3,7 @@
 <%= render "shared/side_bar_hidden" %>
 
  <p class="blog-notice"><%= notice %></p>
- 
+
 <%= form_with(model: @blog, class:"blog-edit-form",local: true) do |form| %>
 
   <div class="blog-form-title">
@@ -17,9 +17,12 @@
   </div>
 
     <div class="blog-form-time">
-    <div class="blog-form-tag">時間</div>
-    <%= form.date_select :start_time, class: "blog-edit-text" %>
-  </div>
+      <div class="blog-form-tag">時間</div>
+      <%= form.date_select :start_time, class: "blog-edit-text" %>
+    </div>
+    <div class="blog-form-time">
+      <%= form.time_select :start_time, class: 'your-css-class' %>
+    </div>
 
   <div class="blog-submit">
     <%= form.submit "修正する",class: "blog-submit-btn" %>

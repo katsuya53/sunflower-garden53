@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><%= @user.nickname %>様</p>
+    <p>
+      いつもご利用ありがとうございます。
+      カレンダーに以下の投稿が登録された時間となりました。ご確認ください。
+    </p>
+    <p><strong>投稿タイトル：</strong> <%= @blog.blog_title %></p>
+    <p><strong>投稿内容：</strong> <%= @blog.blog_text %></p>
+    <p>
+      引き続き当サイトをお楽しみください。
+    </p>
+  </body>
+</html>

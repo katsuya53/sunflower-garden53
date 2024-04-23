@@ -56,10 +56,10 @@ class CommentsController < ApplicationController
   end
 
   def correct_post
-        @post = Post.find(params[:id])
-      unless @post.user.id == current_user.id
-        redirect_to posts_path,notice: "アクセスできません。"
-      end
+    @comment = Comment.find(params[:id])
+    unless @comment.user_id == current_user.id
+      redirect_to posts_path, notice: "アクセスできません。"
+    end
   end
 
 end

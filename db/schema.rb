@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_22_125805) do
     t.string "blog_title"
     t.text "blog_text"
     t.datetime "start_time"
+    t.boolean "blog_sent", default: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
