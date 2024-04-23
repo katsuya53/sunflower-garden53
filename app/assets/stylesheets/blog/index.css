@@ -7,21 +7,26 @@ h1 {
   color: #333;
 }
 
-.row {
+.blog-wrap {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.col-md-4 {
+.blog-input-area {
   flex-basis: 20%; /* カレンダーの横幅を  %にする */
 }
 
-.col-md-8 {
+.blog-view-area {
   flex-basis: 80%; /* 予定一覧の横幅を  %にする */
-  background-color: #f8f9fa;
+  background-color:white;
   padding: 20px;
   border-radius: 5px;
+  font-size: 2vw;
+}
+
+.blog-view-title {
+  font-size: 1.5vw;
 }
 
 .blog-schedule {
@@ -66,23 +71,50 @@ th, td {
   margin: 5px;
 }
 
+.blog-submit-btn {
+  background: #007bff;
+  width: 150px;
+  height: 40px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  border-width: 1px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 a {
   color: #007bff;
 }
 
 @media (max-width: 770px) {
-  .row {
-    display:block; /* スマホの場合、縦に並べる */
+  .blog-wrap {
+    display: flex;
+    flex-direction: column; /* 画面が狭い場合、上下に要素を配置 */
+  }
+  
+  .blog-view-title {
+    font-size: 3vw;
   }
 
-  
-  .col-md-4 {
-    flex-basis: 20%; /* カレンダーの横幅を  %にする */
+  .blog-view-area {
+    font-size: 3vw;
+    padding: 0px;
+    order: 1;
+    width: 100%; /* 幅を100%に設定 */
   }
-  
-  .col-md-8 {
-    flex-basis: 80%; /* 予定一覧の横幅を  %にする */
-    font-size: 2.5vw;
+
+  .blog-view-title {
+    font-size: 2vw;
+  }
+
+  .blog-input-area {
+    order: 2;
+    width: 100%; /* 幅を100%に設定 */
+    margin-top: 30px;
   }
 
 }

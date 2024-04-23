@@ -4,12 +4,13 @@
    <%= render "shared/side_bar_hidden" %>
 
   <h1 class="blog-title">カレンダー</h1>
-  <br>
 
-  <div class="row">
-    <div class="col-md-4">
+  <div class=" blog-wrap">
+    <div class="blog-input-area">  <%# 予定入力エリア %>
+
       <div class="blog-schedule">今後の予定一覧</div>
       <table class="blog-table">
+
         <thead class="thead-light">
           <tr>
             <th>タイトル</th>
@@ -43,22 +44,24 @@
           <%= form.date_select :start_time, class: 'your-css-class' %>
         </div>
 
-        <div class="blog-submit">
-          <%= form.submit "登録する" %>
-        </div>
+        
+          <%= form.submit "登録する" ,class: "blog-submit-btn"%>
+        
       <% end %>
     </div>
 
-    <div class="col-md-8">
+    <div class="blog-view-area"> <%# カレンダー表示エリア %>
       <%= month_calendar events: @blogs do |date, blogs| %>
         <%= date.day %>
 
+      <div class="blog-view-title">
         <% blogs.each do |blog| %>
           <div>
             <%= link_to blog.blog_title, blog %>
           </div>
         <% end %>
       <% end %>
+      </div>
     </div>
   </div>
 </div>
