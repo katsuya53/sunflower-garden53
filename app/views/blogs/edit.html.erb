@@ -2,6 +2,8 @@
 
 <%= render "shared/side_bar_hidden" %>
 
+ <p class="blog-notice"><%= notice %></p>
+ 
 <%= form_with(model: @blog, class:"blog-edit-form",local: true) do |form| %>
 
   <div class="blog-form-title">

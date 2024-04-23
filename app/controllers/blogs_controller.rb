@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_action :move_to_index
+
   def index
     @blogs = Blog.all
     @blog = Blog.new
@@ -19,7 +21,7 @@ class BlogsController < ApplicationController
       redirect_to blogs_path, notice:"予定を作成しました"
     else
       @blogs = Blog.all
-      render :index
+      redirect_to blogs_path, notice:"入力エラー。作成できませんでした"
     end
   end
 
@@ -38,7 +40,7 @@ class BlogsController < ApplicationController
     if @blog.update(blog_parameter)
       redirect_to @blog ,notice: "予定を編集しました"
     else
-      render 'edit'
+      redirect_to edit_blog_path(@blog), notice:"入力エラー。更新できませんでした"
     end
   end
 
@@ -46,6 +48,12 @@ class BlogsController < ApplicationController
 
   def blog_parameter
     params.require(:blog).permit(:blog_title, :blog_text, :start_time)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path,notice: "ログインなしではアクセスできません。"
+    end
   end
 
 end

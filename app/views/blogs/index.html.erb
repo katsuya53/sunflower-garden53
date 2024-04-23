@@ -21,7 +21,7 @@
         </thead>
 
         <tbody>
-          <% @blogs.each do |blog| %>
+          <% current_user.blogs.each do |blog| %>
             <tr>
               <td><%= link_to blog.blog_title, blog %></td>
               <td><%= blog.start_time.strftime("%-m/%-d") %></td>
@@ -38,7 +38,7 @@
 
         <div class="blog-form-content">
           <div class="blog-form-tag">内容(20文字以内)</div>
-          <%= form.text_area :blog_text, rows: 3, maxlength:"20"  %>
+          <%= form.text_area :blog_text, rows: 2, style: 'resize: none;', maxlength:"20"  %>
         </div>
 
         <div class="blog-time">
@@ -53,7 +53,7 @@
     </div>
 
     <div class="blog-view-area"> <%# カレンダー表示エリア %>
-      <%= month_calendar events: @blogs do |date, blogs| %>
+      <%= month_calendar events: current_user.blogs do |date, blogs| %>
         <%= date.day %>
 
       <div class="blog-view-title">

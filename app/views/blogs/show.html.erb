@@ -1,7 +1,7 @@
 <%= render "shared/second-header" %>
 
    <%= render "shared/side_bar_hidden" %>
-   
+   <%= render 'layouts/error_messages', model: @blog %> <!-- エラーメッセージ  -->
    <p class="blog-notice"><%= notice %></p>
 
 <div class="blog-show-wrap">

@@ -102,7 +102,7 @@ end
 
   def move_to_index
     unless user_signed_in?
-      redirect_to action: :index,notice: "アクセスできません。"
+      redirect_to root_path,notice: "ログインなしではアクセスできません。"
     end
   end
 
