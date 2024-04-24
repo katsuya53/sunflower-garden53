@@ -86,8 +86,8 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 
 # ローカルでの動作方法
 以下のコマンドを順に実行。  
-% git clone https://github.com/katsuya53/sunflower-garden53
-% cd sunflower-garden53
+% git clone https://github.com/katsuya53/sunflower-garden53  
+% cd sunflower-garden53  
 % bundle install
 
 # 工夫したポイント
