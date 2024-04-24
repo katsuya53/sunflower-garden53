@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :move_to_index
   before_action :correct_post,only: [:edit]
+  before_action :set_beginning_of_week
 
   def index
     @blogs = Blog.all
@@ -64,6 +65,10 @@ class BlogsController < ApplicationController
     unless @blog.user.id == current_user.id
       redirect_to blogs_path, notice: "アクセスできません"  
     end
+  end
+
+  def set_beginning_of_week
+    Date.beginning_of_week = :sunday
   end
 
 end

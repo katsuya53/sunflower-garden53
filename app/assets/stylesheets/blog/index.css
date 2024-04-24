@@ -98,6 +98,15 @@ a {
   color: #007bff;
 }
 
+.wday-0 {
+  color: red;
+}
+
+.wday-6 {
+   color: blue;
+} 
+
+
 @media (max-width: 770px) {
   .blog-wrap {
     display: flex;
