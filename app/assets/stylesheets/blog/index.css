@@ -141,4 +141,19 @@ a {
     margin-bottom: 10px;
   }
 
+  .calendar-heading {
+    font-size: 4vw;
+  }
+
+}
+
+@media (max-width: 490px) {
+ 
+  .calendar-heading {
+    font-size: 5vw;
+  }
+
+  .table-striped {
+    font-size: 4vw;
+  }
 }

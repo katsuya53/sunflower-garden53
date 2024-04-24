@@ -42,12 +42,17 @@
         </div>
 
         <div class="blog-time">
-          <div class="blog-form-tag">時間</div>
+          <div class="blog-form-tag">日時</div>
           <%= form.date_select :start_time, class: 'your-css-class' %>
         </div>
         <div class="blog-time">
           <%= form.time_select :start_time, class: 'your-css-class' %>
         </div>
+
+<BR>
+    <div class="blog-form-tag">
+    <%= form.check_box :blog_sent, { checked: false }, true %> メール通知なし
+  </div>
 
           <%= form.submit "登録する" ,class: "blog-submit-btn" %>
         
