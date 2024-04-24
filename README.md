@@ -8,7 +8,7 @@ SUNFLOWER-GARDEN
 http://54.65.201.13/
 
 # テスト用アカウント
-メールアドレス : hanako@test.com
+メールアドレス : hanako@test.com  
 パスワード : h111111
 
 # 利用方法
