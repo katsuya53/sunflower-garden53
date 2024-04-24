@@ -66,8 +66,28 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 # 実装した機能についての画像やGIFおよびその説明
 
 # 実装予定の機能
+1. 日記機能
+2. 今日の花が通知されてくる機能
+3. 登録された都道府県によって園芸に適した天気予報を知れる
+4. 撮影した画像から何の花か検索できる
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/1f2b0d8287256002cf691f2cb51fe252.png)](https://gyazo.com/1f2b0d8287256002cf691f2cb51fe252)
 
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/20b5e9e5e1ad53c100d32bb621211ccc.png)](https://gyazo.com/20b5e9e5e1ad53c100d32bb621211ccc)
 
+# 開発環境
+- フロントエンド
+- バックエンド
+- インフラ
+- テキストエディタ
+- タスク管理
+
+# ローカルでの動作方法
+以下のコマンドを順に実行。  
+% git clone https://github.com/katsuya53/sunflower-garden53
+% cd sunflower-garden53
+% bundle install
+
+# 工夫したポイント
