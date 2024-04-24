@@ -20,7 +20,7 @@ class BlogsController < ApplicationController
       @blog = current_user.blogs.build(blog_params)
       if @blog.save
         SendNotificationJob.set(wait_until: @blog.start_time).perform_later(current_user.id)
-        redirect_to @blog, notice: "予定を作成しました"
+        redirect_to blogs_path, notice: "予定を作成しました"
       else
         @blogs = Blog.all
         redirect_to blogs_path, notice:"入力エラー。作成できませんでした"
