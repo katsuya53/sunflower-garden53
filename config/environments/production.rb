@@ -84,7 +84,7 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
-  config.action_mailer.default_url_options = { host: 'http://54.65.201.13' }
+  config.action_mailer.default_url_options = { host: 'https://sunflower-garden.jp/' }
 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
