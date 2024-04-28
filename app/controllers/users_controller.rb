@@ -32,8 +32,6 @@ class UsersController < ApplicationController
       redirect_to root_path, notice: "ユーザーが削除されました。"
     end
 
-  
-
 
   private
 
@@ -48,10 +46,10 @@ class UsersController < ApplicationController
   end
 
   def correct_post
-    @user = User.find(params[:id])
-  unless @user.user.id == current_user.id
-    redirect_to users_path,notice: "アクセスできません。"
+  @user = User.find(params[:id])
+  unless @user.id == current_user.id
+    redirect_to users_path, notice: "アクセスできません。"
   end
-  end
+end
 
 end
