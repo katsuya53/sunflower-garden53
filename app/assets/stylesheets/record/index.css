@@ -1,0 +1,124 @@
+
+.record-index-wrap {
+  background-color: #e0ebaf;
+  overflow: scroll;
+}
+
+
+.record-flash-message {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  text-align:center;
+  color:red;
+  
+}
+
+.record-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.record-contents {
+  background-color: white;
+  border-radius: 10px;
+  width: 31%;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  align-items: flex-end;
+}
+
+.record-img {
+  width: 90%;
+  height: 300px;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  margin: auto;
+}
+
+.record-text {
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  height: 100px;
+  flex-grow: 1; /* 余白を埋めるために成長 */
+  overflow: hidden; /* はみ出したコンテンツを隠す */
+  text-overflow: ellipsis; /* はみ出したコンテンツを省略記号で表示 */
+}
+
+.category-select-form {
+  margin-bottom: 10px;
+
+}
+
+
+/* 幅狭小表示時 */
+@media (max-width: 770px) {
+
+  .record-form-group {
+    width: 80%;
+  }
+
+  .record-contents {
+    width: 47%;
+    height: 95%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .record-img {
+    width: 90%;
+    height: 200px;
+  }
+
+  .record-text {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+}
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+
+  .record-area {
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+  .record-contents {
+    width: 95%;
+    padding-top: 8px;
+  }
+
+  .record-text {
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+}
+
+
+/* スマホ表示時 */
+@media (max-width: 360px) {
+
+  .record-text {
+    font-size: 15px;
+  }
+}

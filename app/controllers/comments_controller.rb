@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@post)
     else
-      redirect_to root_path, alert: "Failed to create comment."
+      redirect_to root_path, alert: "コメントの作成に失敗しました."
     end
   end
 

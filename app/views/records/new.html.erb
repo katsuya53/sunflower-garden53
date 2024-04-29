@@ -1,0 +1,79 @@
+<%= render "shared/third-header" %>
+
+<div class="total-wrapper">
+  
+  <%= form_with model: @record, url: records_path, method: :post, id: 'post-new_post', class: 'post-form' do |f| %>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>日記作成画面</h1><BR>
+    </div>
+
+<div class="record-index-wrap">
+  <div class= "record-flash-message">
+    <span>  <!-- エラーや通知を表示 -->
+    
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+      <%= flash[:success] %>
+      <%= flash[:danger] %>
+    </span>
+  </div>
+  </div>
+    <%= render 'layouts/error_messages', model: @record %> <!-- エラーメッセージ  -->
+    
+    <%# 写真をアップロード %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <div id="post-previews"> <!--投稿画像のプレビューを表示--->
+        </div>
+        <label class="form-text">投稿画像</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.file_field :record_image, id: "post-image" %>
+    </div>
+    
+    <%# 投稿日入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">日時</label>
+        <span class="indispensable">必須</span>
+      </div>
+    <%= f.datetime_field :posted_at, class: "post_datetime", id: "post-datetime" %>
+    </div>
+
+    <%# 文章入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">文章</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :record_text, class:"post_text", id:"post-text", placeholder:"文章（必須 40文字まで)" ,rows:"2" ,maxlength:"40" %>
+    </div>
+
+    <%# カテゴリー入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">カテゴリー（植物名）10文字以内</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="category-select-form">
+      <%= f.collection_select :category_id, Category.all, :id, :category_name, { prompt: "選択してください" }, class: "category-select" %>
+      </div>
+      <%= f.text_field :new_category_name, class: "new-category-field", placeholder: "新規作成の場合はこちらに入力",maxlength:"10" %>
+      
+    </div>
+
+    <%# 下部ボタン %>
+    <div class="post-form-group">
+        <h2 class='form-bottom-text'>日付も後で編集できます</h2>
+   
+        <%= f.submit "日記を作成", class: "post-green-btn" %>
+     
+    </div>
+
+  </div>
+  <% end %>
+
+</div>
+
+<%= render "shared/second-footer" %>

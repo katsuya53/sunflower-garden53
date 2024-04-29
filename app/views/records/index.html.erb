@@ -1,0 +1,46 @@
+<%= render "shared/third-header" %>
+
+<div class="record-index-wrap">
+  <div class= "record-flash-message">
+    <span>  <!-- エラーや通知を表示 -->
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+      <%= flash[:success] %>
+      <%= flash[:danger] %>
+    </span>
+  </div>
+
+  <div class="main-title">
+    観察日記
+  </div>
+
+  <div class="record-area">
+    <% @records.each do |record| %>
+
+      <div class='record-contents'>
+
+        <%= record.category.category_name %>
+
+        <%= record.created_at.strftime("%Y/%m/%d %H:%M") %>
+
+        <%= link_to record_path(record) do %>
+          <%= image_tag record.record_image, class: "record-img" if record.record_image.attached? %>
+        <% end %>
+
+        <div class='record-text'>
+          <%= record.record_text %>
+        </div>
+
+      </div>
+
+    <% end %>
+  </div>
+
+  <div class="record-form-group">
+    <h2 class='form-bottom-text'>下のボタンから日記を作成できます</h2>
+    <%= link_to "日記をつける", new_record_path, class: "post-green-btn" %>
+  </div>
+
+</div>
+
+<%= render "shared/footer" %>

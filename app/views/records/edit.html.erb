@@ -1,0 +1,81 @@
+<%= render "shared/third-header" %>
+
+<div class="show-wrap">
+  
+    <div class='show-form-header'>
+      <h1 class='show-form-header-text'>投稿編集画面</h1>
+    </div>
+
+  <%= form_with model: @post_form, id: 'post-new_post', class: 'post-edit-form', url: post_path(@post), local: true, method: :patch do |f|%>
+  <div class='form-wrap'>
+    
+    <%= render 'layouts/error_messages', model: @post %> <!-- エラーメッセージ  -->
+    
+    <%# 写真をアップロード %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <div id="post-previews"> <!--投稿画像のプレビューを表示--->
+        </div>
+        <%= image_tag @post.image, class: "post-image" %>
+        <label class="form-text">投稿画像</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.file_field :image, id: "post-image" %>
+    </div>
+
+    <%# タイトル入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">タイトル</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :post_title, class:"post_text", id:"post-title", placeholder:"タイトル（必須 20文字まで)", maxlength:"20" %>
+    </div>
+    
+    <%# 文章入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">文章</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :post_text, id:"post-text", placeholder:"文章（必須 200文字まで)" ,rows:"4" ,maxlength:"200" %>
+    </div>
+    
+    <%# タグ入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">タグ（キーワード）</label>
+        <span class="indispensable">(10文字以内)</span>
+      </div>
+      <%= f.text_area :tag_name, class:"post_tag", id:"post-tag", placeholder:"例：鉢植え、ハンギング、育て方" ,rows:"1" ,maxlength:"10" %>
+      <div id="search-result"></div>
+      <%= f.text_area :tag_name2, class:"post_tag2", id:"post-tag2", placeholder:"       花の名前、野菜の名前、肥料" ,rows:"1" ,maxlength:"10" %>
+      <div id="search-result2"></div>
+      <%= f.text_area :tag_name3, class:"post_tag3", id:"post-tag3", placeholder:"      多肉、土、種、夏、赤、黄など" ,rows:"1" ,maxlength:"10" %>
+    <div id="search-result3"></div>
+    </div>
+    
+    <%# 注意書き %>
+    <div class="caution">
+        他人が不快と思われるような投稿はやめましょう。
+    </div>
+
+    <%# 下部ボタン %>
+
+    <div class="post-form-group">
+        <h2 class='form-bottom-text'>投稿された内容は後で編集できます</h2>
+      <div class='post-btn'>
+        <%= f.submit "修正して投稿する", class: "post-green-btn" %>
+    </div>
+    </div>
+
+    
+
+  </div>
+  <% end %>
+<div class= "btn-area">
+<%= button_to "投稿を削除する", post_path(@post), method: :delete, class: "delete-post-btn", onclick: "return confirm('本当に削除しますか？');"  %>
+</div>
+</div>
+とう
+<%= render "shared/second-footer" %>

@@ -35,7 +35,9 @@
       <%= link_to image_tag("icon-calendar.png", class: "icon-calendar-img"), blogs_path %>
     </div>
     <div class="menu-item">
-      <%= link_to image_tag("icon-diary.png", class: "icon-diary-img"), "/" %>
+      <%= link_to records_path do %>
+      <%= image_tag("icon-diary.png", class: "icon-diary-img") %> <%# エラーになるので記述を変更 %>
+      <% end %>
     </div>
     <div class="menu-item">
       <%= link_to image_tag("icon-today-none.png", class: "icon-today-img"), "/" %>

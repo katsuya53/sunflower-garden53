@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   resources :blogs
 
+  resources :records
+
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   get "password/reset", to: "password_resets#new"
   post "password/reset", to: "password_resets#create"

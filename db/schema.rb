@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
-  create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2024_04_29_085921) do
+  create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", charset: "utf8mb4", force: :cascade do |t|
+  create_table "active_storage_blobs", charset: "utf8", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -33,13 +33,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", charset: "utf8mb4", force: :cascade do |t|
+  create_table "active_storage_variant_records", charset: "utf8", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "blogs", charset: "utf8mb4", force: :cascade do |t|
+  create_table "blogs", charset: "utf8", force: :cascade do |t|
     t.string "blog_title"
     t.text "blog_text"
     t.datetime "start_time"
@@ -50,7 +50,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
-  create_table "comments", charset: "utf8mb4", force: :cascade do |t|
+  create_table "categories", charset: "utf8", force: :cascade do |t|
+    t.string "category_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", charset: "utf8", force: :cascade do |t|
     t.text "comment_text", null: false
     t.bigint "user_id", null: false
     t.bigint "post_id", null: false
@@ -60,7 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "contacts", charset: "utf8mb4", force: :cascade do |t|
+  create_table "contacts", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
     t.string "subject", null: false
@@ -69,7 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "follows", charset: "utf8mb4", force: :cascade do |t|
+  create_table "follows", charset: "utf8", force: :cascade do |t|
     t.bigint "follower_id"
     t.bigint "followee_id"
     t.datetime "created_at", null: false
@@ -78,7 +84,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.index ["follower_id"], name: "index_follows_on_follower_id"
   end
 
-  create_table "likes", charset: "utf8mb4", force: :cascade do |t|
+  create_table "likes", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "post_id"
     t.datetime "created_at", null: false
@@ -87,7 +93,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "post_tag_relations", charset: "utf8mb4", force: :cascade do |t|
+  create_table "post_tag_relations", charset: "utf8", force: :cascade do |t|
     t.bigint "post_id"
     t.bigint "tag_id"
     t.datetime "created_at", null: false
@@ -96,7 +102,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.index ["tag_id"], name: "index_post_tag_relations_on_tag_id"
   end
 
-  create_table "posts", charset: "utf8mb4", force: :cascade do |t|
+  create_table "posts", charset: "utf8", force: :cascade do |t|
     t.string "post_title", null: false
     t.text "post_text", null: false
     t.bigint "user_id", null: false
@@ -106,14 +112,24 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "tags", charset: "utf8mb4", force: :cascade do |t|
+  create_table "records", charset: "utf8", force: :cascade do |t|
+    t.text "record_text", null: false
+    t.bigint "user_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_records_on_category_id"
+    t.index ["user_id"], name: "index_records_on_user_id"
+  end
+
+  create_table "tags", charset: "utf8", force: :cascade do |t|
     t.string "tag_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["tag_name"], name: "index_tags_on_tag_name", unique: true
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -141,4 +157,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_033758) do
   add_foreign_key "post_tag_relations", "posts"
   add_foreign_key "post_tag_relations", "tags"
   add_foreign_key "posts", "users"
+  add_foreign_key "records", "categories"
+  add_foreign_key "records", "users"
 end
