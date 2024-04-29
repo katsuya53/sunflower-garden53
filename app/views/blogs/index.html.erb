@@ -36,7 +36,7 @@
           <%= form.text_area :blog_title, rows: 1, style: 'resize: none;', maxlength:"5"  %>
         </div>
 
-        <div class="blog-form-content">
+        <div class="blog-form-text">
           <div class="blog-form-tag">内容(20文字以内)</div>
           <%= form.text_area :blog_text, rows: 2, style: 'resize: none;', maxlength:"20"  %>
         </div>
@@ -49,10 +49,10 @@
           <%= form.time_select :start_time, class: 'your-css-class' %>
         </div>
 
-<BR>
-    <div class="blog-form-tag">
-    <%= form.check_box :blog_sent, { checked: false }, true %> メール通知なし
-  </div>
+        <BR>
+        <div class="blog-form-tag">
+          <%= form.check_box :blog_sent, { checked: false }, true %> メール通知なし
+        </div>
 
           <%= form.submit "予定を作成" ,class: "blog-submit-btn" %>
         

@@ -10,6 +10,14 @@
   <strong>日時</strong><BR>
   <%= @blog.start_time.strftime("%-m/%-d %H:%M") %>
   </p>
+  <p>
+  <strong>メール通知</strong><BR>
+  <% if @blog.blog_sent %>
+    通知なし
+  <% else %>
+    通知あり
+  <% end %>
+</p>
 
   <p>
   <strong>タイトル</strong><BR>
