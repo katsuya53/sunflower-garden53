@@ -13,7 +13,7 @@ https://sunflower-garden.jp
 
 # 利用方法
 TOPページ
-[![Image from Gyazo](https://i.gyazo.com/f8cfcf1cbc422f2042242a7ef8a94872.jpg)](https://gyazo.com/f8cfcf1cbc422f2042242a7ef8a94872)
+[<img src="https://i.gyazo.com/f8cfcf1cbc422f2042242a7ef8a94872.jpg" alt="Image from Gyazo" width="200">](https://gyazo.com/f8cfcf1cbc422f2042242a7ef8a94872)
 
 ## 会員登録、編集、削除
 1. TOPページの新規登録をクリックして必要な情報を登録すると、認証メールが届くので、クリックすると登録が完了する
