@@ -12,6 +12,8 @@ https://sunflower-garden.jp
 パスワード : h111111
 
 # 利用方法
+TOPページ
+[![Image from Gyazo](https://i.gyazo.com/f8cfcf1cbc422f2042242a7ef8a94872.jpg)](https://gyazo.com/f8cfcf1cbc422f2042242a7ef8a94872)
 
 ## 会員登録、編集、削除
 1. TOPページの新規登録をクリックして必要な情報を登録すると、認証メールが届くので、クリックすると登録が完了する
@@ -66,9 +68,6 @@ https://sunflower-garden.jp
 # 洗い出した要件
 要件定義シート_SUNFLOWER-GARDEN
 https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2qoQ/edit#gid=982722306
-
-# 実装した機能についての画像やGIFおよびその説明
-【作成中】
 
 # 今後実装予定の機能
 1. 日記機能：写真と文章で自分だけの観察日記がつけられる
