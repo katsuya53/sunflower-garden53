@@ -1,5 +1,5 @@
 # アプリケーション名
-Sunflower-Garden
+### Sunflower-Garden
 
 # アプリケーション概要
 園芸の難しさを乗り越え、より楽しむことができる
