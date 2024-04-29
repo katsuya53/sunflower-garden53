@@ -5,7 +5,7 @@ Sunflower-Garden
 園芸の難しさを乗り越え、より楽しむことができる
 
 # URL
-https://sunflower-garden.jp/
+https://sunflower-garden.jp
 
 # テスト用アカウント
 メールアドレス : hanako@test.com  
@@ -77,10 +77,10 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 4. 画像検索：カメラを起動して撮影し、画像から何の花か検索できる
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/1f2b0d8287256002cf691f2cb51fe252.png)](https://gyazo.com/1f2b0d8287256002cf691f2cb51fe252)
+[![Image from Gyazo](https://i.gyazo.com/3f9222bf8aaa542044b3667bca8daebb.png)](https://gyazo.com/3f9222bf8aaa542044b3667bca8daebb)
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/20b5e9e5e1ad53c100d32bb621211ccc.png)](https://gyazo.com/20b5e9e5e1ad53c100d32bb621211ccc)
+[![Image from Gyazo](https://i.gyazo.com/632d8dcf83a5e423037fa596ad84c899.png)](https://gyazo.com/632d8dcf83a5e423037fa596ad84c899)
 
 # 開発環境
 - フロントエンド：javascript
