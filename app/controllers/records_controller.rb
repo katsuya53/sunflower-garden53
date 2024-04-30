@@ -1,11 +1,15 @@
 class RecordsController < ApplicationController
-  before_action :set_record, only: [:edit, :update, :destroy]
+  before_action :set_record, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index
   before_action :correct_record,only: [:edit]
 
   def index
-    @records = Record.all
-    @records = Record.includes(:user).order("created_at DESC")
+    @categories = Category.all
+    if params[:category_id].present?
+      @records = Record.where(category_id: params[:category_id]).includes(:user).order("created_at DESC")
+    else
+      @records = Record.all.includes(:user).order("created_at DESC")
+    end
   end
 
   def new

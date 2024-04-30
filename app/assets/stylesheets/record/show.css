@@ -1,0 +1,33 @@
+.record-show-wrap {
+  background-color: antiquewhite;
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.record-show-content {
+  background-color: white;
+
+  width: 500px;
+  margin: auto;
+
+
+
+}
+
+.record-show-img {
+ 
+ 
+padding: 10px;
+  margin: auto;
+}
+
+.post-show-text {
+  font-size: 22px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}

@@ -1,174 +1,32 @@
 <%= render "shared/second-header" %>
 
-<div class="post-show-wrap">
-
-  <%= render "shared/side_bar_hidden" %>
+<div class="record-show-wrap">
   
   <div class='show-form-header'>
-    <h1 class='show-form-header-text'>詳細画面</h1>
+    <h1 class='show-form-header-text'>日記 詳細画面</h1>
+  </div>
+<div cklass =>
+ <%= @record.category.category_name %>
+
+  <div class='record-show-content'>
+
+   
+
+    <%= image_tag @record.record_image, class: "record-show-img" %>
+
   </div>
 
-  <div class='post-show-content'>
-    <%= image_tag @post.image, class: "post-show-img" %>
-   
-    <div class='post-show-title'>
-      <%= @post.post_title %>
-    </div>
+    <%= @record.record_text %>
 
-    <div class='post-show-text'>
-      <%= simple_format(@post.post_text) %>
-    </div>
+    <%= @record.created_at.strftime("%Y/%m/%d %H:%M") %>
 
-    <div class='post-show-text'>
-      キーワード：<br>
-      <% @post.tags.each do |tag| %>
-      <%= tag.tag_name %>
-      <% unless tag == @post.tags.last %>, <% end %>
-      <% end %>
-    </div>
-
-    <div class="related-posts">
-      <h3>関連する投稿</h3>
-      <% @post.tags.each_with_index do |tag, index| %>
-      <h3>「<%= tag.tag_name %>」</h3>
-      <% tag.posts.each do |related_post| %>
-        <% unless related_post == @post %>
-          <div class="related-post">
-            <%= link_to related_post.post_title, post_path(related_post) %>
-          </div>
-        <% end %>
-      <% end %>
-      <% unless index == @post.tags.size - 1 %><br style="line-height: 0.5;"> <% end %>
-      <% end %>
-    </div>
-
-    <div class="post-show-poster-wrap">
-
-        <div class='post-show-poster-image'>
-          <% if @post.user && @post.user.image.attached? %>
-            <%= image_tag @post.user.image, class: "post-show-icon-image" %>
-          <% else %>
-            <%= image_tag("user-icon.png", class: "post-show-noicon-image") %>
-          <% end %>
-        </div>
-
-        <div class="post-show-poster-user">
-          <% if user_signed_in? %>  <%# ログインしていればユーザー詳細ページのリンクあり%>
-            <%= link_to @post.user.nickname, user_path(@post.user.id) %>
-          <% else %>
-            <%= @post.user.nickname %>
-          <% end %>
-
-            <span class="post-show-san">さん</span>
-
-            <div class='post-show-date'>
-              <%= @post.updated_at.strftime("%Y/%m/%d") %>
-            </div>
-
-        </div>
-
-      <div class="show-iine-area">
-          <% if user_signed_in? %> <%# ログインしていればいいねのボタン使用可能%>
-          <div id="like-btn<%= @post.id %>">
-            <div class="show-iine-icon-image">
-              <% if user_signed_in? && @post.liked_by?(current_user) %>
-              <%= link_to image_tag("iine-do.png", class:"iine-img"), post_likes_path(@post.id), data: { turbo_method: :delete }, class: "post_likes", remote: true %>
-              <% else %>
-              <%= link_to image_tag("iine.png", class:"iine-img"), post_likes_path(@post.id), data: { turbo_method: :post }, class: "post_likes", remote: true %>
-              <% end %>
-            </div>
-          </div>
-          
-          <div class="like-count">
-            <%= @post.likes_count.positive? ? @post.likes_count : 0 %>
-          </div>
-          <% else %>
-          <div class="show-iine-icon-image">
-            <%= image_tag("iine.png", class:"show-iine-img")%>
-          </div>
-          <div class="like-count">
-            <%= @post.likes_count.positive? ? @post.likes_count : 0 %>
-          </div>
-          <% end %>
-        </div>
 
       
-    </div>
-   
+  <div class="form-group">
+    <h2 class='form-bottom-text'>下のボタンから日記を編集できます</h2>
+    <%= link_to "日記を編集", edit_record_path(@record), class: "post-green-btn" %>
   </div>
-
-   <%# ログインした投稿者のみ編集ボタンが表示 %>
-    <% if user_signed_in? && current_user.id == @post.user_id  %>
-    <div class="form-group">
-      <h2 class='form-bottom-text'>下のボタンから投稿を編集できます</h2>
-        <%= link_to "投稿編集", edit_post_path, class: "post-green-btn" %>
-    </div>
-    <% else %>
-    <% end%>
-
-    <% if @comments.blank? %>
-    <% else %>
-    <div class="comment-contents">
-    <div class="comment-header">
-      コメント一覧
-    </div>
-    <% end %>
-
-    <% editable_comments = @comments.select { |comment| user_signed_in? && current_user.id == comment.user_id } %>
-
-    <% @comments.each do |comment| %>
-      <div class="comment-content">
-        
-        <div class="comment-text">
-          <%= comment.comment_text %>
-        </div>
-        <div class= "comment-info">
-          <div class='comment-poster'>
-            <%= image_tag comment.user.image, class: "comment-icon-image" %>
-            <%= comment.user.nickname %>
-            <div class="comment-san">
-             さん
-            </div>
-            <div class='comment-date'>
-              <%= comment.updated_at.strftime("%Y/%m/%d") %>
-            </div>
-            <% if editable_comments.include?(comment) %>
-              <%= link_to "編集", edit_comment_path(comment), class: "" %>
-            <% end %>
-          </div>
-        </div>
-        
-      </div>
-    <% end %>
-  </div>
-
-  <div class="comment-wrap">
-    <div class="comment-box">
-      <% if user_signed_in? %>
-        <%= form_with(model: Comment.new, url: post_comments_path(@post), local: true, class: "comment-form") do |f| %>
-          <div class="comment-field">
-            <%= f.label :comment_text, "感想や質問などコメントできます (改行不可)" %>
-            <%= f.text_area :comment_text, rows: 1, style: "width: 100%;" %>
-          </div>
-          <p class="comment-warn">
-            相手のことを考え丁寧なコメントを心がけましょう。
-          </p>
-
-          <div class="comment-actions">
-            <%= f.button class: 'comment-btn' do %>
-            <div class="comment-flag-icon">
-              <%= image_tag("comment.png") %>
-            </div>
-            <div class="comment-btn-text">
-              コメントする
-            </div>
-            <% end %>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-    
-  </div>
+  
 </div>
 
 <%= render "shared/second-footer" %>
