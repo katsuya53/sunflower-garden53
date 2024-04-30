@@ -9,25 +9,117 @@
 
 .record-show-content {
   background-color: white;
-
-  width: 500px;
+  width: 600px;
   margin: auto;
-
-
-
 }
 
 .record-show-img {
- 
- 
 padding: 10px;
   margin: auto;
 }
 
-.post-show-text {
+.record-show-text {
   font-size: 22px;
   padding-left: 20px;
   padding-top: 10px;
   padding-right: 20px;
   margin-bottom: 20px;
+}
+
+.record-show-category {
+  background-color: white;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 30px;
+  color: green;
+  font-weight: bold;
+}
+
+.record-show-info {
+    background-color: white;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 20px;
+  }
+
+.record-show-text {
+  font-size: 20px;
+}
+
+.record-show-date {
+  font-size: 15px;
+  text-align: end;
+}
+
+.record-form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+  
+.record-green-btn {
+  width: 160px;
+  background-color: green;
+  border: 1px solid green;
+  color: #fff;
+  line-height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+
+/* 幅狭小表示時 */
+@media (max-width: 770px) {
+
+  .record-show-wrap {
+    width: 95%;
+  }
+
+  .record-show-content {
+    width: 500px;
+  }
+
+  .record-show-category {
+    width: 500px;
+  }
+
+  .record-show-info {
+    width: 500px;
+  }
+}
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+
+  .record-show-wrap {
+    width: 95%;
+  }
+
+  .record-show-content {
+    width: 300px;
+  }
+
+  .record-show-category {
+    width: 300px;
+    font-size: 20px;
+  }
+
+  .record-show-info {
+    width: 300px;
+  }
+
+  .record-show-text {
+    font-size: 18px;
+  }
 }

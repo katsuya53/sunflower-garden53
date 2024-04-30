@@ -5,26 +5,29 @@
   <div class='show-form-header'>
     <h1 class='show-form-header-text'>日記 詳細画面</h1>
   </div>
-<div cklass =>
- <%= @record.category.category_name %>
 
-  <div class='record-show-content'>
-
-   
-
-    <%= image_tag @record.record_image, class: "record-show-img" %>
-
+  <div class="record-show-category">
+    <%= @record.category.category_name %>
   </div>
 
-    <%= @record.record_text %>
+  <div class='record-show-content'>
+    <%= image_tag @record.record_image, class: "record-show-img" %>
+  </div>
 
-    <%= @record.created_at.strftime("%Y/%m/%d %H:%M") %>
-
+  <div class="record-show-info">
+    <div class="record-show-text">
+      <%= @record.record_text %>
+    </div>
+    <div class="record-show-date">
+      <%= @record.created_at.strftime("%Y/%m/%d %H:%M") %>
+    </div>
+  </div>
 
       
-  <div class="form-group">
-    <h2 class='form-bottom-text'>下のボタンから日記を編集できます</h2>
-    <%= link_to "日記を編集", edit_record_path(@record), class: "post-green-btn" %>
+  <div class="record-form-group">
+  
+    <%= link_to "戻る", :back, class: "record-green-btn" %>
+    <%= link_to "日記を編集", edit_record_path(@record), class: "record-green-btn" %>
   </div>
   
 </div>
