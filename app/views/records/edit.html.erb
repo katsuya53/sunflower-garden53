@@ -1,81 +1,81 @@
 <%= render "shared/third-header" %>
 
-<div class="show-wrap">
+<div class="total-wrapper">
   
-    <div class='show-form-header'>
-      <h1 class='show-form-header-text'>投稿編集画面</h1>
+  <%= form_with model: @record, id: 'post-new_post', class: 'post-edit-form', url: record_path(@record), local: true, method: :patch do |f|%>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>日記編集画面</h1><BR>
     </div>
 
-  <%= form_with model: @post_form, id: 'post-new_post', class: 'post-edit-form', url: post_path(@post), local: true, method: :patch do |f|%>
-  <div class='form-wrap'>
+<div class="record-index-wrap">
+  <div class= "record-flash-message">
+    <span>  <!-- エラーや通知を表示 -->
     
-    <%= render 'layouts/error_messages', model: @post %> <!-- エラーメッセージ  -->
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+      <%= flash[:success] %>
+      <%= flash[:danger] %>
+    </span>
+  </div>
+  </div>
+    <%= render 'layouts/error_messages', model: @record %> <!-- エラーメッセージ  -->
     
     <%# 写真をアップロード %>
     <div class="post-form-group">
       <div class='post-form-text-wrap'>
         <div id="post-previews"> <!--投稿画像のプレビューを表示--->
         </div>
-        <%= image_tag @post.image, class: "post-image" %>
+        <%= image_tag @record.record_image, class: "post-image" %>
         <label class="form-text">投稿画像</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.file_field :image, id: "post-image" %>
-    </div>
-
-    <%# タイトル入力欄 %>
-    <div class="post-form-group">
-      <div class='post-form-text-wrap'>
-        <label class="form-text">タイトル</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_area :post_title, class:"post_text", id:"post-title", placeholder:"タイトル（必須 20文字まで)", maxlength:"20" %>
+      <%= f.file_field :record_image, id: "post-image" %>
     </div>
     
+    <%# 投稿日入力欄 %>
+    <div class="post-form-group">
+      <div class='post-form-text-wrap'>
+        <label class="form-text">日時</label>
+        <span class="indispensable">必須</span>
+      </div>
+    <%= f.datetime_field :posted_at, class: "post_datetime", id: "post-datetime" %>
+    </div>
+
     <%# 文章入力欄 %>
     <div class="post-form-group">
       <div class='post-form-text-wrap'>
         <label class="form-text">文章</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :post_text, id:"post-text", placeholder:"文章（必須 200文字まで)" ,rows:"4" ,maxlength:"200" %>
+      <%= f.text_area :record_text, class:"post_text", id:"post-text", placeholder:"文章（必須 40文字まで)" ,rows:"2" ,maxlength:"40" %>
     </div>
-    
-    <%# タグ入力欄 %>
+
+    <%# カテゴリー入力欄 %>
     <div class="post-form-group">
       <div class='post-form-text-wrap'>
-        <label class="form-text">タグ（キーワード）</label>
-        <span class="indispensable">(10文字以内)</span>
+        <label class="form-text">カテゴリー（植物名）10文字以内</label>
+        <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :tag_name, class:"post_tag", id:"post-tag", placeholder:"例：鉢植え、ハンギング、育て方" ,rows:"1" ,maxlength:"10" %>
-      <div id="search-result"></div>
-      <%= f.text_area :tag_name2, class:"post_tag2", id:"post-tag2", placeholder:"       花の名前、野菜の名前、肥料" ,rows:"1" ,maxlength:"10" %>
-      <div id="search-result2"></div>
-      <%= f.text_area :tag_name3, class:"post_tag3", id:"post-tag3", placeholder:"      多肉、土、種、夏、赤、黄など" ,rows:"1" ,maxlength:"10" %>
-    <div id="search-result3"></div>
-    </div>
-    
-    <%# 注意書き %>
-    <div class="caution">
-        他人が不快と思われるような投稿はやめましょう。
+      <div class="category-select-form">
+      <%= f.collection_select :category_id, Category.all, :id, :category_name, { prompt: "選択してください" }, class: "category-select" %>
+      </div>
+      <%= f.text_field :new_category_name, class: "new-category-field", placeholder: "新規作成の場合はこちらに入力",maxlength:"10" %>
+      
     </div>
 
     <%# 下部ボタン %>
-
     <div class="post-form-group">
-        <h2 class='form-bottom-text'>投稿された内容は後で編集できます</h2>
-      <div class='post-btn'>
-        <%= f.submit "修正して投稿する", class: "post-green-btn" %>
+        <h2 class='form-bottom-text'>日付も後で編集できます</h2>
+   
+        <%= link_to "戻る", :back, class: "record-green-btn" %>
+        <%= f.submit "編集する", class: "record-green-btn" %>
+     
     </div>
-    </div>
-
-    
 
   </div>
   <% end %>
-<div class= "btn-area">
-<%= button_to "投稿を削除する", post_path(@post), method: :delete, class: "delete-post-btn", onclick: "return confirm('本当に削除しますか？');"  %>
+
 </div>
-</div>
-とう
+
 <%= render "shared/second-footer" %>

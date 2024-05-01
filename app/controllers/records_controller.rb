@@ -33,13 +33,18 @@ class RecordsController < ApplicationController
   def show
   end
 
-  def edit
-  end
-
   def update
+    if @record.update(record_params)
+      @record.touch # 更新日時を更新
+      redirect_to record_path(@record)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @record.destroy
+    redirect_to records_path
   end
 
 private
