@@ -1,8 +1,8 @@
 <%= render "shared/third-header" %>
 
 <div class="record-index-wrap">
-  <div class= "record-flash-message">
-    <span>  <!-- エラーや通知を表示 -->
+  <div class="record-flash-message">
+    <span> <!-- エラーや通知を表示 -->
       <%= flash[:notice] %>
       <%= flash[:alert] %>
       <%= flash[:success] %>
@@ -20,30 +20,32 @@
     <ul>
       <li><%= link_to "すべて表示する", records_path %></li>
       <% @categories.each do |category| %>
-        <li><%= link_to category.category_name, records_path(category_id: category.id) %></li>
+        <% if current_user.records.exists?(category_id: category.id) %> <!-- 現在のユーザーの投稿に指定のカテゴリーが含まれているかを確認 -->
+          <li><%= link_to category.category_name, records_path(category_id: category.id) %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>
 
   <div class="record-area">
     <% @records.each do |record| %>
+      <% if record.user_id == current_user.id %> <!-- ユーザーが投稿の作者であるかを確認 -->
+        <div class='record-contents'>
+          <div class="record-category-name">
+            <%= record.category.category_name %>
+          </div>
+          
+          <div class="image-flame">
+            <%= link_to record_path(record) do %>
+              <%= image_tag record.record_image, class: "record-img" if record.record_image.attached? %>
+            <% end %>
+          </div>
 
-      <div class='record-contents'>
-        <div class="record-category-name">
-          <%= record.category.category_name %>
+          <div class="record-date">
+            <%= record.updated_at.strftime("%Y/%m/%d %H:%M") %>
+          </div>
         </div>
-        
-        <div class="image-flame">
-          <%= link_to record_path(record) do %>
-            <%= image_tag record.record_image, class: "record-img" if record.record_image.attached? %>
-          <% end %>
-        </div>
-
-        <div class="record-date">
-          <%= record.updated_at.strftime("%Y/%m/%d %H:%M") %>
-        </div>
-      </div>
-
+      <% end %>
     <% end %>
   </div>
 
