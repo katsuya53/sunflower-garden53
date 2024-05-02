@@ -1,7 +1,7 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index
-  before_action :correct_record, only: [:edit]
+  before_action :correct_record, only: [:edit, :show]
 
   def index
     @categories = Category.all
