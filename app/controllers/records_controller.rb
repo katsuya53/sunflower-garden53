@@ -38,16 +38,19 @@ class RecordsController < ApplicationController
   def update
     @record = Record.find(params[:id])
   
-    new_category_name = params[:record][:new_category_name]
-    if new_category_name.present?
-      category = Category.find_or_create_by(category_name: new_category_name)
+    if params[:record][:new_category_name].present?
+      category = Category.find_or_create_by(category_name: params[:record][:new_category_name])
       @record.category = category
+      if @record.save
+        redirect_to edit_record_path(@record), notice: "カテゴリーが追加されました。編集を続けてください。"
+        return
+      end
     elsif params[:record][:category_id].present?
       @record.category_id = params[:record][:category_id]
     end
   
-    if @record.update(record_params.except(:new_category_name))
-      redirect_to record_path(@record)
+    if @record.update(record_params)
+      redirect_to record_path(@record), notice: "日記が更新されました。"
     else
       render :edit, status: :unprocessable_entity
     end
