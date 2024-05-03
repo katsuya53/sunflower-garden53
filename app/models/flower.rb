@@ -1,3 +1,5 @@
+require 'csv' #CSVモジュールの起動 コンソールにて Flower.import_from_csv('data/flowers.csv')
+
 class Flower < ApplicationRecord
   attribute :date, :date
   attribute :flower_name, :string

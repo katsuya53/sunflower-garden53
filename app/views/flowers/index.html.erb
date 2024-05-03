@@ -1,6 +1,5 @@
 <%= render "shared/second-header" %>
 
-
 <div class="what-flower-toppage">
    <%= render "shared/side_bar_hidden" %>
 
@@ -9,12 +8,8 @@
   <div class=" what-flower-wrap">
 
 
-<%= form_tag(flowers_path, method: :get) do %>
-  <%= select_tag :selected_date, options_for_select((Date.today - 7..Date.today + 1).to_a, @selected_date), prompt: 'この日は？' %>
-  <%= submit_tag '何の花？' %>
-<% end %>
-
-<div class="what-flower-name">
+  <%= @selected_date.strftime("%Y年%m月%d日") %>の花は<BR>
+  
   <% if @flower %>
   
   <%# 画像を紐付け予定 %>
@@ -24,12 +19,13 @@
       <%#= image_tag 'flower-sample.png', resize: '100x100', class: 'flower-sample-image', alt: 'サンプル画像' %>
     <%# end %>
 
-  <%= @flower.flower_name %>
+<span class="what-flower-name">
+  <%= @flower.flower_name %></span>です
 
   <div class="google-search-link">
     <% google_search_url = "https://www.google.com/search?q=#{CGI.escape(@flower.flower_name)}" %>
-    <%= link_to "より詳しく調べる", google_search_url, target: "_blank" %>
-  </div>
+    <%= link_to "詳しく調べる", google_search_url, target: "_blank" %>
+  
 
   <%# 花についての情報を追加予定 %>
     <%#= @flower.flower_info %>
@@ -38,6 +34,19 @@
     データが登録されていません
   <% end %>
 </div>
+
+<div class="what-flower-content">
+最近の花も表示されます
+</div>
+
+
+  <%= form_tag(flowers_path, method: :get) do %>
+  <div class="what-flower-search">
+    <%= select_tag :selected_date, options_for_select((Date.today - 7..Date.today + 1).to_a, @selected_date), prompt: 'この日は？' %>
+    <%= submit_tag '何の花？', class: "what-flower-submit-btn"%>
+  </div>
+<% end %>
+
 </div>
 </div>
 

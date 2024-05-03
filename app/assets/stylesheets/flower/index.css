@@ -12,6 +12,7 @@
 
 .what-flower-wrap {
 font-size: 20px;
+padding: 20px;
 }
 
 .flower-sample-image {
@@ -19,18 +20,27 @@ font-size: 20px;
 }
 
 .what-flower-name {
-padding: 40px;
+font-size: 25px;
+color: darkgreen;
+padding: 20px;
+font-weight: bold;
+}
+
+.what-flower-content {
+margin-top: 20px;
+}
+
+.what-flower-search {
+  display: flex;
+  justify-self: center;
+ justify-content: center;
 }
 
 .what-flower-submit-btn {
   background: #007bff;
-  width: 150px;
+  width: 100px;
   height: 40px;
-  display: block;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-left: 10px; /* ボタンの左側の余白を追加 */
   border: 1px solid black;
   color: white;
   border-radius: 5px;

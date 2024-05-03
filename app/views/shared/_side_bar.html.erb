@@ -39,7 +39,7 @@
 
   <div class="menu-item">
     <%= link_to flowers_path do %>
-    <%= image_tag("icon-today-none.png", class: "icon-today-img") %> <%# エラーになるので記述を変更 %>
+    <%= image_tag("icon-today.png", class: "icon-today-img") %> <%# エラーになるので記述を変更 %>
     <% end %>
   </div>
 
@@ -49,4 +49,6 @@
   <div class="menu-item">
     <%= link_to image_tag("icon-camera-none.png", class: "icon-camera-img"), "/" %>
   </div>
+
+  <%= link_to 'CSV ファイルをインポートする', import_flowers_path %>
 </div>
