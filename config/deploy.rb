@@ -39,7 +39,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 # デプロイメント前に実行されるタスク
 before 'deploy:migrate', 'custom:import_csv'
 
-# 自作のタスク
+# CSVを本番環境にインポートする
 namespace :custom do
   desc 'Import CSV data'
   task :import_csv do

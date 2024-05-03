@@ -9,10 +9,9 @@
   padding: 20px 0;
 }
 
-
 .what-flower-wrap {
-font-size: 20px;
-padding: 20px;
+  font-size: 20px;
+  padding: 20px;
 }
 
 .flower-sample-image {
@@ -20,20 +19,20 @@ padding: 20px;
 }
 
 .what-flower-name {
-font-size: 25px;
-color: darkgreen;
-padding: 20px;
-font-weight: bold;
+  font-size: 25px;
+  color: darkgreen;
+  padding: 20px;
+  font-weight: bold;
 }
 
 .what-flower-content {
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .what-flower-search {
   display: flex;
   justify-self: center;
- justify-content: center;
+  justify-content: center;
 }
 
 .what-flower-submit-btn {
@@ -47,7 +46,6 @@ margin-top: 20px;
   cursor: pointer;
   font-size: 16px;
 }
-
 
 
 @media (max-width: 770px) {
