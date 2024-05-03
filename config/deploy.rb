@@ -35,3 +35,20 @@ end
 
 # デプロイ後に画像が消えないように設定
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/storage" # “public/storage"を加える
+
+# デプロイメント前に実行されるタスク
+before 'deploy:migrate', 'custom:import_csv'
+
+# 自作のタスク
+namespace :custom do
+  desc 'Import CSV data'
+  task :import_csv do
+    on roles(:app) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, 'import:flowers' # CSVをインポートするRakeタスクを実行
+        end
+      end
+    end
+  end
+end
