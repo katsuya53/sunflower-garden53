@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_02_133937) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_03_102535) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -73,6 +73,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_02_133937) do
     t.text "message", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "flowers", charset: "utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "date"
+    t.string "flower_name"
+    t.text "flower_info"
   end
 
   create_table "follows", charset: "utf8", force: :cascade do |t|

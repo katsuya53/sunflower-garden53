@@ -36,9 +36,13 @@
     <%= image_tag("icon-diary.png", class: "icon-diary-img") %> <%# エラーになるので記述を変更 %>
     <% end %>
   </div>
+
   <div class="menu-item">
-    <%= link_to image_tag("icon-today-none.png", class: "icon-today-img"), "/" %>
+    <%= link_to flowers_path do %>
+    <%= image_tag("icon-today-none.png", class: "icon-today-img") %> <%# エラーになるので記述を変更 %>
+    <% end %>
   </div>
+
   <div class="menu-item">
     <%= link_to image_tag("icon-weather-none.png", class: "icon-weather-img"), "/" %>
   </div>

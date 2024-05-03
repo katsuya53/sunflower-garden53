@@ -1,0 +1,44 @@
+<%= render "shared/second-header" %>
+
+
+<div class="what-flower-toppage">
+   <%= render "shared/side_bar_hidden" %>
+
+  <h1 class="what-flower-title">今日は何の花？</h1>
+
+  <div class=" what-flower-wrap">
+
+
+<%= form_tag(flowers_path, method: :get) do %>
+  <%= select_tag :selected_date, options_for_select((Date.today - 7..Date.today + 1).to_a, @selected_date), prompt: 'この日は？' %>
+  <%= submit_tag '何の花？' %>
+<% end %>
+
+<div class="what-flower-name">
+  <% if @flower %>
+  
+  <%# 画像を紐付け予定 %>
+    <%# if @flower.flower_image.attached? %>
+      <%#= image_tag @flower.flower_image.variant(resize: '100x100'), class: 'user-show-image' %>
+    <%# else %>
+      <%#= image_tag 'flower-sample.png', resize: '100x100', class: 'flower-sample-image', alt: 'サンプル画像' %>
+    <%# end %>
+
+  <%= @flower.flower_name %>
+
+  <div class="google-search-link">
+    <% google_search_url = "https://www.google.com/search?q=#{CGI.escape(@flower.flower_name)}" %>
+    <%= link_to "より詳しく調べる", google_search_url, target: "_blank" %>
+  </div>
+
+  <%# 花についての情報を追加予定 %>
+    <%#= @flower.flower_info %>
+
+  <% else %>
+    データが登録されていません
+  <% end %>
+</div>
+</div>
+</div>
+
+<%= render "shared/second-footer" %>

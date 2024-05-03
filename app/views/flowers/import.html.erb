@@ -1,0 +1,7 @@
+<%= form_tag(import_flowers_path, multipart: true) do %>
+  <div class="field">
+    <%= label_tag :file, 'CSV ファイルを選択してください' %>
+    <%= file_field_tag :file %>
+  </div>
+  <%= submit_tag 'CSV ファイルをインポートする' %>
+<% end %>

@@ -1,0 +1,61 @@
+.what-flower-toppage {
+  text-align: center;
+  margin: auto;
+  background-color: antiquewhite;
+  width: 80%;
+}
+
+.what-flower-title {
+  padding: 20px 0;
+}
+
+
+.what-flower-wrap {
+font-size: 20px;
+}
+
+.flower-sample-image {
+  margin: auto;
+}
+
+.what-flower-name {
+padding: 40px;
+}
+
+.what-flower-submit-btn {
+  background: #007bff;
+  width: 150px;
+  height: 40px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+@media (max-width: 770px) {
+  .what-flower-wrap {
+    display: flex;
+    flex-direction: column; /* 画面が狭い場合、上下に要素を配置 */
+  }
+  
+  .what-flower-title {
+    font-size: 4vw;
+    margin-bottom: 10px;
+  }
+
+  .what-flower-notice {
+    text-align: center;
+    font-size: 15px;
+    color:darkgreen;
+    margin-bottom: 10px;
+  }
+
+}

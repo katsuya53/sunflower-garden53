@@ -40,5 +40,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :flowers, only: [:index, :new, :create, :edit, :update, :destroy] do
+    collection do
+      post :import
+      get :import # GETリクエスト用のルートを追加
+    end
+  end
   get '/favicon.ico', to: 'application#favicon'
 end
