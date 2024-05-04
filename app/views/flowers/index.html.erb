@@ -23,7 +23,7 @@
   <%= @flower.flower_name %></span>です
 
   <div class="google-search-link">
-    <% google_search_url = "https://www.google.com/search?q=#{CGI.escape(@flower.flower_name)}" %>
+    <% google_search_url = "https://www.google.com/search?q=#{CGI.escape(@flower.flower_name + ' 花')}" %>
     <%= link_to "詳しく調べる", google_search_url, target: "_blank" %>
   
 
