@@ -155,21 +155,21 @@
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
 
-.comment-wrap {
-  width: 90%;
-}
+  .comment-wrap {
+    width: 90%;
+  }
 
-.comment-count-icon {
-  width: 12vw;
-  margin-left: 30px;
-  margin-right: 10px;
-  position: relative;
-}
+  .comment-count-icon {
+    width: 12vw;
+    margin-left: 30px;
+    margin-right: 10px;
+    position: relative;
+  }
 
-.comment-count-sum {
-  font-size: 4vw;
-  transform: translate(180%, 60%);
-}
+  .comment-count-sum {
+    font-size: 4vw;
+    transform: translate(180%, 60%);
+  }
 }
 
 
@@ -207,5 +207,4 @@
     margin-right: 5px;
     margin-left: 1px;
   }
-
 }
