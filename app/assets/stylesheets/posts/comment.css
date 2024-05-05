@@ -71,6 +71,7 @@
 
 .comment-icon-image {
   width: 40px;
+  height: 40px;
   margin: auto;
   margin-right: 10px;
   object-fit: cover; 
@@ -81,6 +82,7 @@
 
 .comment-noicon-image {
   width: 50px;
+  height: 50px;
   margin: auto;
   margin-right: 10px;
   object-fit: cover; 
@@ -194,12 +196,14 @@
 
   .comment-icon-image {
     width: 30px;
+    height: 30px;
     margin-right: 5px;
     margin-left: 1px;
   }
 
   .comment-noicon-image {
     width: 40px;
+    height: 40px;
     margin-right: 5px;
     margin-left: 1px;
   }
