@@ -45,7 +45,7 @@
     <div class="post-show-poster-wrap">
 
         <div class='post-show-poster-image'>
-          <% if @post.user && @post.user.image.attached? %>
+          <% if @post.user && @post.user.image.attached? %> <%# ユーザーアイコン画像がなければサンプル画像を表示%>
             <%= image_tag @post.user.image, class: "post-show-icon-image" %>
           <% else %>
             <%= image_tag("user-icon.png", class: "post-show-noicon-image") %>
@@ -124,8 +124,12 @@
         </div>
         <div class= "comment-info">
           <div class='comment-poster'>
-            <%= image_tag comment.user.image, class: "comment-icon-image" %>
-            <%= comment.user.nickname %>
+            <% if comment.user.image.present? %>
+              <%= image_tag comment.user.image, class: "comment-icon-image" %>
+            <% else %>
+              <%= image_tag "user-icon.png", class: "comment-noicon-image" %>
+            <% end %>
+              <%= comment.user.nickname %>
             <div class="comment-san">
              さん
             </div>

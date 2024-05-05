@@ -79,6 +79,15 @@
   margin-left: 5px;
 }
 
+.comment-noicon-image {
+  width: 50px;
+  margin: auto;
+  margin-right: 10px;
+  object-fit: cover; 
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
 .comment-text {
   font-size: 18px;
   margin-top: 20px;
@@ -188,4 +197,11 @@
     margin-right: 5px;
     margin-left: 1px;
   }
+
+  .comment-noicon-image {
+    width: 40px;
+    margin-right: 5px;
+    margin-left: 1px;
+  }
+
 }
