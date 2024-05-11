@@ -7,25 +7,31 @@
 <%= form_with(model: @blog, class:"blog-edit-form",local: true) do |form| %>
 
   <div class="blog-form-title">
-    <div class="blog-form-tag">タイトル(5文字以内)</div>
+    <div class="blog-form-tag">
+      タイトル(5文字以内)
+    </div>
     <%= form.text_field :blog_title, class: "blog-edit-text", maxlength:"5" %>
   </div>
 
   <div class="blog-form-text">
-    <div class="blog-form-tag">内容(20文字以内)</div>
+    <div class="blog-form-tag">
+      内容(20文字以内)
+    </div>
     <%= form.text_field :blog_text, class: "blog-edit-text", maxlength:"20" %>
   </div>
 
-    <div class="blog-time">
-          <div class="blog-form-tag">日時</div>
-          <%= form.datetime_select :start_time, class: 'your-css-class' %>
-        </div>
+  <div class="blog-time">
+    <div class="blog-form-tag">
+      日時
+    </div>
+      <%= form.datetime_select :start_time, class: 'your-css-class' %>
+  </div>
        
-
-        <BR>
-        <div class="blog-form-tag">
-          <%= form.check_box :blog_sent, {}, true %> メール通知なし
-        </div>
+  <BR>
+  <div class="blog-form-tag">
+    <%= form.check_box :blog_sent, {}, true %>
+    メール通知なし
+  </div>
 
   <div class="blog-submit">
     <%= form.submit "予定を修正",class: "blog-submit-btn" %>

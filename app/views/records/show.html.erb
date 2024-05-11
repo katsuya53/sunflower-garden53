@@ -22,10 +22,8 @@
       <%= @record.posted_at.strftime("%Y/%m/%d %H:%M") %>
     </div>
   </div>
-
       
   <div class="record-form-group">
-  
     <%= link_to "戻る", records_path, class: "record-green-btn" %>
     <%= link_to "日記を編集", edit_record_path(@record), class: "record-green-btn" %>
   </div>

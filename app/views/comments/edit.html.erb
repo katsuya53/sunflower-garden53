@@ -9,9 +9,8 @@
   <%= form_with model: @comment, id: 'comment-new_post', class: 'post-edit-form', url: comment_path(@comment), local: true, method: :patch do |f|%>
   <div class='form-wrap'>
     
-    <%= render 'layouts/error_messages', model: @comment %> <!-- エラーメッセージ  -->
-    
-    
+    <%# エラーメッセージ %>
+    <%= render 'layouts/error_messages', model: @comment %> 
     
     <%# 文章入力欄 %>
     <div class="post-form-group">
@@ -28,7 +27,6 @@
     </div>
 
     <%# 下部ボタン %>
-
     <div class="post-form-group">
         <h2 class='form-bottom-text'>投稿された内容は後で編集できます</h2>
       <div class='post-btn'>
@@ -36,13 +34,12 @@
     </div>
     </div>
 
-    
-
   </div>
   <% end %>
-<div class= "btn-area">
-<%= button_to "投稿を削除する", comment_path(@comment), method: :delete, class: "delete-post-btn", onclick: "return confirm('本当に削除しますか？');"  %>
-</div>
+
+  <div class= "btn-area">
+    <%= button_to "投稿を削除する", comment_path(@comment), method: :delete, class: "delete-post-btn", onclick: "return confirm('本当に削除しますか？');"  %>
+  </div>
 </div>
 
 <%= render "shared/second-footer" %>

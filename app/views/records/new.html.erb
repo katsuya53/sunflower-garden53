@@ -8,17 +8,17 @@
       <h1 class='form-header-text'>日記作成画面</h1><BR>
     </div>
 
-<div class="record-index-wrap">
-  <div class= "record-flash-message">
-    <span>  <!-- エラーや通知を表示 -->
+    <div class="record-index-wrap">
+      <div class= "record-flash-message">
+        <span>  <!-- エラーや通知を表示 -->
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+          <%= flash[:success] %>
+          <%= flash[:danger] %>
+        </span>
+      </div>
+    </div>
     
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-      <%= flash[:success] %>
-      <%= flash[:danger] %>
-    </span>
-  </div>
-  </div>
     <%= render 'layouts/error_messages', model: @record %> <!-- エラーメッセージ  -->
     
     <%# 写真をアップロード %>

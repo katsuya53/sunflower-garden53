@@ -1,32 +1,35 @@
 <%= render "shared/second-header" %>
 
    <%= render "shared/side_bar_hidden" %>
-   <%= render 'layouts/error_messages', model: @blog %> <!-- エラーメッセージ  -->
+
+   <%# エラーメッセージ %>
+   <%= render 'layouts/error_messages', model: @blog %> 
    <p class="blog-notice"><%= notice %></p>
 
 <div class="blog-show-wrap">
 
   <p>
-  <strong>日時</strong><BR>
-  <%= @blog.start_time.strftime("%-m/%-d %H:%M") %>
+    <strong>日時</strong><BR>
+    <%= @blog.start_time.strftime("%-m/%-d %H:%M") %>
   </p>
-  <p>
-  <strong>メール通知</strong><BR>
-  <% if @blog.blog_sent %>
-    通知なし
-  <% else %>
-    通知あり
-  <% end %>
-</p>
 
   <p>
-  <strong>タイトル</strong><BR>
-  <%= @blog.blog_title %>
-    </p>
+    <strong>メール通知</strong><BR>
+    <% if @blog.blog_sent %>
+      通知なし
+    <% else %>
+      通知あり
+    <% end %>
+  </p>
 
   <p>
-  <strong>内容</strong><BR>
-  <%= @blog.blog_text %>
+    <strong>タイトル</strong><BR>
+    <%= @blog.blog_title %>
+  </p>
+
+  <p>
+    <strong>内容</strong><BR>
+    <%= @blog.blog_text %>
   </p>
 
   <%= link_to '編集', edit_blog_path(@blog) %>
