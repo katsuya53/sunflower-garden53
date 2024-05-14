@@ -140,16 +140,22 @@
 
 .comment-count-icon {
   width: 4vw;
+  height: 4vw; /* 高さも設定する必要があります */
   margin-left: 10px;
   margin-right: 10px;
   position: relative;
+  display: flex; /* 中央配置のためにflexboxを使用 */
+  justify-content: center; /* 横方向の中央配置 */
+  align-items: center; /* 縦方向の中央配置 */
 }
 
 .comment-count-sum {
   font-size: 1.5vw;
-  position: absolute; /* 追加 */
-  transform: translate(160%, 50%);
-  z-index: 1; /* 任意の値。他の要素よりも大きな値に設定すると、要素が前面に表示されます。 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  z-index: 1; /* 必要に応じて */
 }
 
 /* 幅狭小表示時 */
