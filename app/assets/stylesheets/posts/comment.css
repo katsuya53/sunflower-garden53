@@ -140,13 +140,13 @@
 
 .comment-count-icon {
   width: 4vw;
-  height: 4vw; /* 高さも設定する必要があります */
+  height: 4vw; 
   margin-left: 10px;
   margin-right: 10px;
   position: relative;
-  display: flex; /* 中央配置のためにflexboxを使用 */
-  justify-content: center; /* 横方向の中央配置 */
-  align-items: center; /* 縦方向の中央配置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .comment-count-sum {
@@ -155,7 +155,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
-  z-index: 1; /* 必要に応じて */
+  z-index: 1;
 }
 
 /* 幅狭小表示時 */
@@ -167,14 +167,13 @@
 
   .comment-count-icon {
     width: 12vw;
+    height: 12vw;
     margin-left: 30px;
     margin-right: 10px;
-    position: relative;
   }
 
   .comment-count-sum {
     font-size: 4vw;
-    transform: translate(180%, 60%);
   }
 }
 
