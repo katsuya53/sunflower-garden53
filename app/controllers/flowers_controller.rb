@@ -1,12 +1,10 @@
 class FlowersController < ApplicationController
-
   def index
-      # デフォルト値として今日の日付を設定
-      @selected_date = params[:selected_date] || Date.today
-      @flower = Flower.find_by(date: @selected_date)
-      # 指定した日付を取得して表示
-      @selected_date = params[:selected_date].present? ? Date.parse(params[:selected_date]) : Date.today
-      @flower = Flower.find_by(date: @selected_date)
+    # セレクトボックスからの日付を日本時間に変換
+    @selected_date = params[:selected_date].present? ? Date.parse(params[:selected_date]).in_time_zone('Tokyo') : Date.today
+
+    # 日本時間での日付を使って花の情報を取得
+    @flower = Flower.find_by(date: @selected_date)
   end
 
   def import
