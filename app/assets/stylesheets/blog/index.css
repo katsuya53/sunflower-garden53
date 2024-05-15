@@ -158,6 +158,10 @@ a {
 
 @media (max-width: 490px) {
  
+  .blog-title {
+    font-size: 5vw;
+  }
+
   .calendar-heading {
     font-size: 5vw;
   }

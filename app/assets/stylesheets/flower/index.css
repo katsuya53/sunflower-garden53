@@ -65,5 +65,12 @@
     color:darkgreen;
     margin-bottom: 10px;
   }
+}
 
+
+@media (max-width: 490px) {
+
+  .what-flower-title {
+    font-size: 5vw;
+  }
 }
