@@ -65,14 +65,14 @@
             </div>
           </div>
           
-          <div class="like-count">
+          <div class="iine-count">
             <%= post.likes_count.positive? ? post.likes_count : 0 %>
           </div>
           <% else %>
           <div class="iine-icon-image">
             <%= image_tag("iine.png", class:"iine-img")%>
           </div>
-          <div class="like-count">
+          <div class="iine-count">
             <%= post.likes_count.positive? ? post.likes_count : 0 %>
           </div>
           <% end %>
