@@ -117,12 +117,12 @@
 }
 
 .post-date {
-  font-size: 1vw;
+  font-size: 1.3vw;
   justify-items: left;
 }
 
 .post-san {
-  margin-left: 5px;
+  margin-left: 1px;
   font-size: 1vw;
 }
 
@@ -226,16 +226,16 @@
   }
   
   .post-date {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   
   .post-san {
-    margin-left: 5px;
+    margin-left: 2px;
     font-size: 2vw;
   }
   
   .post-icon-image {
-    width: 14vw;
+    width: 10vw;
     margin-right: 10px;
   }
 
@@ -250,7 +250,7 @@
   }
 
   .iine-count {
-    font-size: 3vw;
+    font-size: 4vw;
     margin-left: 1vw;
    }
 }
@@ -284,11 +284,11 @@
   }
 
   .post-date {
-    margin-left: 10px;
+    margin-left: 1px;
   }
 
   .post-san {
-    margin-left: 5px;
+    margin-left: 1px;
   }
 
   .post-icon-image {

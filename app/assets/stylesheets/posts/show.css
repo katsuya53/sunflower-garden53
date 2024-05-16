@@ -124,7 +124,7 @@
   }
 
   .post-show-poster-user {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .post-show-poster-wrap {
@@ -132,7 +132,7 @@
   }
 
   .post-show-date {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .post-show-san {
@@ -165,11 +165,11 @@
   }
 
   .post-show-poster-user {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .post-show-date {
-    font-size: 3vw;
+    font-size: 4vw;
     margin-left: 2vw;
   }
 
@@ -191,6 +191,6 @@
   }
 
   .show-iine-count {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
