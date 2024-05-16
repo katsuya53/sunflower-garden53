@@ -80,7 +80,7 @@ class PostsController < ApplicationController
 end
   
   def search
-    @posts = Post.search(params[:keyword])
+    @posts = Post.search(params[:keyword]).order(updated_at: :desc)
   end
 
   def search_tag
