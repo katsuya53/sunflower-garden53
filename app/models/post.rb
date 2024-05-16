@@ -22,16 +22,19 @@ class Post < ApplicationRecord
     save
   end
   
+
   def self.search(search)
     if search.present?
-      joins(:user, :tags, :comments)
-        .where('post_title LIKE ? OR post_text LIKE ? OR users.nickname LIKE ? OR tags.tag_name LIKE ? OR comments.comment_text LIKE ?',
-               "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
-        .distinct
+      posts = left_outer_joins(:user, :tags, :comments)
+                .where('posts.post_title LIKE ? OR posts.post_text LIKE ? OR users.nickname LIKE ? OR tags.tag_name LIKE ? OR comments.comment_text LIKE ?',
+                       "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+                .distinct
+      posts.load # クエリの結果を強制的に読み込む 検索結果が表示できない不具合の対応策
     else
-      all
+      Post.includes(:user).order('updated_at DESC')
     end
   end
+
 
   private
 
