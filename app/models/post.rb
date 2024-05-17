@@ -21,7 +21,6 @@ class Post < ApplicationRecord
     self.likes_count -= 1
     save
   end
-  
 
   def self.search(search)
     if search.present?

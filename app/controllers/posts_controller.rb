@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :correct_post,only: [:edit]
 
   def index
-    @posts = Post.includes(:user, :comments).order("created_at DESC")
+    @posts = Post.includes(:user, :comments).order("updated_at DESC")
     @comment_count = {} # コメント数を格納するハッシュを初期化
     @posts.each do |post|
       @comment_count[post.id] = post.comments.count # 各投稿のコメント数を取得しハッシュに格納
