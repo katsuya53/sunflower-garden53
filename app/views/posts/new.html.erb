@@ -1,76 +1,62 @@
 <%= render "shared/third-header" %>
 
 <div class="total-wrapper">
-
   <%= form_with model: @post_form, url: posts_path, method: :post, id: 'post-new_post', class: 'post-form' do |f| %>
-  <div class='form-wrap'>
-    <div class='form-header'>
-      <h1 class='form-header-text'>新規投稿画面</h1>
-    </div>
+    <div class='form-wrap'>
+      <div class='form-header'>
+        <h1 class='form-header-text'>新規投稿画面</h1>
+      </div>
 
-    <%= render 'layouts/error_messages', model: @post_form %> <!-- エラーメッセージ  -->
-    
-    <%# 写真をアップロード %>
-    <div class="post-form-group">
-      <div class='post-form-text-wrap'>
-        <div id="post-previews"> <!--投稿画像のプレビューを表示--->
+      <%= render 'layouts/error_messages', model: @post_form %> <!-- エラーメッセージ  -->
+
+      <div class="post-form-group">
+        <div class='post-form-text-wrap'>
+          <div id="post-previews"></div> <!--投稿画像のプレビューを表示-->
+          <label class="form-text">投稿画像</label>
+          <span class="indispensable">必須</span>
         </div>
-        <label class="form-text">投稿画像</label>
-        <span class="indispensable">必須</span>
+        <%= f.file_field :image, id: "post-image" %>
       </div>
-      <%= f.file_field :image, id: "post-image" %>
-    </div>
 
-    <%# タイトル入力欄 %>
-    <div class="post-form-group">
-      <div class='post-form-text-wrap'>
-        <label class="form-text">タイトル</label>
-        <span class="indispensable">必須</span>
+      <div class="post-form-group">
+        <div class='post-form-text-wrap'>
+          <label class="form-text">タイトル</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :post_title, class: "post_text", id: "post-title", placeholder: "タイトル（必須 20文字まで)", maxlength: "20" %>
       </div>
-      <%= f.text_area :post_title, class:"post_text", id:"post-title", placeholder:"タイトル（必須 20文字まで)", maxlength:"20" %>
-    </div>
-    
-    <%# 文章入力欄 %>
-    <div class="post-form-group">
-      <div class='post-form-text-wrap'>
-        <label class="form-text">文章</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_area :post_text, class:"post_text", id:"post-text", placeholder:"文章（必須 200文字まで)" ,rows:"4" ,maxlength:"200" %>
-    </div>
 
-    <%# タグ入力欄 %>
-    <div class="post-form-group">
-      <div class='post-form-text-wrap'>
-        <label class="form-text">タグ（キーワード）</label>
-        <span class="indispensable">(10文字以内)</span>
+      <div class="post-form-group">
+        <div class='post-form-text-wrap'>
+          <label class="form-text">文章</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :post_text, class: "post_text", id: "post-text", placeholder: "文章（必須 200文字まで)", rows: "4", maxlength: "200" %>
       </div>
-        <%= f.text_area :tag_name, class:"post_tag", id:"post-tag", placeholder:"例：鉢植え、ハンギング、育て方" ,rows:"1" ,maxlength:"10" %>
-      <div id="search-result"></div>
-        <%= f.text_area :tag_name2, class:"post_tag2", id:"post-tag2", placeholder:"      花の名前、野菜の名前、肥料" ,rows:"1" ,maxlength:"10" %>
-      <div id="search-result2"></div>
-        <%= f.text_area :tag_name3, class:"post_tag3", id:"post-tag3", placeholder:"      多肉、土、種、夏、赤、黄など" ,rows:"1" ,maxlength:"10" %>
-      <div id="search-result3">
-    </div>
-    </div>
 
-    <%# 注意書き %>
-    <div class="caution">
+      <div class="post-form-group">
+        <div class='post-form-text-wrap'>
+          <label class="form-text">タグ（キーワード）</label>
+          <span class="indispensable">(10文字以内)</span>
+        </div>
+        <%= f.text_area :tag_name, class: "post_tag", id: "post-tag", placeholder: "例：鉢植え、ハンギング、育て方", rows: "1", maxlength: "10" %>
+        <div id="search-result"></div>
+        <%= f.text_area :tag_name2, class: "post_tag2", id: "post-tag2", placeholder: "例：花の名前、野菜の名前、肥料", rows: "1", maxlength: "10" %>
+        <div id="search-result2"></div>
+        <%= f.text_area :tag_name3, class: "post_tag3", id: "post-tag3", placeholder: "例：多肉、土、種、夏、赤、黄など", rows: "1", maxlength: "10" %>
+        <div id="search-result3"></div>
+      </div>
+
+      <div class="caution">
         他人が不快と思われるような投稿はやめましょう。
-    </div>
+      </div>
 
-    <%# 下部ボタン %>
-
-    <div class="post-form-group">
+      <div class="post-form-group">
         <h2 class='form-bottom-text'>投稿された内容は後で編集できます</h2>
-   
         <%= f.submit "投稿する", class: "post-green-btn" %>
-     
+      </div>
     </div>
-
-  </div>
   <% end %>
-
 </div>
 
 <%= render "shared/second-footer" %>
