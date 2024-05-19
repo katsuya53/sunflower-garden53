@@ -23,7 +23,6 @@ function pullDown() {
       });
     }
   });
-
 }
 
 // ページが完全に読み込まれた後にpullDown関数を呼び出す
