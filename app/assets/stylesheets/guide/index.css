@@ -1,0 +1,44 @@
+.guide-toppage {
+  text-align: center;
+  margin: auto;
+  background-color: antiquewhite;
+  width: 80%;
+}
+
+.guide-title {
+  padding: 20px 0;
+}
+
+.guide-wrap {
+  font-size: 20px;
+  padding: 20px;
+  text-align:left
+}
+
+.guide-sub {
+  font-size: 25px;
+  color: blue;
+}
+
+
+/* 幅狭小表示時 */
+@media (max-width: 770px) {
+  .guide-wrap {
+    font-size: 15px;
+  }
+
+  .guide-sub {
+    font-size: 18px;
+  }
+}
+
+/* 幅狭小表示時 */
+@media (max-width: 490px) {
+  .guide-wrap {
+    font-size: 12px;
+  }
+  
+  .guide-sub {
+    font-size: 15px;
+  }
+  }

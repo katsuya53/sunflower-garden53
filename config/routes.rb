@@ -50,4 +50,6 @@ Rails.application.routes.draw do
 
   get 'weather/show', to: 'weather#show'
 
+  get 'guide/index', to: 'guide#index'
+
 end

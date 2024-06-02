@@ -85,7 +85,6 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 
 # 今後実装予定の機能
 1. 操作方法：チュートリアルのように、初めてアプリを操作する人にもわかりやすく画像で説明するページをTOPページにおく
-2. 画像検索：カメラを起動して撮影し、画像から何の花か検索できる
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/3f9222bf8aaa542044b3667bca8daebb.png)](https://gyazo.com/3f9222bf8aaa542044b3667bca8daebb)

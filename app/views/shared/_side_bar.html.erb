@@ -25,12 +25,21 @@
 </div>
 
 <div class="menu-list">
+
+  <div class="menu-item">
+     <%= link_to guide_index_path do %>
+    <%=  image_tag("icon-guide.png", class: "icon-guide-img") %>
+    <% end %>
+  </div>
+
   <div class="menu-item">
     <%= link_to image_tag("icon-post.png", class: "icon-post-img"), new_post_path %>
   </div>
+
   <div class="menu-item">
     <%= link_to image_tag("icon-calendar.png", class: "icon-calendar-img"), blogs_path %>
   </div>
+
   <div class="menu-item">
     <%= link_to records_path do %>
     <%= image_tag("icon-diary.png", class: "icon-diary-img") %> <%# エラーになるので記述を変更 %>
@@ -50,7 +59,9 @@
   </div>
   
   <div class="menu-item">
-    <%= link_to image_tag("icon-camera-none.png", class: "icon-camera-img"), "/" %>
+     <%= link_to new_public_contact_path do %>
+    <%=  image_tag("icon-mail.png", class: "icon-mail-img") %>
+    <% end %>
   </div>
 
 </div>
