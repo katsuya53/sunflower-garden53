@@ -2,7 +2,7 @@
   text-align: center;
   margin: auto;
   background-color: antiquewhite;
-  width: 80%;
+  width: 90%;
 }
 
 .guide-title {
@@ -17,28 +17,30 @@
 
 .guide-sub {
   font-size: 25px;
+  color:red;
+}
+
+.guide-sub2 {
+  font-size: 25px;
+  color:green;
+}
+
+.guide-sub3 {
+  font-size: 25px;
   color: blue;
 }
 
-
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
+  .guide-toppage {
+    width: 95%;
+  }
+
   .guide-wrap {
     font-size: 15px;
   }
 
-  .guide-sub {
+  .guide-sub, .guide-sub2, .guide-sub3 {
     font-size: 18px;
   }
 }
-
-/* 幅狭小表示時 */
-@media (max-width: 490px) {
-  .guide-wrap {
-    font-size: 12px;
-  }
-  
-  .guide-sub {
-    font-size: 15px;
-  }
-  }
