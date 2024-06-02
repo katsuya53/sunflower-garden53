@@ -2,8 +2,8 @@
   
   <div class="user-area">
     <div class="user-icon-area">
-      <% if user_signed_in? %>  <!--ログインしていなければサンプル画像を表示-->
-        <% if current_user.image.attached? %>  <!--アイコン画像の登録がなければサンプル画像を表示-->
+      <% if user_signed_in? %>
+        <% if current_user.image.attached? %>
           <%= image_tag current_user.image.variant(resize: '100x100'), class: 'hidden-user-image' %>
         <% else %>
           <%= image_tag("user-icon.png", class: "hidden-user-noicon-img") %>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="user-name">
-      <% if user_signed_in? %>  <!--ログインしていなければ ゲストさん と表示-->
+      <% if user_signed_in? %>
         <%= link_to current_user.nickname, user_path(current_user), class: "hidden-user-name" %>
       <% else %>
         ゲストさん
@@ -29,41 +29,46 @@
   <div class="menu-list">
 
     <div class="menu-item">
-     <%= link_to guide_index_path do %>
-    <%=  image_tag("icon-guide.png", class: "icon-guide-img") %>
-    <% end %>
-  </div>
+      <%= link_to guide_index_path do %>
+        <%= image_tag("icon-guide.png", class: "icon-guide-img") %>
+      <% end %>
+    </div>
 
-  <div class="menu-item">
-    <%= link_to image_tag("icon-post.png", class: "icon-post-img"), new_post_path %>
-  </div>
+    <div class="menu-item">
+      <%= link_to new_post_path do %>
+        <%= image_tag("icon-post.png", class: "icon-post-img") %>
+      <% end %>
+    </div>
 
-  <div class="menu-item">
-    <%= link_to image_tag("icon-calendar.png", class: "icon-calendar-img"), blogs_path %>
-  </div>
+    <div class="menu-item">
+      <%= link_to blogs_path do %>
+        <%= image_tag("icon-calendar.png", class: "icon-calendar-img") %>
+      <% end %>
+    </div>
 
-  <div class="menu-item">
-    <%= link_to records_path do %>
-    <%= image_tag("icon-diary.png", class: "icon-diary-img") %> <%# エラーになるので記述を変更 %>
-    <% end %>
-  </div>
+    <div class="menu-item">
+      <%= link_to records_path do %>
+        <%= image_tag("icon-diary.png", class: "icon-diary-img") %>
+      <% end %>
+    </div>
 
-  <div class="menu-item">
-    <%= link_to flowers_path do %>
-    <%= image_tag("icon-today.png", class: "icon-today-img") %>
-    <% end %>
-  </div>
+    <div class="menu-item">
+      <%= link_to flowers_path do %>
+        <%= image_tag("icon-today.png", class: "icon-today-img") %>
+      <% end %>
+    </div>
 
-  <div class="menu-item">
-     <%= link_to weather_show_path do %>
-    <%=  image_tag("icon-weather.png", class: "icon-weather-img") %>
-    <% end %>
-  </div>
-  
-  <div class="menu-item">
-     <%= link_to new_public_contact_path do %>
-    <%=  image_tag("icon-mail.png", class: "icon-mail-img") %>
-    <% end %>
-  </div>
+    <div class="menu-item">
+      <%= link_to weather_show_path do %>
+        <%= image_tag("icon-weather.png", class: "icon-weather-img") %>
+      <% end %>
+    </div>
 
-</div>
+    <div class="menu-item">
+      <%= link_to new_public_contact_path do %>
+        <%= image_tag("icon-mail.png", class: "icon-mail-img") %>
+      <% end %>
+    </div>
+
+  </div> <!-- .menu-list -->
+</div> <!-- .show-lists -->
