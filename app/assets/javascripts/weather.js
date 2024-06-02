@@ -3,7 +3,7 @@
 function get_weather_japanese(weather_main) {
   switch (weather_main) {
     case "Clouds":
-      return "曇りかな";
+      return "曇り";
     case "Thunderstorm":
       return "雷雨";
     case "Drizzle":
