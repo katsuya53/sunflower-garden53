@@ -1,5 +1,3 @@
-# lib/api/open_weather_map/request.rb
-
 require 'httpclient'
 require 'json'
 
