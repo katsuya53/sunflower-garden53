@@ -2,6 +2,7 @@
 
 <% if @weather_info.present? %>
   <h1>天気情報</h1>
+  <p>あなたの地域: <%= current_user.prefecture.name %></p>
   <p>天気: <span id="weather_japanese"></span></p>
   <p><%= image_tag("http://openweathermap.org/img/w/#{@weather_info[:weather_icon]}.png", style: "filter: grayscale(0%)") %></p>
   <p>温度: <%= @weather_info[:temp] %>°C</p>
