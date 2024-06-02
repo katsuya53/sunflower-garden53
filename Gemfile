@@ -92,3 +92,5 @@ gem 'jquery-turbolinks'
 gem 'simple_calendar', '~> 2.0'
 gem 'sassc-rails', '~> 2.0'
 gem 'sidekiq'
+gem 'httpclient'
+gem 'byebug', group: [:development, :test]

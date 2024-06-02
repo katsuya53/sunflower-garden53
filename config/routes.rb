@@ -47,4 +47,7 @@ Rails.application.routes.draw do
     end
   end
   get '/favicon.ico', to: 'application#favicon'
+
+  get 'weather/show', to: 'weather#show'
+
 end

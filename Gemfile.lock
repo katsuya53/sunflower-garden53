@@ -128,6 +128,7 @@ GEM
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httpclient (2.8.3)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -338,6 +339,7 @@ DEPENDENCIES
   devise
   devise-i18n
   dotenv-rails
+  httpclient
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
