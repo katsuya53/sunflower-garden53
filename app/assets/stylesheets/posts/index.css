@@ -9,7 +9,7 @@
 .main-index {
   background-color: #e0ebaf;
   width: calc(70%);
-  height: 1200px;
+  height: 1300px;
   overflow: scroll;
   position: relative;
 }
@@ -17,7 +17,7 @@
 .side-bar {
   background-color:lemonchiffon;
   width: calc(30%);
-  height: 1200px;
+  height: 1300px;
 }
 
 .side-bar-hidden {
