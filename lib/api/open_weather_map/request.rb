@@ -34,7 +34,7 @@ module Api
           temp_max: attrs['main']['temp_max'].round(1),
           temp_min: attrs['main']['temp_min'].round(1),
           humidity: attrs['main']['humidity'],
-          pressure: attrs['main']['pressure']
+          pressure: attrs['main']['rain']
         }
       end
     end
