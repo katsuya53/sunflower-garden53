@@ -1,5 +1,5 @@
 class WeatherController < ApplicationController
-  before_action :authenticate_user!
+  before_action :move_to_index
 
   def show
     # ユーザーのprefecture_idをもとに都市IDを取得
@@ -28,4 +28,15 @@ class WeatherController < ApplicationController
       @weather_info = {}
     end
   end
+
+
+
+  private
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path, notice: "ログインなしではアクセスできません。"
+    end
+  end
+
 end

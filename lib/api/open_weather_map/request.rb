@@ -30,9 +30,9 @@ module Api
           weather_description: attrs['weather'][0]['description'],
           weather_icon: attrs['weather'][0]['icon'],
           weather_id: attrs['weather'][0]['id'],
-          temp: attrs['main']['temp'],
-          temp_max: attrs['main']['temp_max'],
-          temp_min: attrs['main']['temp_min'],
+          temp: attrs['main']['temp'].round(1),
+          temp_max: attrs['main']['temp_max'].round(1),
+          temp_min: attrs['main']['temp_min'].round(1),
           humidity: attrs['main']['humidity'],
           pressure: attrs['main']['pressure']
         }
