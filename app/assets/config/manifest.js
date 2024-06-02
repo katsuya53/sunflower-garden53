@@ -4,3 +4,4 @@
 //= link_tree ../../../vendor/javascript .js
 //= link shared/second_header.css
 //= link menu.js
+//= link weather.js
