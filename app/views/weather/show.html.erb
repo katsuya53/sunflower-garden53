@@ -1,10 +1,21 @@
+<%= render "shared/second-header" %>
 <%= javascript_include_tag 'weather' %>
 
+<div class="weather-toppage">
+   <%= render "shared/side_bar_hidden" %>
+
+<h1 class="weather-title">今日の天気</h1>
+
+  <div class=" wearther-wrap">
+
 <% if @weather_info.present? %>
-  <h1>天気情報</h1>
   <p>あなたの地域: <%= current_user.prefecture.name %></p>
   <p>天気: <span id="weather_japanese"></span></p>
-  <p><%= image_tag("http://openweathermap.org/img/w/#{@weather_info[:weather_icon]}.png", style: "filter: grayscale(0%)") %></p>
+
+  <div class="weather-icon">
+  <p><%= image_tag("http://openweathermap.org/img/w/#{@weather_info[:weather_icon]}.png", class: "centered") %></p>
+  </div>
+
   <p>温度: <%= @weather_info[:temp] %>°C</p>
   <p>最高気温: <%= @weather_info[:temp_max] %>°C</p>
   <p>最低気温: <%= @weather_info[:temp_min] %>°C</p>
@@ -16,3 +27,8 @@
 <% else %>
   <p>天気情報が取得できませんでした。</p>
 <% end %>
+
+</div>
+</div>
+
+<%= render "shared/second-footer" %>
