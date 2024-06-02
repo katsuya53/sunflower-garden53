@@ -46,7 +46,9 @@
   </div>
 
   <div class="menu-item">
-    <%= link_to image_tag("icon-weather-none.png", class: "icon-weather-img"), "/" %>
+     <%= link_to weather_show_path do %>
+    <%=  image_tag("icon-weather.png", class: "icon-weather-img") %>
+    <% end %>
   </div>
   
   <div class="menu-item">

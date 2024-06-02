@@ -30,7 +30,6 @@ class WeatherController < ApplicationController
   end
 
 
-
   private
 
   def move_to_index
