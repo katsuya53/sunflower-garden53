@@ -9,7 +9,7 @@
 https://sunflower-garden.jp
 
 # テスト用アカウント
-メールアドレス : hanako@test.com  
+メールアドレス : hanako@test.com
 パスワード : h111111
 
 # 利用方法
