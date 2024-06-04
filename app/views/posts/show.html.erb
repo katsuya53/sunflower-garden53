@@ -31,6 +31,7 @@
       <h3>関連する投稿</h3>
       <% @post.tags.each_with_index do |tag, index| %>
       <h3>「<%= tag.tag_name %>」</h3>
+
       <% tag.posts.each do |related_post| %>
         <% unless related_post == @post %>
           <div class="related-post">
@@ -38,6 +39,7 @@
           </div>
         <% end %>
       <% end %>
+
       <% unless index == @post.tags.size - 1 %><br style="line-height: 0.5;"> <% end %>
       <% end %>
     </div>
@@ -107,10 +109,10 @@
 
     <% if @comments.blank? %>
     <% else %>
-    <div class="comment-contents">
-    <div class="comment-header">
+      <div class="comment-contents">
+      <div class="comment-header">
       コメント一覧
-    </div>
+      </div>
     <% end %>
 
     <% editable_comments = @comments.select { |comment| user_signed_in? && current_user.id == comment.user_id } %>
@@ -154,7 +156,7 @@
             <%= f.text_area :comment_text, rows: 1, style: "width: 100%;" %>
           </div>
           <p class="comment-warn">
-            相手のことを考え丁寧なコメントを心がけましょう。
+            相手のことを考え丁寧なコメントを心がけましょう
           </p>
 
           <div class="comment-actions">
