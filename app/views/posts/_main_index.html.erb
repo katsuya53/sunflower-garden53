@@ -30,9 +30,13 @@
 
         <div class='post-poster-image'>
           <% if post.user && post.user.image.attached? %>
-            <%= image_tag post.user.image, class: "post-icon-image" %>
+            <%= link_to user_path(post.user.id) do %>
+              <%= image_tag post.user.image, class: "post-icon-image" %>
+            <% end %>
           <% else %>
-            <%= image_tag("user-icon.png", class: "post-noicon-image") %>
+            <%= link_to user_path(post.user.id) do %>
+              <%= image_tag("user-icon.png", class: "post-noicon-image") %>
+            <% end %>
           <% end %>
         </div>
 
