@@ -2,15 +2,19 @@
   
   <div class="user-area">
     <div class="user-icon-area">
-      <% if user_signed_in? %>
-        <% if current_user.image.attached? %>
-          <%= image_tag current_user.image.variant(resize: '100x100'), class: 'hidden-user-image' %>
-        <% else %>
-          <%= image_tag("user-icon.png", class: "hidden-user-noicon-img") %>
+      <% if user_signed_in? %>  <!--ログインしていなければサンプル画像を表示-->
+      <% if current_user.image.attached? %>  <!--アイコン画像の登録がなければサンプル画像を表示-->
+        <%= link_to user_path(current_user) do %>
+          <%= image_tag current_user.image.variant(resize: '100x100'), class: 'user-image' %>
         <% end %>
       <% else %>
-        <%= image_tag("user-icon.png", class: "hidden-user-noicon-img") %>
+        <%= link_to user_path(current_user) do %>
+          <%= image_tag("user-icon.png", class: "user-noicon-img") %>
+        <% end %>
       <% end %>
+    <% else %>
+      <%= image_tag("user-icon.png", class: "user-noicon-img") %>
+    <% end %>
     </div>
 
     <div class="user-name">
