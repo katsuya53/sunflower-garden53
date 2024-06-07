@@ -27,8 +27,15 @@ class WeatherController < ApplicationController
       @debug_info += ", Error: 無効な都道府県IDです"
       @weather_info = {}
     end
-  end
 
+    # ページがリロードされていない場合はリロードする
+    unless session[:reloaded]
+      session[:reloaded] = true
+      redirect_to weather_show_path
+    else
+      session.delete(:reloaded)
+    end
+  end
 
   private
 
@@ -37,5 +44,4 @@ class WeatherController < ApplicationController
       redirect_to root_path, notice: "ログインなしではアクセスできません。"
     end
   end
-
 end
