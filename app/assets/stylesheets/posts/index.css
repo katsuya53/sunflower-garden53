@@ -33,11 +33,11 @@
 /* タブレット表示時 */
 @media (max-width: 1024px) {
   .main-index {
-    height: 800px;
+    height: 900px;
   }
   
   .side-bar {
-    height: 800px;
+    height: 900px;
   }
 
   .main-title {
