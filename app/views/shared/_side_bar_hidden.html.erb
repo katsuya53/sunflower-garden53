@@ -9,11 +9,11 @@
           <% end %>
         <% else %>
           <%= link_to user_path(current_user) do %>
-            <%= image_tag("user-icon.png", class: "user-noicon-img") %>
+            <%= image_tag("user-icon.png", class: "hidden-user-noicon-img") %>
           <% end %>
         <% end %>
       <% else %>
-        <%= image_tag("user-icon.png", class: "user-noicon-img") %>
+        <%= image_tag("user-icon.png", class: "hidden-user-noicon-img") %>
       <% end %>
     </div>
 
