@@ -110,7 +110,6 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 
 # 追加したい機能
 1. 操作説明ページへの写真、動画埋め込み
-2. マウスを合わせた際の画像の変更 Javascript追加
 
 # 改善点
 - いいねボタンのクリック時に画面がスクロールされるので、画面を移動しないようにする

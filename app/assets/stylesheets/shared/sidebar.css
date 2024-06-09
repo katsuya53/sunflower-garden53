@@ -141,6 +141,15 @@
   display: none;
 }
 
+.menu-item img {
+  transition: filter 0.3s ease;
+}
+
+.menu-item img:hover {
+  filter: brightness(1.2); /* 明るさを20%増加 */
+}
+
+
 /* タブレット表示時 */
 @media (max-width: 1024px) {
 }
