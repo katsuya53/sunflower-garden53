@@ -77,6 +77,14 @@
   margin: auto;
 }
 
+.post-img {
+  transition: transform 0.3s ease; /* サイズの変化にトランジションを適用 */
+}
+
+.post-img:hover {
+  transform: scale(1.05); /* 画像を5%拡大 */
+}
+
 .post-title {
   padding-left: 30px;
   padding-top: 10px;
@@ -158,6 +166,30 @@
 .iine-count {
   font-size: 1.6vw;
   margin-left: 0.5vw;
+}
+
+.post-icon-image {
+  transition: transform 0.3s ease; /* サイズの変化にトランジションを適用 */
+}
+
+.post-icon-image:hover {
+  transform: scale(1.15); /* 画像を15%拡大 */
+}
+
+.post-noicon-image {
+  transition: transform 0.3s ease; /* サイズの変化にトランジションを適用 */
+}
+
+.post-noicon-image:hover {
+  transform: scale(1.15); /* 画像を15%拡大 */
+}
+
+.iine-icon-image {
+  transition: transform 0.3s ease; /* サイズの変化にトランジションを適用 */
+}
+
+.iine-icon-image:hover {
+  transform: scale(1.15); /* 画像を15%拡大 */
 }
 
 

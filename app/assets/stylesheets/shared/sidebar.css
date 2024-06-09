@@ -142,13 +142,20 @@
 }
 
 .menu-item img {
-  transition: filter 0.3s ease;
+  transition: transform 0.3s ease; /* サイズの変化にトランジションを適用 */
 }
 
 .menu-item img:hover {
-  filter: brightness(1.2); /* 明るさを20%増加 */
+  transform: scale(1.15); /* 画像を15%拡大 */
 }
 
+.user-image {
+  transition: transform 0.3s ease; /* サイズの変化にトランジションを適用 */
+}
+
+.user-image:hover {
+  transform: scale(1.15); /* 画像を15%拡大 */
+}
 
 /* タブレット表示時 */
 @media (max-width: 1024px) {
