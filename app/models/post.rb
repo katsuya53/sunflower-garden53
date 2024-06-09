@@ -7,7 +7,11 @@ class Post < ApplicationRecord
   has_many :post_tag_relations, dependent: :destroy
   has_many :tags, through: :post_tag_relations
   has_many :likes, dependent: :destroy
-  
+
+  validates :post_title, presence: { message: "を入力してください" }
+  validates :post_text, presence: { message: "を入力してください" }
+  validates :image, presence: { message: "を入力してください" }
+
   def liked_by?(user)
     likes.where(user_id: user.id).exists?
   end
@@ -33,7 +37,6 @@ class Post < ApplicationRecord
       Post.includes(:user).order('updated_at DESC')
     end
   end
-
 
   private
 

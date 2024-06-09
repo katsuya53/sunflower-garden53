@@ -28,7 +28,8 @@ class User < ApplicationRecord
   validates :prefecture_id, presence: { message: "を選択してください" }, numericality: { other_than: 1, message: "を選択してください" }
   validates :nickname, presence: { message: "を入力してください" }, uniqueness: { message: "はすでに使用されています" }
   validate :password_presence
-
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は不正な値です。英字と数字の両方を含めてください' }, if: :password_required?
+  
   private
 
   def password_presence
