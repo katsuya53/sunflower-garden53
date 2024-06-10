@@ -12,12 +12,18 @@ ja:
         post_title: "タイトル"
         post_text: "本文"
         image: "画像"
+      record:
+        record_text: "本文"
+        record_image: "画像"
   activemodel:
     attributes:
       post_form:
         post_title: "タイトル"
         post_text: "本文"
         image: "画像"
+      record:
+        record_text: "本文"
+        record_image: "画像"
   errors:
     format: "%{attribute} %{message}"
     messages:
