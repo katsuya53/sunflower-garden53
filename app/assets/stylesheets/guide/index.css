@@ -16,11 +16,37 @@
 }
 
 .guide-menu-wrap {
-display: flex;
-justify-content:center
+  display: flex;
+  justify-content:center;
 }
 
+.guide-menu-select-text {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 50px;
+}
 
+.guide-menu-pc, .guide-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.guide-menu-pc .guide-pc-btn-img, .guide-menu-mobile .guide-mobile-btn-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.guide-menu-text-pc {
+  font-size: 25px;
+  color:blue;
+}
+
+.guide-menu-text-mobile {
+  font-size: 25px;
+  color:red;
+}
 
 
 
