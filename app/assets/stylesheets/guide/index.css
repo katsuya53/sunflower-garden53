@@ -36,6 +36,7 @@
 .guide-menu-pc .guide-pc-btn-img, .guide-menu-mobile .guide-mobile-btn-img {
   display: block;
   margin: 0 auto;
+  height: 250px;
 }
 
 .guide-menu-text-pc {
@@ -47,8 +48,6 @@
   font-size: 25px;
   color:red;
 }
-
-
 
 .guide-sub {
   font-size: 25px;
@@ -65,6 +64,15 @@
   color: blue;
 }
 
+.guide-menu-wrap img {
+  transition: transform 0.3s ease;
+}
+
+.guide-menu-wrap img:hover {
+  transform: scale(1.15);
+}
+
+
 /* 幅狭小表示時 */
 @media (max-width: 770px) {
   .guide-toppage {
@@ -77,5 +85,29 @@
 
   .guide-sub, .guide-sub2, .guide-sub3 {
     font-size: 18px;
+  }
+
+  .guide-menu-select-text {
+    font-size: 18px;
+  }
+
+  .guide-menu-pc .guide-pc-btn-img, .guide-menu-mobile .guide-mobile-btn-img {
+    height: 150px;
+  }
+
+  .guide-menu-text-mobile, .guide-menu-text-pc {
+    font-size: 18px;
+  }
+}
+
+/* スマホ表示時 */
+@media (max-width: 490px) {
+
+  .guide-menu-pc .guide-pc-btn-img, .guide-menu-mobile .guide-mobile-btn-img {
+    height: 100px;
+  }
+
+  .guide-menu-text-mobile, .guide-menu-text-pc {
+    font-size: 15px;
   }
 }
