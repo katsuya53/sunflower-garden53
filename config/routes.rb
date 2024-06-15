@@ -51,5 +51,7 @@ Rails.application.routes.draw do
   get 'weather/show', to: 'weather#show'
 
   get 'guide/index', to: 'guide#index'
+  get 'guide/show_pc', to: 'guide#show_pc'
+  get 'guide/show_mobile', to: 'guide#show_mobile'
 
 end

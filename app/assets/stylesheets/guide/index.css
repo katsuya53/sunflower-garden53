@@ -15,6 +15,15 @@
   text-align:left
 }
 
+.guide-menu-wrap {
+display: flex;
+justify-content:center
+}
+
+
+
+
+
 .guide-sub {
   font-size: 25px;
   color:red;
