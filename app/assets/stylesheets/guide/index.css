@@ -166,6 +166,10 @@
 /* スマホ表示時 */
 @media (max-width: 490px) {
 
+  .guide-icon-img {
+    width: 200px;
+  }
+
   .guide-menu-pc .guide-pc-btn-img, .guide-menu-mobile .guide-mobile-btn-img {
     height: 100px;
   }
