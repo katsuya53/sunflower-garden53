@@ -22,7 +22,9 @@
                         <a href="#" onclick="showVideo('gif1'); return false;">[動画]</a>
                         <div id="gif1-container" style="display:none;">
                             <img id="gif1" src="https://i.gyazo.com/efaebd58b27bfc8d85bc9d3dcabf632f.gif" alt="Image from Gyazo" width="682"/>
-                            <button onclick="hideVideo('gif1');">閉じる</button>
+                            <div class="close-button-container">
+                                <button class="close-button" onclick="hideVideo('gif1');">閉じる</button>
+                            </div>
                         </div>
                     </p>
                     <p class="guide-sub-text">（アイコンの画像は登録しなくても問題ありません。メールアドレスはお間違えのないようにご注意下さい。）</p>
@@ -33,7 +35,9 @@
                         <a href="#" onclick="showVideo('gif2'); return false;">[動画]</a>
                         <div id="gif2-container" style="display:none;">
                             <img id="gif2" src="https://i.gyazo.com/b98cbf2d57ffae9db4a310cce69e7723.gif" alt="Image from Gyazo" width="682"/>
-                            <button onclick="hideVideo('gif2');">閉じる</button>
+                            <div class="close-button-container">
+                                <button class="close-button" onclick="hideVideo('gif2');">閉じる</button>
+                            </div>
                         </div>
                     </p>
 
@@ -41,7 +45,9 @@
                         <a href="#" onclick="showVideo('gif3'); return false;">[動画]</a>
                         <div id="gif3-container" style="display:none;">
                             <img id="gif3" src="https://i.gyazo.com/07ea6bc230cdb41418f9b9182b1c1fef.gif" alt="Image from Gyazo" width="682"/>
-                            <button onclick="hideVideo('gif3');">閉じる</button>
+                            <div class="close-button-container">
+                                <button class="close-button" onclick="hideVideo('gif3');">閉じる</button>
+                            </div>
                         </div>
                     </p>
                 </div>
@@ -58,7 +64,9 @@
                         <a href="#" onclick="showVideo('gif2-3'); return false;">[動画]</a>
                         <div id="gif2-3-container" style="display:none;">
                             <img id="gif2-3" src="https://i.gyazo.com/4c510ecf544810de3f2496acd83e97df.gif" alt="Image from Gyazo" width="682"/>
-                            <button onclick="hideVideo('gif2-3');">閉じる</button>
+                            <div class="close-button-container">
+                                <button class="close-button" onclick="hideVideo('gif2-3');">閉じる</button>
+                            </div>
                         </div>
                     </p>
                 </div>
@@ -73,7 +81,6 @@
                     <p>（スマホやタブレットにて、右サイドバーが隠れている場合は右上のMENUボタンをクリック）</p>
                 </div>
 
- 
                 <div class="guide-sub2">
                     【みんなの投稿 新規投稿】
                 </div>
@@ -110,7 +117,7 @@
                 <div class="guide-sub2">
                     【通知が届く マイカレンダー】
                 </div>
-                    <%= image_tag("icon-calendar.png", class: "guide-icon-img") %>
+                <%= image_tag("icon-calendar.png", class: "guide-icon-img") %>
 
                 <div class="guide-text">
                     <p>1. ログイン中であればクリックするとそのユーザーだけのカレンダーが表示されます。</p>
@@ -121,8 +128,8 @@
 
                 <div class="guide-sub2">
                     【成長を記録 写真日記】
-                    </div>
-                    <%= image_tag("icon-diary.png", class: "guide-icon-img") %>
+                </div>
+                <%= image_tag("icon-diary.png", class: "guide-icon-img") %>
 
                 <div class="guide-text">
                     <p>1. ログイン中であればクリックするとそのユーザーだけの日記が表示されます。</p>
@@ -133,8 +140,8 @@
 
                 <div class="guide-sub2">
                     【今日は何の花の日？】
-                    </div>
-                    <%= image_tag("icon-today.png", class: "guide-icon-img") %>
+                </div>
+                <%= image_tag("icon-today.png", class: "guide-icon-img") %>
 
                 <div class="guide-text">
                     <p>1. クリックすると今日の誕生花が表示されます。</p>
@@ -144,8 +151,8 @@
 
                 <div class="guide-sub2">
                     【園芸日和 今日の天気】
-                    </div>
-                    <%= image_tag("icon-weather.png", class: "guide-icon-img") %>
+                </div>
+                <%= image_tag("icon-weather.png", class: "guide-icon-img") %>
 
                 <div class="guide-text">
                     <p>1. ログイン中であれば、クリックするとあなたの都道府県の天気予報が表示されます。</p>
@@ -153,8 +160,8 @@
 
                 <div class="guide-sub2">
                     【管理者へ お問い合わせ】
-                    </div>
-                    <%= image_tag("icon-mail.png", class: "guide-icon-img") %>
+                </div>
+                <%= image_tag("icon-mail.png", class: "guide-icon-img") %>
 
                 <div class="guide-text">
                     <p>1. クリックすると管理者へメールを送るフォームが表示されます。</p>
