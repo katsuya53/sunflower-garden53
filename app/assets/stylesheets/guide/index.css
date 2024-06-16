@@ -9,6 +9,26 @@
   padding: 20px 0;
 }
 
+.guide-pre-text {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+.guide-text {
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.guide-text-blue {
+  margin-top: 15px;
+  color: blue;
+}
+
+.guide-sub-text {
+  padding-left: 30px;
+}
+
 .guide-wrap {
   font-size: 20px;
   padding: 20px;
@@ -50,18 +70,32 @@
 }
 
 .guide-sub {
+  margin-top: 20px;
   font-size: 25px;
-  color:red;
+  color:blue;
 }
 
 .guide-sub2 {
+  margin-top: 40px;
   font-size: 25px;
   color:green;
 }
 
 .guide-sub3 {
+  margin-top: 20px;
   font-size: 25px;
   color: blue;
+}
+
+.guide-item .guide-title {
+  cursor: pointer;
+  font-size: 22px;
+  color: blue;
+  text-decoration: underline;
+}
+
+.guide-item .content p {
+  margin: 5px 0;
 }
 
 .guide-menu-wrap img {
@@ -70,6 +104,10 @@
 
 .guide-menu-wrap img:hover {
   transform: scale(1.15);
+}
+
+.guide-icon-img {
+  width: 300px;
 }
 
 

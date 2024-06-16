@@ -16,10 +16,10 @@ https://sunflower-garden.jp
 TOPページ
 ![Image from top-page-image](https://github.com/katsuya53/sunflower-garden53/blob/main/app/assets/images/TOP-page.png?raw=true)
 
-## 会員登録、編集、削除
+## ユーザー登録、編集、削除
 1. TOPページの新規登録をクリックして必要な情報を登録すると、認証メールが届くので、クリックすると登録が完了する
 2. メールアドレスとパスワードでログインが可能となる。
-3. 会員情報の変更や削除はメニュー上部のニックネームをクリックして編集画面から行う
+3. ユーザー情報の変更や削除はメニュー上部のニックネームをクリックして編集画面から行う
 
 ## ログイン、ログアウト
 1. TOPページに閲覧者の状態によってログインとログアウトが表示されている
