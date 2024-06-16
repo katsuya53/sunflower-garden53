@@ -109,7 +109,7 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 5. 独自ドメイン取得、AWSでSSL化
 
 # 追加したい機能
-1. 操作説明ページへの写真、動画の埋め込み
+1. 結合テストコードも実装する
 
 # 改善点
 - いいねボタンのクリック時に画面がスクロールされるので、画面を移動しないようにする
@@ -125,5 +125,5 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 - 製作時間：合計 約200時間
 
 # 制作時間②
-- 制作期間：2024/6/1 ~ 現在
-- 製作時間：合計 約20時間
+- 制作期間：2024/6/1 ~ 6/15
+- 製作時間：合計 約30時間
