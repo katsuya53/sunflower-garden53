@@ -173,4 +173,12 @@
   .guide-menu-text-mobile, .guide-menu-text-pc {
     font-size: 15px;
   }
+
+  .guide-item .guide-title {
+    font-size: 16px;
+  }
+  
+  .guide-item .guide-title:hover {
+    font-size: 20px;
+  }
 }
