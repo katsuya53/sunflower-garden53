@@ -6,7 +6,7 @@
 園芸の難しさを乗り越え、より楽しむことができるように、SNS機能やスケジュール管理、日記機能を実装したアプリである。
 
 # URL
-https://sunflower-garden.jp
+https://sunflower-garden.jp/
 
 # テスト用アカウント
 メールアドレス : hanako@test.com
@@ -15,6 +15,9 @@ https://sunflower-garden.jp
 # 利用方法
 TOPページ
 ![Image from top-page-image](https://github.com/katsuya53/sunflower-garden53/blob/main/app/assets/images/TOP-page.png?raw=true)
+
+## 操作ガイド
+https://sunflower-garden.jp/guide/index
 
 ## ユーザー登録、編集、削除
 1. TOPページの新規登録をクリックして必要な情報を登録すると、認証メールが届くので、クリックすると登録が完了する
@@ -73,6 +76,9 @@ TOPページ
 ## 情報取得機能「今日の天気」
 1. メニュー「今日の天気」をクリックするとそのユーザーの都道府県の気象情報ページが表示される
 2. 更新ボタンを押すとリアルタイムに気象情報が更新される
+
+## お問い合わせ
+1. フォームに入力した質問や不具合の報告などが、管理者へメール送信される
 
 # アプリケーションを作成した背景
 植物の管理の難しさの解決し、成長の記録ができ、他者との共有や交流ができるサイトがあればと考えた。
