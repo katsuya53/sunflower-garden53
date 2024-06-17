@@ -59,7 +59,7 @@
             <div id="content2" class="content" style="display:none;">
                 <div class="guide-text">
                     <p>1. トップページにログインの状態によって、ログインまたはログアウトが表示されています。</p>
-                    <p>2. ログインしていなくても投稿の閲覧は可能ですが、ほとんどのメニューは利用できませんので新規登録しましょう。</p>
+                    <p>2. ログインしていなくても投稿の閲覧は可能ですが、ほとんどのメニューは利用できませんのでユーザー登録がまだの方は登録しましょう。</p>
                     <p>3. パスワードを忘れてしまった場合は、登録したメールアドレスにリセットするためのリンクが送信されます。
                         <a href="#" onclick="showVideo('gif2-3'); return false;">[動画]</a>
                         <div id="gif2-3-container" style="display:none;">
@@ -77,7 +77,7 @@
             <div class="guide-title" onclick="toggleContent('content3')">③ メニュー / できること</div>
             <div id="content3" class="content" style="display:none;">
                 <div class="guide-text">
-                    <p>右のサイドバーに様々なコンテンツがリストとして表示されています。</p>
+                    <p>右のサイドバーに様々な以下のコンテンツがリストとして表示されています。</p>
                     <p>（スマホやタブレットにて、右サイドバーが隠れている場合は右上のMENUボタンをクリック）</p>
                 </div>
 
@@ -85,6 +85,10 @@
                     【みんなの投稿 新規投稿】
                 </div>
                 <%= image_tag("icon-post.png", class: "guide-icon-img") %>
+                <div class="guide-pre-text">
+                    <p>今育てている植物の写真や、街で見かけた花、気になる写真などを投稿しましょう。</p>
+                    <p>他のユーザーの投稿を見て気に入った場合は、コメントやいいねボタンを押してください。</p>
+                </div>
 
                 <div class="guide-text">
                     <p>1. クリックすると新規投稿フォームが表示されます。</p>
@@ -115,7 +119,7 @@
                         </div>
                     </p>
 
-                    <p>2. ログインしていれば、コメントすることができます。コメントするボタンをクリックするとその投稿にコメントができます。
+                    <p>2. ログインしていれば、その投稿にコメントができます。コメントするボタンをクリックして感想や質問を書いてみましょう。
                       <a href="#" onclick="showVideo('gif3-2-2'); return false;">[動画]</a>
                     <div id="gif3-2-2-container" style="display:none;">
                             <img id="gif3-2-2" src="https://i.gyazo.com/4d8c074dac4acb9729aa3ed45d536019.gif" alt="動画表示できません" width=60%/>
@@ -125,7 +129,7 @@
                         </div>
                     </p>
 
-                    <p>3. あなたのコメントであればコメントを編集、削除ができます。
+                    <p>3. 入力したコメントはいつでも編集、削除ができます。
                     <a href="#" onclick="showVideo('gif3-2-3'); return false;">[動画]</a>
                         <div id="gif3-2-3-container" style="display:none;">
                             <img id="gif3-2-3" src="https://i.gyazo.com/751ed0fd9b0eaef0d2da988c432b92d9.gif" alt="動画表示できません" width=60%/>
@@ -153,7 +157,7 @@
 
                 <div class="guide-text">
                     <p class="guide-text-blue">・ユーザー詳細、編集、フォロー</p>
-                    <p>1. サイドバーのメニューにあるログイン中のユーザー名をクリックするとユーザー詳細ページが表示されます。
+                    <p>1. サイドバーのメニューにあるのユーザー名またはアイコン画像をクリックするとユーザー詳細ページが表示されます。
                       <a href="#" onclick="showVideo('gif3-4-1'); return false;">[動画]</a>
                         <div id="gif3-4-1-container" style="display:none;">
                             <img id="gif3-4-1" src="https://i.gyazo.com/07ea6bc230cdb41418f9b9182b1c1fef.gif" alt="動画表示できません" width=60%/>
@@ -163,9 +167,9 @@
                         </div>
                     </p>
 
-                    <p>2. 投稿詳細ページで投稿者のニックネームをクリックしてもそのユーザー詳細ページが表示されます。</p>
-                    <p>3. あなたがそのユーザーであれば登録情報を編集または削除（退会）ができます。</p>
-                    <p>4. 「フォローする」をクリックすると閲覧しているユーザーをフォローをしたり、解除ができます。
+                    <p>2. 投稿詳細ページの投稿者のニックネームや画像をクリックしてもそのユーザー詳細ページが表示されます。</p>
+                    <p>3. ご自身のユーザー詳細ページであれば、登録情報を編集または削除（退会）することができます。</p>
+                    <p>4. 「フォローする」をクリックすると気になるユーザーをフォロー（お気に入り）をしたり、解除ができます。
                       <a href="#" onclick="showVideo('gif3-5-3'); return false;">[動画]</a>
                         <div id="gif3-5-3-container" style="display:none;">
                             <img id="gif3-5-3" src="https://i.gyazo.com/7504b0bb37f66162f7668b5f6c2d1948.gif" alt="動画表示できません" width=60%/>
@@ -180,6 +184,10 @@
                     【通知が届く マイカレンダー】
                 </div>
                 <%= image_tag("icon-calendar.png", class: "guide-icon-img") %>
+                <div class="guide-pre-text">
+                    <p>カレンダーに予定を登録しておくことで、肥料や水やり、その他必要なことをメールで通知してくれます。</p>
+                    <p>メールを通知しないようにもできるので、記録としてもお使い頂けます。</p>
+                </div>
 
                 <div class="guide-text">
                     <p>1. ログイン中であればクリックするとそのユーザーだけのカレンダーが表示されます。</p>
@@ -210,6 +218,10 @@
                     【成長を記録 写真日記】
                 </div>
                 <%= image_tag("icon-diary.png", class: "guide-icon-img") %>
+                <div class="guide-pre-text">
+                    <p>あなただけしか閲覧できない、写真と簡単な説明だけを記録できる日記です。</p>
+                    <p>植物の成長をアルバムのように管理することができます。</p>
+                </div>
 
                 <div class="guide-text">
                     <p>1. ログイン中であればクリックするとそのユーザーだけの日記が表示されます。</p>
@@ -231,7 +243,10 @@
                     【今日は何の花の日？】
                 </div>
                 <%= image_tag("icon-today.png", class: "guide-icon-img") %>
-
+                <div class="guide-pre-text">
+                    <p>今日が何の花（誕生花）なのか知ることができます。</p>
+                    <p>その花についてより詳しく調べることも可能です。</p>
+                </div>
                 <div class="guide-text">
                     <p>1. クリックすると今日の誕生花が表示されます。</p>
                     <p>2. 「詳しく調べる」リンクをクリックするとgoogle検索ページが表示されてより詳しい情報を知ることができます。
@@ -244,16 +259,18 @@
                         </div>
                     </p>
 
-                    <p>3. 閲覧日以外にも翌日や７日前までの花も調べることができます。</p>
+                    <p>3. 閲覧日以外にも、翌日や７日前までの花もリストから選んで調べることができます。</p>
                 </div>
 
                 <div class="guide-sub2">
                     【園芸日和 今日の天気】
                 </div>
                 <%= image_tag("icon-weather.png", class: "guide-icon-img") %>
-
+                <div class="guide-pre-text">
+                    <p>あなたの登録された都道府県から、現在の天気を知ることができます。</p>
+                </div>
                 <div class="guide-text">
-                    <p>1. ログイン中であれば、クリックするとあなたの都道府県の天気予報が表示されます。
+                    <p>1. ログイン中であれば、クリックするとあなたの都道府県の天気が表示されます。
                       <a href="#" onclick="showVideo('gif3-9-1'); return false;">[動画]</a>
                         <div id="gif3-9-1-container" style="display:none;">
                             <img id="gif3-9-1" src="https://i.gyazo.com/03082dd33801fda3216d40097493fa48.gif" alt="動画表示できません" width=60%/>
@@ -268,10 +285,13 @@
                     【管理者へ お問い合わせ】
                 </div>
                 <%= image_tag("icon-mail.png", class: "guide-icon-img") %>
+                <div class="guide-pre-text">
+                    <p>アプリに関する質問や、不具合のご報告などございましたら、アプリの管理者へご連絡下さい。</p>
+                </div>
 
                 <div class="guide-text">
                     <p>1. クリックすると管理者へメールを送るフォームが表示されます。</p>
-                    <p>2. 3日以内にはフォームに入力されたメールアドレスに管理人より返信があります。</p>
+                    <p>2. 送信後、遅くても3日以内にはフォームに入力されたメールアドレス宛に管理人より返信致します。</p>
                 </div>
             </div>
         </div>
