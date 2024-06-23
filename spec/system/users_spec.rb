@@ -39,8 +39,18 @@ RSpec.describe 'ユーザー新規登録', type: :system do
     # 新規登録ページへ移動する
     visit new_user_registration_path
     # ユーザー情報を入力する
+    fill_in 'nickname', with: " "
+      fill_in 'email', with:  " "
+      fill_in 'password', with:  " "
+      fill_in 'password-confirmation', with:  " "
+      select '---', from: 'user[prefecture_id]'
       # サインアップボタンを押してもユーザーモデルのカウントは上がらないことを確認する
+      expect{
+        find('input[name="commit"]').click
+        sleep 1
+      }.to change { User.count }.by(0)
       # 新規登録ページへ戻されることを確認する
+      expect(page).to have_current_path(new_user_registration_path)
     end
   end
 end
