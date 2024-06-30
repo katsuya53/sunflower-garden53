@@ -22,13 +22,15 @@ describe PostsController, type: :request do
 
   describe 'GET #show' do
     it 'showアクションにリクエストすると正常にレスポンスが返ってくる' do 
+      get post_path(@post)
+      expect(response.status).to eq 200
     end
     it 'showアクションにリクエストするとレスポンスに投稿済みのツイートのテキストが存在する' do 
-    end
-    it 'showアクションにリクエストするとレスポンスに投稿済みのツイートの画像URLが存在する' do 
+      get post_path(@post)
+      expect(response.body).to include(@post.post_text)
     end
     it 'showアクションにリクエストするとレスポンスにコメント一覧表示部分が存在する' do 
     end
   end 
-  
+
 end
