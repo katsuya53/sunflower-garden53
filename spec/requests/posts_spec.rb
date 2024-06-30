@@ -7,6 +7,8 @@ describe PostsController, type: :request do
 
   describe 'GET #index' do
     it 'indexアクションにリクエストすると正常にレスポンスが返ってくる' do 
+      get root_path
+      expect(response.status).to eq 200
     end
     it 'indexアクションにリクエストするとレスポンスに投稿済みのツイートのテキストが存在する' do 
     end
