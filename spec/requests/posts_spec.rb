@@ -11,6 +11,8 @@ describe PostsController, type: :request do
       expect(response.status).to eq 200
     end
     it 'indexアクションにリクエストするとレスポンスに投稿済みのツイートのテキストが存在する' do 
+      get root_path
+      expect(response.body).to include(@post.post_text)
     end
     it 'indexアクションにリクエストするとレスポンスに投稿済みのツイートの画像URLが存在する' do 
     end
