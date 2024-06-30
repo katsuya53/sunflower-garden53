@@ -29,8 +29,6 @@ describe PostsController, type: :request do
       get post_path(@post)
       expect(response.body).to include(@post.post_text)
     end
-    it 'showアクションにリクエストするとレスポンスにコメント一覧表示部分が存在する' do 
-    end
   end 
 
 end
