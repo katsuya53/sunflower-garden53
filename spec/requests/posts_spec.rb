@@ -15,6 +15,8 @@ describe PostsController, type: :request do
       expect(response.body).to include(@post.post_text)
     end
     it 'indexアクションにリクエストするとレスポンスに投稿検索フォームが存在する' do 
+      get root_path
+      expect(response.body).to include('検索')
     end
   end
 end
