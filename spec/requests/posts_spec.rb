@@ -25,10 +25,9 @@ describe PostsController, type: :request do
       get post_path(@post)
       expect(response.status).to eq 200
     end
-    it 'showアクションにリクエストするとレスポンスに投稿済みのツイートのテキストが存在する' do 
+    it 'showアクションにリクエストするとレスポンスに投稿済みのテキストが存在する' do 
       get post_path(@post)
       expect(response.body).to include(@post.post_text)
     end
   end 
-
 end
