@@ -102,7 +102,7 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 - タスク管理：スプレッドシート
 
 # テスト
-- Rspec 単体テスト(model)
+- Rspec 単体テスト(model,controller)
 
 # ローカルでの動作方法
 以下のコマンドを順に実行。  
@@ -131,5 +131,5 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 - 製作時間：合計 約200時間
 
 # 制作時間②
-- 制作期間：2024/6/1 ~ 6/15
-- 製作時間：合計 約30時間
+- 制作期間：2024/6/1 ~ 6/31
+- 製作時間：合計 約40時間
