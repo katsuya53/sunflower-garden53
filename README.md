@@ -103,6 +103,7 @@ https://docs.google.com/spreadsheets/d/1gckdPCufE7ylFW7s5P7IHMctCwj01BmyZb0qN4f2
 
 # テスト
 - Rspec 単体テスト(model,controller)
+- Rspec 結合テスト(user,post)
 
 # ローカルでの動作方法
 以下のコマンドを順に実行。  
